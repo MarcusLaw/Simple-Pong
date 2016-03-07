@@ -35,6 +35,25 @@ int main(int argc, char* argv[])
 {
     SDL_Init(SDL_INIT_EVERYTHING);
     window = SDL_CreateWindow("Simple Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+    SDL_Rect leftPaddle;
+    leftPaddle.w = 10;
+    leftPaddle.h = 100;
+    leftPaddle.x = 0;
+    leftPaddle.y = SCREEN_HEIGHT / 2 - leftPaddle.h / 2;
+
+    SDL_Rect rightPaddle;
+    rightPaddle.w = 10;
+    rightPaddle.h = 100;
+    rightPaddle.x = SCREEN_WIDTH - rightPaddle.w;
+    rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
+
+    SDL_Rect ball;
+    ball.w = 10;
+    ball.h = 10;
+    ball.x = SCREEN_WIDTH / 2 - ball.w / 2;
+    ball.y = SCREEN_HEIGHT / 2 - ball.h / 2;
 
     while(!quit)
     {
@@ -42,6 +61,21 @@ int main(int argc, char* argv[])
         {
             if(e.type == SDL_QUIT) quit = 1;
         }
+
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_RenderClear(renderer);
+
+        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+        SDL_RenderDrawRect(renderer, &leftPaddle);
+        SDL_RenderFillRect(renderer, &leftPaddle);
+
+        SDL_RenderDrawRect(renderer, &rightPaddle);
+        SDL_RenderFillRect(renderer, &rightPaddle);
+
+        SDL_RenderDrawRect(renderer, &ball);
+        SDL_RenderFillRect(renderer, &ball);
+
+        SDL_RenderPresent(renderer);
     }
 
     SDL_FreeSurface(surface);
