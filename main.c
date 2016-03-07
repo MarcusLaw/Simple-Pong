@@ -63,6 +63,24 @@ int main(int argc, char* argv[])
         while(SDL_PollEvent(&e) != 0)
         {
             if(e.type == SDL_QUIT) quit = 1;
+            else if(e.type == SDL_KEYDOWN)
+            {
+                switch(e.key.keysym.sym)
+                {
+                    case SDLK_w:
+                        leftPaddle.y = leftPaddle.y - 10;
+                        break;
+                    case SDLK_s:
+                        leftPaddle.y = leftPaddle.y + 10;
+                        break;
+                    case SDLK_UP:
+                        rightPaddle.y = rightPaddle.y - 10;
+                        break;
+                    case SDLK_DOWN:
+                        rightPaddle.y = rightPaddle.y + 10;
+                        break;
+                }
+            }
         }
 
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
