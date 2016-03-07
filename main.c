@@ -33,10 +33,12 @@ SDL_Event e;
 
 int main(int argc, char* argv[])
 {
+    // Initialize SDL
     SDL_Init(SDL_INIT_EVERYTHING);
     window = SDL_CreateWindow("Simple Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
+    // Declare Rects
     SDL_Rect leftPaddle;
     leftPaddle.w = 10;
     leftPaddle.h = 100;
@@ -55,6 +57,7 @@ int main(int argc, char* argv[])
     ball.x = SCREEN_WIDTH / 2 - ball.w / 2;
     ball.y = SCREEN_HEIGHT / 2 - ball.h / 2;
 
+    // Main Game Loop
     while(!quit)
     {
         while(SDL_PollEvent(&e) != 0)
@@ -78,6 +81,7 @@ int main(int argc, char* argv[])
         SDL_RenderPresent(renderer);
     }
 
+    // Quit SDL
     SDL_FreeSurface(surface);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
