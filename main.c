@@ -42,24 +42,30 @@ int main(int argc, char* argv[])
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // Declare Rects
-        // Left Paddle
-    SDL_Rect leftPaddle;
-    leftPaddle.w = 10;
-    leftPaddle.h = 100;
-    leftPaddle.x = 0;
-    leftPaddle.y = SCREEN_HEIGHT / 2 - leftPaddle.h / 2;
-        // Right Paddle
-    SDL_Rect rightPaddle;
-    rightPaddle.w = 10;
-    rightPaddle.h = 100;
-    rightPaddle.x = SCREEN_WIDTH - rightPaddle.w;
-    rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
+        //Divider
+    SDL_Rect divider;
+    divider.w = 1;
+    divider.h = SCREEN_HEIGHT;
+    divider.x = SCREEN_WIDTH / 2;
+    divider.y = 0;
         // Ball
     SDL_Rect ball;
     ball.w = 10;
     ball.h = 10;
     ball.x = SCREEN_WIDTH / 2 - ball.w / 2;
     ball.y = SCREEN_HEIGHT / 2 - ball.h / 2;
+        // Left Paddle
+    SDL_Rect leftPaddle;
+    leftPaddle.w = 10;
+    leftPaddle.h = 100;
+    leftPaddle.x = 5;
+    leftPaddle.y = SCREEN_HEIGHT / 2 - leftPaddle.h / 2;
+        // Right Paddle
+    SDL_Rect rightPaddle;
+    rightPaddle.w = 10;
+    rightPaddle.h = 100;
+    rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
+    rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
 
     // Main Game Loop
     while(!quit)
@@ -80,20 +86,25 @@ int main(int argc, char* argv[])
 		if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
 
 		// Logic
-		if(ball.x < 0) xBallDirection = 1;
-		if(ball.x + ball.w > SCREEN_WIDTH) xBallDirection = -1;
+            // Balls to the Walls
+		if(ball.x < 0) ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
+		if(ball.x + ball.w > SCREEN_WIDTH) ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
 		if(ball.y < 0) yBallDirection = 1;
 		if(ball.y + ball.h > SCREEN_HEIGHT) yBallDirection = -1;
+            // Paddles
 		if(leftPaddle.y < 0) leftPaddle.y++;
 		if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
 		if(rightPaddle.y < 0) rightPaddle.y++;
 		if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--;
 
 		// Render
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
+            // Divider
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_RenderDrawRect(renderer, &divider);
+        SDL_RenderFillRect(renderer, &divider);
             // Left Paddle
-        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
         SDL_RenderDrawRect(renderer, &leftPaddle);
         SDL_RenderFillRect(renderer, &leftPaddle);
             // Right Paddle
@@ -104,6 +115,8 @@ int main(int argc, char* argv[])
         SDL_RenderFillRect(renderer, &ball);
             // Update Screen
         SDL_RenderPresent(renderer);
+
+        SDL_Delay(3);
     }
 
     // Quit SDL
