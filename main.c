@@ -86,6 +86,17 @@ int main(int argc, char* argv[])
 		if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
 
 		// Logic
+            // Paddle to the Balls
+        if(ball.x < leftPaddle.x + leftPaddle.w && ball.x + ball.w > leftPaddle.x &&
+           ball.y < leftPaddle.y + leftPaddle.h && ball.h + ball.y > leftPaddle.y)
+        {
+            xBallDirection = 1;
+        }
+        if(ball.x < rightPaddle.x + rightPaddle.w && ball.x + ball.w > rightPaddle.x &&
+           ball.y < rightPaddle.y + rightPaddle.h && ball.h + ball.y > rightPaddle.y)
+        {
+            xBallDirection = -1;
+        }
             // Balls to the Walls
 		if(ball.x < 0) ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
 		if(ball.x + ball.w > SCREEN_WIDTH) ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
