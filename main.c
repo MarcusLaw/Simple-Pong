@@ -25,6 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #define SCREEN_HEIGHT 576
 
 int quit;
+const Uint8 *currentKeyState;
 
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
@@ -63,26 +64,22 @@ int main(int argc, char* argv[])
         while(SDL_PollEvent(&e) != 0)
         {
             if(e.type == SDL_QUIT) quit = 1;
-            else if(e.type == SDL_KEYDOWN)
-            {
-                switch(e.key.keysym.sym)
-                {
-                    case SDLK_w:
-                        leftPaddle.y = leftPaddle.y - 10;
-                        break;
-                    case SDLK_s:
-                        leftPaddle.y = leftPaddle.y + 10;
-                        break;
-                    case SDLK_UP:
-                        rightPaddle.y = rightPaddle.y - 10;
-                        break;
-                    case SDLK_DOWN:
-                        rightPaddle.y = rightPaddle.y + 10;
-                        break;
-                }
-            }
         }
 
+		// Get Keystates
+		currentKeyState = SDL_GetKeyboardState(NULL);
+		if(currentKeyState[SDL_SCANCODE_W]) leftPaddle.y--;
+		if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++;
+		if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--;
+		if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
+
+		// Logic
+		if(leftPaddle.y < 0) leftPaddle.y++;
+		if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
+		if(rightPaddle.y < 0) rightPaddle.y++;
+		if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--;
+
+		// Render
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
 
