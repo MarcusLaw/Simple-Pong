@@ -20,28 +20,40 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <stdlib.h>
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_image.h"
+#include "SDL2/SDL_ttf.h"
 
 #define SCREEN_WIDTH 1024
 #define SCREEN_HEIGHT 576
 
 int quit;
+int start;
 int xBallDirection = 1;
 int yBallDirection = -1;
 const Uint8 *currentKeyState;
 
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
-SDL_Surface *surface;
 SDL_Event e;
 
 int main(int argc, char* argv[])
 {
     // Initialize SDL
     SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
     window = SDL_CreateWindow("Simple Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    TTF_Font *font = TTF_OpenFont("fonts/slkscr.ttf", 16);
+    SDL_Color white = {255, 255, 255};
+    SDL_Surface *textSurface = TTF_RenderText_Solid(font, "Press Space to Start", white);
+    SDL_Texture *startMessageTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
 
     // Declare Rects
+        // Start Message
+    SDL_Rect startMessage;
+    startMessage.w = 480;
+    startMessage.h = 64;
+    startMessage.x = SCREEN_WIDTH / 2 + startMessage.w / 24;
+    startMessage.y = SCREEN_HEIGHT / 4 - startMessage.h / 2;
         //Divider
     SDL_Rect divider;
     divider.w = 1;
@@ -67,12 +79,46 @@ int main(int argc, char* argv[])
     rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
     rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
 
+    // Render
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
+        // Start Message
+    SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessage);
+        // Divider
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_RenderDrawRect(renderer, &divider);
+    SDL_RenderFillRect(renderer, &divider);
+        // Left Paddle
+    SDL_RenderDrawRect(renderer, &leftPaddle);
+    SDL_RenderFillRect(renderer, &leftPaddle);
+        // Right Paddle
+    SDL_RenderDrawRect(renderer, &rightPaddle);
+    SDL_RenderFillRect(renderer, &rightPaddle);
+        // Ball
+    SDL_RenderDrawRect(renderer, &ball);
+    SDL_RenderFillRect(renderer, &ball);
+        // Update Screen
+    SDL_RenderPresent(renderer);
+
     // Main Game Loop
     while(!quit)
     {
         while(SDL_PollEvent(&e) != 0)
         {
             if(e.type == SDL_QUIT) quit = 1;
+        }
+
+        while(!start)
+        {
+            while(SDL_PollEvent(&e) != 0)
+            {
+                if(e.type == SDL_QUIT) quit = 1, start = 1;
+            }
+
+            currentKeyState = SDL_GetKeyboardState(NULL);
+            if(currentKeyState[SDL_SCANCODE_SPACE]) start = 1;
+
+            SDL_Delay(3);
         }
 
         ball.x = ball.x + xBallDirection;
@@ -84,6 +130,7 @@ int main(int argc, char* argv[])
 		if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++;
 		if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--;
 		if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
+		if(currentKeyState[SDL_SCANCODE_SPACE]);
 
 		// Logic
             // Paddle to the Balls
@@ -131,9 +178,11 @@ int main(int argc, char* argv[])
     }
 
     // Quit SDL
-    SDL_FreeSurface(surface);
+    TTF_CloseFont(font);
+    SDL_FreeSurface(textSurface);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
+    TTF_Quit();
     SDL_Quit();
     return 0;
 }
