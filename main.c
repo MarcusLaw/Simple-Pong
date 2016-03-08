@@ -25,6 +25,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #define SCREEN_HEIGHT 576
 
 int quit;
+int xBallDirection = 1;
+int yBallDirection = -1;
 const Uint8 *currentKeyState;
 
 SDL_Window *window = NULL;
@@ -40,18 +42,19 @@ int main(int argc, char* argv[])
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // Declare Rects
+        // Left Paddle
     SDL_Rect leftPaddle;
     leftPaddle.w = 10;
     leftPaddle.h = 100;
     leftPaddle.x = 0;
     leftPaddle.y = SCREEN_HEIGHT / 2 - leftPaddle.h / 2;
-
+        // Right Paddle
     SDL_Rect rightPaddle;
     rightPaddle.w = 10;
     rightPaddle.h = 100;
     rightPaddle.x = SCREEN_WIDTH - rightPaddle.w;
     rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
-
+        // Ball
     SDL_Rect ball;
     ball.w = 10;
     ball.h = 10;
@@ -66,6 +69,9 @@ int main(int argc, char* argv[])
             if(e.type == SDL_QUIT) quit = 1;
         }
 
+        ball.x = ball.x + xBallDirection;
+        ball.y = ball.y + yBallDirection;
+
 		// Get Keystates
 		currentKeyState = SDL_GetKeyboardState(NULL);
 		if(currentKeyState[SDL_SCANCODE_W]) leftPaddle.y--;
@@ -74,6 +80,10 @@ int main(int argc, char* argv[])
 		if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
 
 		// Logic
+		if(ball.x < 0) xBallDirection = 1;
+		if(ball.x + ball.w > SCREEN_WIDTH) xBallDirection = -1;
+		if(ball.y < 0) yBallDirection = 1;
+		if(ball.y + ball.h > SCREEN_HEIGHT) yBallDirection = -1;
 		if(leftPaddle.y < 0) leftPaddle.y++;
 		if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
 		if(rightPaddle.y < 0) rightPaddle.y++;
@@ -82,17 +92,17 @@ int main(int argc, char* argv[])
 		// Render
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
-
+            // Left Paddle
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
         SDL_RenderDrawRect(renderer, &leftPaddle);
         SDL_RenderFillRect(renderer, &leftPaddle);
-
+            // Right Paddle
         SDL_RenderDrawRect(renderer, &rightPaddle);
         SDL_RenderFillRect(renderer, &rightPaddle);
-
+            // Ball
         SDL_RenderDrawRect(renderer, &ball);
         SDL_RenderFillRect(renderer, &ball);
-
+            // Update Screen
         SDL_RenderPresent(renderer);
     }
 
