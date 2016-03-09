@@ -27,6 +27,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 int quit;
 int start;
+int leftScore;
+int rightScore;
 int xBallDirection = 1;
 int yBallDirection = -1;
 const Uint8 *currentKeyState;
@@ -145,8 +147,8 @@ int main(int argc, char* argv[])
             xBallDirection = -1;
         }
             // Balls to the Walls
-		if(ball.x < 0) ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
-		if(ball.x + ball.w > SCREEN_WIDTH) ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
+		if(ball.x < 0) rightScore++, printf("Left Score: %d\nRight Score: %d\n\n", leftScore, rightScore), ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
+		if(ball.x + ball.w > SCREEN_WIDTH) leftScore++, printf("Left Score: %d\nRight Score: %d\n\n", leftScore, rightScore), ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
 		if(ball.y < 0) yBallDirection = 1;
 		if(ball.y + ball.h > SCREEN_HEIGHT) yBallDirection = -1;
             // Paddles
