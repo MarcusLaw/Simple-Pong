@@ -29,12 +29,18 @@ int quit;
 int start;
 int leftScore;
 int rightScore;
+char leftScoreBuffer[10];
+char rightScoreBuffer[10];
 int xBallDirection = 1;
 int yBallDirection = -1;
 const Uint8 *currentKeyState;
 
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
+SDL_Surface *leftScoreSurface;
+SDL_Surface *rightScoreSurface;
+SDL_Texture *leftScoreTexture;
+SDL_Texture *rightScoreTexture;
 SDL_Event e;
 
 int main(int argc, char* argv[])
@@ -80,6 +86,18 @@ int main(int argc, char* argv[])
     rightPaddle.h = 100;
     rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
     rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
+        // Left Score
+    SDL_Rect leftScoreRect;
+    leftScoreRect.w = 64;
+    leftScoreRect.h = 64;
+    leftScoreRect.x = SCREEN_WIDTH / 2 - leftScoreRect.w / 2 - 50;
+    leftScoreRect.y = 32;
+        // Right Score
+    SDL_Rect rightScoreRect;
+    rightScoreRect.w = 64;
+    rightScoreRect.h = 64;
+    rightScoreRect.x = SCREEN_WIDTH / 2 - rightScoreRect.w / 2 + 50;
+    rightScoreRect.y = 32;
 
     // Render
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
@@ -147,8 +165,8 @@ int main(int argc, char* argv[])
             xBallDirection = -1;
         }
             // Balls to the Walls
-		if(ball.x < 0) rightScore++, printf("Left Score: %d\nRight Score: %d\n\n", leftScore, rightScore), ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
-		if(ball.x + ball.w > SCREEN_WIDTH) leftScore++, printf("Left Score: %d\nRight Score: %d\n\n", leftScore, rightScore), ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
+		if(ball.x < 0) rightScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
+		if(ball.x + ball.w > SCREEN_WIDTH) leftScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
 		if(ball.y < 0) yBallDirection = 1;
 		if(ball.y + ball.h > SCREEN_HEIGHT) yBallDirection = -1;
             // Paddles
@@ -156,6 +174,14 @@ int main(int argc, char* argv[])
 		if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
 		if(rightPaddle.y < 0) rightPaddle.y++;
 		if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--;
+
+		// Score Board
+		sprintf(leftScoreBuffer, "%d", leftScore);
+        sprintf(rightScoreBuffer, "%d", rightScore);
+		leftScoreSurface = TTF_RenderText_Solid(font, leftScoreBuffer, white);
+		rightScoreSurface = TTF_RenderText_Solid(font, rightScoreBuffer, white);
+		leftScoreTexture = SDL_CreateTextureFromSurface(renderer, leftScoreSurface);
+		rightScoreTexture = SDL_CreateTextureFromSurface(renderer, rightScoreSurface);
 
 		// Render
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
@@ -173,6 +199,9 @@ int main(int argc, char* argv[])
             // Ball
         SDL_RenderDrawRect(renderer, &ball);
         SDL_RenderFillRect(renderer, &ball);
+            // Scoreboard
+        SDL_RenderCopy(renderer, leftScoreTexture, NULL, &leftScoreRect);
+        SDL_RenderCopy(renderer, rightScoreTexture, NULL, &rightScoreRect);
             // Update Screen
         SDL_RenderPresent(renderer);
 
@@ -181,6 +210,10 @@ int main(int argc, char* argv[])
 
     // Quit SDL
     TTF_CloseFont(font);
+    SDL_DestroyTexture(leftScoreTexture);
+    SDL_DestroyTexture(rightScoreTexture);
+    SDL_FreeSurface(leftScoreSurface);
+    SDL_FreeSurface(rightScoreSurface);
     SDL_FreeSurface(textSurface);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
