@@ -28,18 +28,15 @@ int quit;
 int screen = 0;
 int leftScore;
 int rightScore;
-char leftScoreBuffer[10];
-char rightScoreBuffer[10];
+char ScoreBuffer[10];
 int xBallDirection = 1;
 int yBallDirection = -1;
 const Uint8 *currentKeyState;
 
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
-SDL_Surface *leftScoreSurface;
-SDL_Surface *rightScoreSurface;
-SDL_Texture *leftScoreTexture;
-SDL_Texture *rightScoreTexture;
+SDL_Surface *ScoreSurface;
+SDL_Texture *ScoreTexture;
 SDL_Event e;
 
 // Declare Rects
@@ -48,8 +45,7 @@ SDL_Rect divider;
 SDL_Rect ball;
 SDL_Rect leftPaddle;
 SDL_Rect rightPaddle;
-SDL_Rect leftScoreRect;
-SDL_Rect rightScoreRect;
+SDL_Rect ScoreRect;
 
 void defineRects()
 {
@@ -79,15 +75,11 @@ void defineRects()
     rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
     rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
     // Left Score
-    leftScoreRect.w = 64;
-    leftScoreRect.h = 64;
-    leftScoreRect.x = SCREEN_WIDTH / 2 - leftScoreRect.w / 2 - 50;
-    leftScoreRect.y = 32;
+    ScoreRect.w = 0; //All three of these are now zerod as they're computer later.
+    ScoreRect.h = 0;
+    ScoreRect.x = 0;
+    ScoreRect.y = 32;
     // Right Score
-    rightScoreRect.w = 64;
-    rightScoreRect.h = 64;
-    rightScoreRect.x = SCREEN_WIDTH / 2 - rightScoreRect.w / 2 + 50;
-    rightScoreRect.y = 32;
 }
 
 void getKeystates()
@@ -146,8 +138,7 @@ void renderGame()
     SDL_RenderDrawRect(renderer, &ball);
     SDL_RenderFillRect(renderer, &ball);
     // Scoreboard
-    SDL_RenderCopy(renderer, leftScoreTexture, NULL, &leftScoreRect);
-    SDL_RenderCopy(renderer, rightScoreTexture, NULL, &rightScoreRect);
+    SDL_RenderCopy(renderer, ScoreTexture, NULL, &ScoreRect);
     // Draw
     SDL_RenderPresent(renderer);
 }
@@ -182,13 +173,16 @@ int main(int argc, char* argv[])
 		if(rightPaddle.y < 0) rightPaddle.y++;
 		if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--;
 
-		// Score Board
-		sprintf(leftScoreBuffer, "%d", leftScore);
-        sprintf(rightScoreBuffer, "%d", rightScore);
-		leftScoreSurface = TTF_RenderText_Solid(font, leftScoreBuffer, white);
-		rightScoreSurface = TTF_RenderText_Solid(font, rightScoreBuffer, white);
-		leftScoreTexture = SDL_CreateTextureFromSurface(renderer, leftScoreSurface);
-		rightScoreTexture = SDL_CreateTextureFromSurface(renderer, rightScoreSurface);
+		// Scoreboard
+        sprintf(ScoreBuffer, "%d   %d", rightScore, leftScore);
+		ScoreSurface = TTF_RenderText_Solid(font, ScoreBuffer, white); //Get score to surface.
+        ScoreTexture = SDL_CreateTextureFromSurface(renderer, ScoreSurface); //Make it a texture.
+        SDL_FreeSurface(ScoreSurface); //Don't need the surface anymore since it's now a texture.
+        //printf("%d %d",ScoreRect.w,ScoreRect.h); //46 x 17
+        SDL_QueryTexture(ScoreTexture,NULL,NULL,&ScoreRect.w,&ScoreRect.h); //ScoreRect now contains the width and height of our scoreboard.
+        ScoreRect.w*=4; //Adjust font size manually here from texture size queried.
+        ScoreRect.h*=4; //Adjust font size manually here from texture size queried.
+        ScoreRect.x = SCREEN_WIDTH / 2  - ScoreRect.w / 2; //Put it at center, minus half width.
 
 		switch(screen)
 		{
@@ -209,10 +203,8 @@ int main(int argc, char* argv[])
 
     // Quit SDL
     TTF_CloseFont(font);
-    SDL_DestroyTexture(leftScoreTexture);
-    SDL_DestroyTexture(rightScoreTexture);
-    SDL_FreeSurface(leftScoreSurface);
-    SDL_FreeSurface(rightScoreSurface);
+    SDL_DestroyTexture(ScoreTexture);
+    SDL_FreeSurface(ScoreSurface);
     SDL_FreeSurface(textSurface);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
