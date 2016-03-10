@@ -91,6 +91,17 @@ void defineRects()
     rightScoreRect.y = 32;
 }
 
+void getKeystates()
+{
+    currentKeyState = SDL_GetKeyboardState(NULL);
+    if(currentKeyState[SDL_SCANCODE_W]) leftPaddle.y--;
+    if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++;
+    if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--;
+    if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
+    if(currentKeyState[SDL_SCANCODE_RETURN]) screen = 1;
+    if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 0;
+}
+
 void ballPhysics()
 {
     // Velocity
@@ -151,7 +162,7 @@ int main(int argc, char* argv[])
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     TTF_Font *font = TTF_OpenFont("fonts/slkscr.ttf", 16);
     SDL_Color white = {255, 255, 255};
-    SDL_Surface *textSurface = TTF_RenderText_Solid(font, "Press Space to Start", white);
+    SDL_Surface *textSurface = TTF_RenderText_Solid(font, "Press Enter to Start", white);
     SDL_Texture *startMessageTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
 
     defineRects();
@@ -164,14 +175,7 @@ int main(int argc, char* argv[])
             if(e.type == SDL_QUIT) quit = 1;
         }
 
-		// Get Keystates
-		currentKeyState = SDL_GetKeyboardState(NULL);
-		if(currentKeyState[SDL_SCANCODE_W]) leftPaddle.y--;
-		if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++;
-		if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--;
-		if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
-		if(currentKeyState[SDL_SCANCODE_SPACE]) screen = 1;
-		if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 0;
+		getKeystates();
 
         // Paddles
 		if(leftPaddle.y < 0) leftPaddle.y++;
