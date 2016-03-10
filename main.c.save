@@ -181,7 +181,7 @@ int main(int argc, char* argv[])
         SDL_QueryTexture(ScoreTexture,NULL,NULL,&ScoreRect.w,&ScoreRect.h); //ScoreRect now contains the width and height of our scoreboard.
         ScoreRect.w*=4; //Adjust font size manually here from texture size queried.
         ScoreRect.h*=4; //Adjust font size manually here from texture size queried.
-        ScoreRect.x = SCREEN_WIDTH / 2  - ScoreRect.w / 2; //Put it at center, minus half current width.
+        ScoreRect.x = SCREEN_WIDTH / 2  - ScoreRect.w / 2; //Put it at center, minus half c width.
 
 		switch(screen)
 		{
