@@ -26,7 +26,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #define SCREEN_HEIGHT 576
 
 int quit;
-int start;
+int screen = 0;
 int leftScore;
 int rightScore;
 char leftScoreBuffer[10];
@@ -43,6 +43,105 @@ SDL_Texture *leftScoreTexture;
 SDL_Texture *rightScoreTexture;
 SDL_Event e;
 
+// Declare Rects
+SDL_Rect startMessageRect;
+SDL_Rect divider;
+SDL_Rect ball;
+SDL_Rect leftPaddle;
+SDL_Rect rightPaddle;
+SDL_Rect leftScoreRect;
+SDL_Rect rightScoreRect;
+
+void defineRects()
+{
+    // Start Message
+    startMessageRect.w = 480;
+    startMessageRect.h = 64;
+    startMessageRect.x = SCREEN_WIDTH / 2 + startMessageRect.w / 24;
+    startMessageRect.y = SCREEN_HEIGHT / 4 - startMessageRect.h / 2;
+    //Divider
+    divider.w = 1;
+    divider.h = SCREEN_HEIGHT;
+    divider.x = SCREEN_WIDTH / 2;
+    divider.y = 0;
+    // Ball
+    ball.w = 10;
+    ball.h = 10;
+    ball.x = SCREEN_WIDTH / 2 - ball.w / 2;
+    ball.y = SCREEN_HEIGHT / 2 - ball.h / 2;
+    // Left Paddle
+    leftPaddle.w = 10;
+    leftPaddle.h = 100;
+    leftPaddle.x = 5;
+    leftPaddle.y = SCREEN_HEIGHT / 2 - leftPaddle.h / 2;
+    // Right Paddle
+    rightPaddle.w = 10;
+    rightPaddle.h = 100;
+    rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
+    rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
+    // Left Score
+    leftScoreRect.w = 64;
+    leftScoreRect.h = 64;
+    leftScoreRect.x = SCREEN_WIDTH / 2 - leftScoreRect.w / 2 - 50;
+    leftScoreRect.y = 32;
+    // Right Score
+    rightScoreRect.w = 64;
+    rightScoreRect.h = 64;
+    rightScoreRect.x = SCREEN_WIDTH / 2 - rightScoreRect.w / 2 + 50;
+    rightScoreRect.y = 32;
+}
+
+void ballPhysics()
+{
+    // Velocity
+    ball.x = ball.x + xBallDirection;
+    ball.y = ball.y + yBallDirection;
+    // Balls to the Walls
+    if(ball.x < 0) rightScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
+    if(ball.x + ball.w > SCREEN_WIDTH) leftScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
+    if(ball.y < 0) yBallDirection = 1;
+    if(ball.y + ball.h > SCREEN_HEIGHT) yBallDirection = -1;
+    // Paddle to the Balls
+    if(ball.x < leftPaddle.x + leftPaddle.w && ball.x + ball.w > leftPaddle.x &&
+       ball.y < leftPaddle.y + leftPaddle.h && ball.h + ball.y > leftPaddle.y)
+    {
+        xBallDirection = 1;
+    }
+    if(ball.x < rightPaddle.x + rightPaddle.w && ball.x + ball.w > rightPaddle.x &&
+       ball.y < rightPaddle.y + rightPaddle.h && ball.h + ball.y > rightPaddle.y)
+    {
+        xBallDirection = -1;
+    }
+}
+
+void clearScreen()
+{
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
+}
+
+void renderGame()
+{
+    // Divider
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_RenderDrawRect(renderer, &divider);
+    SDL_RenderFillRect(renderer, &divider);
+    // Left Paddle
+    SDL_RenderDrawRect(renderer, &leftPaddle);
+    SDL_RenderFillRect(renderer, &leftPaddle);
+    // Right Paddle
+    SDL_RenderDrawRect(renderer, &rightPaddle);
+    SDL_RenderFillRect(renderer, &rightPaddle);
+    // Ball
+    SDL_RenderDrawRect(renderer, &ball);
+    SDL_RenderFillRect(renderer, &ball);
+    // Scoreboard
+    SDL_RenderCopy(renderer, leftScoreTexture, NULL, &leftScoreRect);
+    SDL_RenderCopy(renderer, rightScoreTexture, NULL, &rightScoreRect);
+    // Draw
+    SDL_RenderPresent(renderer);
+}
+
 int main(int argc, char* argv[])
 {
     // Initialize SDL
@@ -55,70 +154,7 @@ int main(int argc, char* argv[])
     SDL_Surface *textSurface = TTF_RenderText_Solid(font, "Press Space to Start", white);
     SDL_Texture *startMessageTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
 
-    // Declare Rects
-        // Start Message
-    SDL_Rect startMessage;
-    startMessage.w = 480;
-    startMessage.h = 64;
-    startMessage.x = SCREEN_WIDTH / 2 + startMessage.w / 24;
-    startMessage.y = SCREEN_HEIGHT / 4 - startMessage.h / 2;
-        //Divider
-    SDL_Rect divider;
-    divider.w = 1;
-    divider.h = SCREEN_HEIGHT;
-    divider.x = SCREEN_WIDTH / 2;
-    divider.y = 0;
-        // Ball
-    SDL_Rect ball;
-    ball.w = 10;
-    ball.h = 10;
-    ball.x = SCREEN_WIDTH / 2 - ball.w / 2;
-    ball.y = SCREEN_HEIGHT / 2 - ball.h / 2;
-        // Left Paddle
-    SDL_Rect leftPaddle;
-    leftPaddle.w = 10;
-    leftPaddle.h = 100;
-    leftPaddle.x = 5;
-    leftPaddle.y = SCREEN_HEIGHT / 2 - leftPaddle.h / 2;
-        // Right Paddle
-    SDL_Rect rightPaddle;
-    rightPaddle.w = 10;
-    rightPaddle.h = 100;
-    rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
-    rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
-        // Left Score
-    SDL_Rect leftScoreRect;
-    leftScoreRect.w = 64;
-    leftScoreRect.h = 64;
-    leftScoreRect.x = SCREEN_WIDTH / 2 - leftScoreRect.w / 2 - 50;
-    leftScoreRect.y = 32;
-        // Right Score
-    SDL_Rect rightScoreRect;
-    rightScoreRect.w = 64;
-    rightScoreRect.h = 64;
-    rightScoreRect.x = SCREEN_WIDTH / 2 - rightScoreRect.w / 2 + 50;
-    rightScoreRect.y = 32;
-
-    // Render
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    SDL_RenderClear(renderer);
-        // Start Message
-    SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessage);
-        // Divider
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-    SDL_RenderDrawRect(renderer, &divider);
-    SDL_RenderFillRect(renderer, &divider);
-        // Left Paddle
-    SDL_RenderDrawRect(renderer, &leftPaddle);
-    SDL_RenderFillRect(renderer, &leftPaddle);
-        // Right Paddle
-    SDL_RenderDrawRect(renderer, &rightPaddle);
-    SDL_RenderFillRect(renderer, &rightPaddle);
-        // Ball
-    SDL_RenderDrawRect(renderer, &ball);
-    SDL_RenderFillRect(renderer, &ball);
-        // Update Screen
-    SDL_RenderPresent(renderer);
+    defineRects();
 
     // Main Game Loop
     while(!quit)
@@ -128,48 +164,16 @@ int main(int argc, char* argv[])
             if(e.type == SDL_QUIT) quit = 1;
         }
 
-        while(!start)
-        {
-            while(SDL_PollEvent(&e) != 0)
-            {
-                if(e.type == SDL_QUIT) quit = 1, start = 1;
-            }
-
-            currentKeyState = SDL_GetKeyboardState(NULL);
-            if(currentKeyState[SDL_SCANCODE_SPACE]) start = 1;
-
-            SDL_Delay(3);
-        }
-
-        ball.x = ball.x + xBallDirection;
-        ball.y = ball.y + yBallDirection;
-
 		// Get Keystates
 		currentKeyState = SDL_GetKeyboardState(NULL);
 		if(currentKeyState[SDL_SCANCODE_W]) leftPaddle.y--;
 		if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++;
 		if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--;
 		if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
-		if(currentKeyState[SDL_SCANCODE_SPACE]);
+		if(currentKeyState[SDL_SCANCODE_SPACE]) screen = 1;
+		if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 0;
 
-		// Logic
-            // Paddle to the Balls
-        if(ball.x < leftPaddle.x + leftPaddle.w && ball.x + ball.w > leftPaddle.x &&
-           ball.y < leftPaddle.y + leftPaddle.h && ball.h + ball.y > leftPaddle.y)
-        {
-            xBallDirection = 1;
-        }
-        if(ball.x < rightPaddle.x + rightPaddle.w && ball.x + ball.w > rightPaddle.x &&
-           ball.y < rightPaddle.y + rightPaddle.h && ball.h + ball.y > rightPaddle.y)
-        {
-            xBallDirection = -1;
-        }
-            // Balls to the Walls
-		if(ball.x < 0) rightScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
-		if(ball.x + ball.w > SCREEN_WIDTH) leftScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
-		if(ball.y < 0) yBallDirection = 1;
-		if(ball.y + ball.h > SCREEN_HEIGHT) yBallDirection = -1;
-            // Paddles
+        // Paddles
 		if(leftPaddle.y < 0) leftPaddle.y++;
 		if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
 		if(rightPaddle.y < 0) rightPaddle.y++;
@@ -183,27 +187,19 @@ int main(int argc, char* argv[])
 		leftScoreTexture = SDL_CreateTextureFromSurface(renderer, leftScoreSurface);
 		rightScoreTexture = SDL_CreateTextureFromSurface(renderer, rightScoreSurface);
 
-		// Render
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-        SDL_RenderClear(renderer);
-            // Divider
-        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-        SDL_RenderDrawRect(renderer, &divider);
-        SDL_RenderFillRect(renderer, &divider);
-            // Left Paddle
-        SDL_RenderDrawRect(renderer, &leftPaddle);
-        SDL_RenderFillRect(renderer, &leftPaddle);
-            // Right Paddle
-        SDL_RenderDrawRect(renderer, &rightPaddle);
-        SDL_RenderFillRect(renderer, &rightPaddle);
-            // Ball
-        SDL_RenderDrawRect(renderer, &ball);
-        SDL_RenderFillRect(renderer, &ball);
-            // Scoreboard
-        SDL_RenderCopy(renderer, leftScoreTexture, NULL, &leftScoreRect);
-        SDL_RenderCopy(renderer, rightScoreTexture, NULL, &rightScoreRect);
-            // Update Screen
-        SDL_RenderPresent(renderer);
+		switch(screen)
+		{
+            case 0:
+                clearScreen();
+                SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessageRect);
+                renderGame();
+                break;
+            case 1:
+                ballPhysics();
+                clearScreen();
+                renderGame();
+                break;
+		}
 
         SDL_Delay(3);
     }
