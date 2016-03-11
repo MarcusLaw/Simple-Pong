@@ -57,10 +57,10 @@ void defineRects()
     startMessageRect.x = SCREEN_WIDTH - startMessageRect.w - 5;
     startMessageRect.y = SCREEN_HEIGHT - startMessageRect.h;
     //Divider
-    startMessageRect.w = 480;
-    startMessageRect.h = 64;
-    startMessageRect.x = SCREEN_WIDTH / 2 + startMessageRect.w / 24;
-    startMessageRect.y = SCREEN_HEIGHT / 4 - startMessageRect.h / 2;
+    startMessageRect.w = 240;
+    startMessageRect.h = 24;
+    startMessageRect.x = SCREEN_WIDTH - startMessageRect.w - 5; // SCREEN_WIDTH - messageWidth = keep on screen; -5 = margin
+    startMessageRect.y = SCREEN_HEIGHT - startMessageRect.h; // SCREEN_HEIGHT - messageWidth = keep on screen
     // Divider
     divider.w = 1;
     divider.h = SCREEN_HEIGHT;
@@ -189,8 +189,8 @@ int main(int argc, char* argv[])
         ScoreTexture = SDL_CreateTextureFromSurface(renderer, ScoreSurface); // Make it a texture.
         SDL_FreeSurface(ScoreSurface); // Don't need the surface anymore since it's now a texture.
         SDL_QueryTexture(ScoreTexture,NULL,NULL,&ScoreRect.w,&ScoreRect.h); // ScoreRect now contains the width and height of our scoreboard.
-        ScoreRect.w*=4; // Adjust font size manually here from texture size queried.
-        ScoreRect.h*=4; // Adjust font size manually here from texture size queried.
+        ScoreRect.w *= 4; // Adjust font size manually here from texture size queried.
+        ScoreRect.h *=4; // Adjust font size manually here from texture size queried.
         ScoreRect.x = SCREEN_WIDTH / 2  - ScoreRect.w / 2; // Put it at center, minus half current width.
 
 		switch(screen)
@@ -207,6 +207,7 @@ int main(int argc, char* argv[])
                 break;
 		}
 
+		// Slow down the loop. Temporary until FPS limiter/ticks are introduced.
         SDL_Delay(2);
     }
 
