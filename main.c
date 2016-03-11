@@ -24,7 +24,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #define SCREEN_WIDTH 1024
 #define SCREEN_HEIGHT 576
 
-// Variables - Shit needs cleaned, mang.
+// Declare Variables - Shit Needs Cleaned, Mang
 int quit;
 int screen = 0;
 int leftScore;
@@ -34,6 +34,7 @@ int xBallDirection = 1;
 int yBallDirection = -1;
 const Uint8 *currentKeyState;
 
+// Declare SDL Pointers
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
 SDL_Surface *ScoreSurface;
@@ -56,6 +57,11 @@ void defineRects()
     startMessageRect.x = SCREEN_WIDTH - startMessageRect.w - 5;
     startMessageRect.y = SCREEN_HEIGHT - startMessageRect.h;
     //Divider
+    startMessageRect.w = 480;
+    startMessageRect.h = 64;
+    startMessageRect.x = SCREEN_WIDTH / 2 + startMessageRect.w / 24;
+    startMessageRect.y = SCREEN_HEIGHT / 4 - startMessageRect.h / 2;
+    // Divider
     divider.w = 1;
     divider.h = SCREEN_HEIGHT;
     divider.x = SCREEN_WIDTH / 2;
@@ -76,11 +82,10 @@ void defineRects()
     rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
     rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
     // Left Score
-    ScoreRect.w = 0; //All three of these are now zerod as they're computer later.
+    ScoreRect.w = 0; // All three of these are now zeroed as they're computed later.
     ScoreRect.h = 0;
     ScoreRect.x = 0;
     ScoreRect.y = 32;
-    // Right Score
 }
 
 void getKeystates()
@@ -92,6 +97,14 @@ void getKeystates()
     if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
     if(currentKeyState[SDL_SCANCODE_RETURN]) screen = 1;
     if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 0;
+}
+
+void paddleMovement()
+{
+    if(leftPaddle.y < 0) leftPaddle.y++;
+    if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
+    if(rightPaddle.y < 0) rightPaddle.y++;
+    if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--;
 }
 
 void ballPhysics()
@@ -155,6 +168,7 @@ int main(int argc, char* argv[])
     SDL_Color white = {255, 255, 255};
     SDL_Surface *textSurface = TTF_RenderText_Solid(font, "Press Enter to Start", white);
     SDL_Texture *startMessageTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+    SDL_FreeSurface(textSurface);
 
     defineRects();
 
@@ -167,22 +181,17 @@ int main(int argc, char* argv[])
         }
 
 		getKeystates();
-
-        // Paddles
-		if(leftPaddle.y < 0) leftPaddle.y++;
-		if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
-		if(rightPaddle.y < 0) rightPaddle.y++;
-		if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--;
+        paddleMovement();
 
 		// Scoreboard
         sprintf(ScoreBuffer, "%d   %d", rightScore, leftScore);
-		ScoreSurface = TTF_RenderText_Solid(font, ScoreBuffer, white); //Get score to surface.
-        ScoreTexture = SDL_CreateTextureFromSurface(renderer, ScoreSurface); //Make it a texture.
-        SDL_FreeSurface(ScoreSurface); //Don't need the surface anymore since it's now a texture.
-        SDL_QueryTexture(ScoreTexture,NULL,NULL,&ScoreRect.w,&ScoreRect.h); //ScoreRect now contains the width and height of our scoreboard.
-        ScoreRect.w*=4; //Adjust font size manually here from texture size queried.
-        ScoreRect.h*=4; //Adjust font size manually here from texture size queried.
-        ScoreRect.x = SCREEN_WIDTH / 2  - ScoreRect.w / 2; //Put it at center, minus half current width.
+		ScoreSurface = TTF_RenderText_Solid(font, ScoreBuffer, white); // Get score to surface.
+        ScoreTexture = SDL_CreateTextureFromSurface(renderer, ScoreSurface); // Make it a texture.
+        SDL_FreeSurface(ScoreSurface); // Don't need the surface anymore since it's now a texture.
+        SDL_QueryTexture(ScoreTexture,NULL,NULL,&ScoreRect.w,&ScoreRect.h); // ScoreRect now contains the width and height of our scoreboard.
+        ScoreRect.w*=4; // Adjust font size manually here from texture size queried.
+        ScoreRect.h*=4; // Adjust font size manually here from texture size queried.
+        ScoreRect.x = SCREEN_WIDTH / 2  - ScoreRect.w / 2; // Put it at center, minus half current width.
 
 		switch(screen)
 		{
@@ -204,8 +213,6 @@ int main(int argc, char* argv[])
     // Quit SDL
     TTF_CloseFont(font);
     SDL_DestroyTexture(ScoreTexture);
-    SDL_FreeSurface(ScoreSurface);
-    SDL_FreeSurface(textSurface);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     TTF_Quit();
