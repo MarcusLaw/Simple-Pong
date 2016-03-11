@@ -24,6 +24,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #define SCREEN_WIDTH 1024
 #define SCREEN_HEIGHT 576
 
+// Variables - Shit needs cleaned, mang.
 int quit;
 int screen = 0;
 int leftScore;
@@ -50,10 +51,10 @@ SDL_Rect ScoreRect;
 void defineRects()
 {
     // Start Message
-    startMessageRect.w = 480;
-    startMessageRect.h = 64;
-    startMessageRect.x = SCREEN_WIDTH / 2 + startMessageRect.w / 24;
-    startMessageRect.y = SCREEN_HEIGHT / 4 - startMessageRect.h / 2;
+    startMessageRect.w = 240;
+    startMessageRect.h = 24;
+    startMessageRect.x = SCREEN_WIDTH - startMessageRect.w - 5;
+    startMessageRect.y = SCREEN_HEIGHT - startMessageRect.h;
     //Divider
     divider.w = 1;
     divider.h = SCREEN_HEIGHT;
@@ -197,7 +198,7 @@ int main(int argc, char* argv[])
                 break;
 		}
 
-        SDL_Delay(3);
+        SDL_Delay(2);
     }
 
     // Quit SDL
