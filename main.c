@@ -184,7 +184,7 @@ int main(int argc, char* argv[])
         paddleMovement();
 
 		// Scoreboard
-        sprintf(ScoreBuffer, "%d   %d", rightScore, leftScore);
+        sprintf(ScoreBuffer, "%d   %d", leftScore, rightScore);
 		ScoreSurface = TTF_RenderText_Solid(font, ScoreBuffer, white); // Get score to surface.
         ScoreTexture = SDL_CreateTextureFromSurface(renderer, ScoreSurface); // Make it a texture.
         SDL_FreeSurface(ScoreSurface); // Don't need the surface anymore since it's now a texture.
@@ -208,7 +208,7 @@ int main(int argc, char* argv[])
 		}
 
 		// Slow down the loop. Temporary until FPS limiter/ticks are introduced.
-        SDL_Delay(2);
+        SDL_Delay(3);
     }
 
     // Quit SDL
