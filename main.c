@@ -54,11 +54,6 @@ void defineRects()
     // Start Message
     startMessageRect.w = 240;
     startMessageRect.h = 24;
-    startMessageRect.x = SCREEN_WIDTH - startMessageRect.w - 5;
-    startMessageRect.y = SCREEN_HEIGHT - startMessageRect.h;
-    //Divider
-    startMessageRect.w = 240;
-    startMessageRect.h = 24;
     startMessageRect.x = SCREEN_WIDTH - startMessageRect.w - 5; // SCREEN_WIDTH - messageWidth = keep on screen; -5 = margin
     startMessageRect.y = SCREEN_HEIGHT - startMessageRect.h; // SCREEN_HEIGHT - messageWidth = keep on screen
     // Divider
@@ -195,15 +190,17 @@ int main(int argc, char* argv[])
 
 		switch(screen)
 		{
-            case 0:
+            case 0: // Pause
                 clearScreen();
                 SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessageRect);
                 renderGame();
                 break;
-            case 1:
+            case 1: // Game
                 ballPhysics();
                 clearScreen();
                 renderGame();
+                break;
+            case 2: // Start Menu
                 break;
 		}
 

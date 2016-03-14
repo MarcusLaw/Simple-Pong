@@ -1,0 +1,3429 @@
+desc: I1 cache:         65536 B, 64 B, 2-way associative
+desc: D1 cache:         16384 B, 64 B, 4-way associative
+desc: LL cache:         8388608 B, 64 B, 64-way associative
+cmd: /home/marcus/Documents/Simple Pong/bin/Debug/Simple Pong 
+events: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw 
+fl=/build/gcc-multilib/src/gcc-5-20160209/libgcc/config/i386/cpuinfo.c
+fn=__cpu_indicator_init
+178 2 0 0 0 0 0 0 0 0
+186 7 0 0 1 1 1 0 0 0
+219 2 1 1 1 0 0 1 0 0
+220 2 0 0 0 0 0 1 0 0
+349 7 1 1 0 0 0 6 1 0
+358 4 1 1 2 1 0 0 0 0
+359 1 0 0 0 0 0 0 0 0
+362 14 1 1 1 0 0 2 0 0
+368 1 0 0 1 0 0 0 0 0
+369 1 0 0 1 0 0 0 0 0
+371 2 0 0 0 0 0 0 0 0
+377 8 1 1 0 0 0 1 0 0
+383 4 0 0 1 0 0 0 0 0
+384 3 0 0 0 0 0 0 0 0
+385 1 1 1 1 0 0 0 0 0
+386 3 0 0 0 0 0 0 0 0
+387 2 0 0 0 0 0 0 0 0
+389 2 0 0 0 0 0 0 0 0
+392 2 1 1 0 0 0 0 0 0
+397 2 0 0 0 0 0 0 0 0
+398 1 1 1 0 0 0 0 0 0
+403 4 0 0 2 0 0 1 0 0
+404 3 0 0 1 0 0 1 0 0
+428 1 0 0 0 0 0 0 0 0
+429 9 0 0 7 0 0 0 0 0
+fn=__get_cpuid_output
+336 6 0 0 0 0 0 2 0 0
+338 4 0 0 4 0 0 0 0 0
+fn=get_available_features
+266 1 0 0 0 0 0 1 0 0
+267 3 1 1 0 0 0 0 0 0
+272 4 1 1 0 0 0 0 0 0
+274 4 0 0 0 0 0 0 0 0
+276 4 0 0 0 0 0 0 0 0
+278 4 0 0 0 0 0 0 0 0
+280 4 1 1 0 0 0 0 0 0
+282 4 0 0 0 0 0 0 0 0
+284 4 0 0 0 0 0 0 0 0
+286 4 0 0 0 0 0 0 0 0
+288 4 1 1 0 0 0 0 0 0
+290 4 0 0 0 0 0 0 0 0
+293 2 0 0 0 0 0 0 0 0
+296 3 0 0 0 0 0 0 0 0
+298 4 0 0 0 0 0 0 0 0
+300 4 1 1 0 0 0 0 0 0
+302 4 0 0 0 0 0 0 0 0
+304 4 0 0 0 0 0 0 0 0
+310 2 0 0 0 0 0 0 0 0
+312 2 0 0 0 0 0 0 0 0
+314 2 0 0 0 0 0 0 0 0
+317 4 0 0 0 0 0 0 0 0
+319 4 0 0 0 0 0 0 0 0
+321 4 0 0 0 0 0 0 0 0
+324 2 0 0 1 0 0 1 0 0
+325 2 0 0 2 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-5-20160209/libstdc++-v3/libsupc++/eh_alloc.cc
+fn=_GLOBAL__sub_I_eh_alloc.cc
+116 1 0 0 0 0 0 1 0 0
+117 3 0 0 0 0 0 2 0 0
+118 2 1 1 0 0 0 0 0 0
+127 1 0 0 0 0 0 1 0 0
+129 1 0 0 0 0 0 1 0 0
+130 1 0 0 0 0 0 1 0 0
+307 3 0 0 1 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-5-20160209/libstdc++-v3/libsupc++/guard.cc
+fn=__cxa_guard_acquire
+113 1 0 0 1 0 0 0 0 0
+189 3 1 1 0 0 0 0 0 0
+227 2 0 0 0 0 0 0 0 0
+232 9 1 1 1 0 0 6 0 0
+237 2 0 0 0 0 0 0 0 0
+243 3 0 0 1 1 0 0 0 0
+252 1 0 0 0 0 0 1 0 0
+253 3 0 0 1 0 0 0 0 0
+270 3 0 0 0 0 0 0 0 0
+334 10 1 1 8 0 0 0 0 0
+fn=__cxa_guard_release
+189 1 0 0 0 0 0 0 0 0
+377 4 2 2 1 0 0 1 0 0
+381 2 0 0 1 0 0 0 0 0
+386 1 0 0 2 0 0 0 0 0
+388 2 0 0 0 0 0 0 0 0
+414 5 0 0 3 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-5-20160209/libstdc++-v3/src/c++11/compatibility-c++0x.cc
+fn=_GLOBAL__sub_I_compatibility_c__0x.cc
+184 4 1 1 0 0 0 2 0 0
+199 4 0 0 0 0 0 2 0 0
+214 6 0 0 0 0 0 2 1 0
+215 6 1 1 0 0 0 1 0 0
+257 2 1 1 1 0 0 1 0 0
+fn=std::(anonymous namespace)::generic_error_category::~generic_error_category()
+184 3 1 1 0 0 0 1 0 0
+fn=std::(anonymous namespace)::system_error_category::~system_error_category()
+199 3 1 1 0 0 0 1 1 0
+fn=std::error_category::error_category()
+135 8 1 1 4 1 0 2 0 0
+fn=std::error_category::~error_category()
+135 2 0 0 2 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-5-20160209/libstdc++-v3/src/c++11/compatibility-thread-c++0x.cc
+fn=_GLOBAL__sub_I_compatibility_thread_c__0x.cc
+49 3 0 0 1 1 0 2 1 0
+124 3 0 0 1 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-5-20160209/libstdc++-v3/src/c++11/future.cc
+fn=(anonymous namespace)::future_error_category::~future_error_category()
+29 3 1 1 0 0 0 1 0 0
+fn=std::future_category()
+64 12 3 3 1 1 1 3 0 0
+74 4 0 0 1 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-5-20160209/libstdc++-v3/src/c++11/system_error.cc
+fn=(anonymous namespace)::generic_error_category::~generic_error_category()
+38 3 0 0 0 0 0 1 0 0
+fn=(anonymous namespace)::system_error_category::~system_error_category()
+54 3 1 1 0 0 0 1 1 1
+fn=_GLOBAL__sub_I_system_error.cc
+70 4 1 1 0 0 0 1 0 0
+71 4 0 0 0 0 0 0 0 0
+184 2 0 0 0 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-build/gcc/include/cpuid.h
+fn=__get_cpuid_output
+219 12 1 1 0 0 0 0 0 0
+239 4 0 0 0 0 0 0 0 0
+242 12 0 0 0 0 0 8 0 0
+243 2 0 0 0 0 0 0 0 0
+fl=/build/gcc-multilib/src/gcc-build/x86_64-unknown-linux-gnu/libstdc++-v3/include/bits/locale_classes.h
+fn=_GLOBAL__sub_I_cxx11_locale_inst.cc
+784 5 0 0 3 1 0 1 0 0
+fn=_GLOBAL__sub_I_cxx11_wlocale_inst.cc
+784 5 0 0 3 1 0 1 0 0
+fn=_GLOBAL__sub_I_locale_inst.cc
+784 5 0 0 3 1 0 1 0 0
+fn=_GLOBAL__sub_I_wlocale_inst.cc
+784 5 0 0 3 1 0 1 0 0
+fl=/build/gcc-multilib/src/gcc-build/x86_64-unknown-linux-gnu/libstdc++-v3/include/bits/locale_facets.h
+fn=_GLOBAL__sub_I_cxx11_locale_inst.cc
+1879 4 1 1 2 1 0 1 0 0
+fn=_GLOBAL__sub_I_cxx11_wlocale_inst.cc
+1879 4 1 1 2 1 0 1 0 0
+fn=_GLOBAL__sub_I_locale_inst.cc
+1879 4 1 1 2 2 1 1 0 0
+2273 4 0 0 2 1 0 1 0 0
+2553 4 0 0 2 1 0 1 0 0
+fn=_GLOBAL__sub_I_wlocale_inst.cc
+1879 4 1 1 2 2 1 1 0 0
+2273 4 0 0 2 1 0 1 0 0
+2553 4 0 0 2 0 0 1 0 0
+fl=/build/gcc-multilib/src/gcc-build/x86_64-unknown-linux-gnu/libstdc++-v3/include/bits/locale_facets_nonio.h
+fn=_GLOBAL__sub_I_cxx11_locale_inst.cc
+754 4 0 0 2 0 0 1 0 0
+1373 8 1 1 4 3 1 2 0 0
+1603 4 0 0 2 1 0 1 0 0
+1760 4 0 0 2 1 0 1 0 0
+1966 4 0 0 2 1 0 1 0 0
+fn=_GLOBAL__sub_I_cxx11_wlocale_inst.cc
+754 4 0 0 2 1 0 1 0 0
+1373 8 1 1 4 3 1 2 0 0
+1603 4 0 0 2 1 0 1 0 0
+1760 4 0 0 2 0 0 1 0 0
+1966 4 0 0 2 0 0 1 0 0
+fn=_GLOBAL__sub_I_locale_inst.cc
+318 4 0 0 2 1 0 1 0 0
+754 4 0 0 2 1 0 1 0 0
+887 4 1 1 2 1 0 1 0 0
+1373 8 1 1 4 3 1 2 0 0
+1603 4 0 0 2 1 0 1 0 0
+1760 4 0 0 2 1 0 1 0 0
+1966 4 0 0 2 1 0 1 0 0
+fn=_GLOBAL__sub_I_wlocale_inst.cc
+318 4 0 0 2 1 0 1 0 0
+754 4 0 0 2 1 0 1 0 0
+887 4 1 1 2 0 0 1 0 0
+1373 8 1 1 4 3 1 2 0 0
+1603 4 0 0 2 0 0 1 0 0
+1760 4 0 0 2 0 0 1 0 0
+1966 4 0 0 2 1 0 1 0 0
+fl=/build/gcc-multilib/src/gcc-build/x86_64-unknown-linux-gnu/libstdc++-v3/include/ext/bitmap_allocator.h
+fn=_GLOBAL__sub_I_bitmap_allocator.cc
+106 8 0 0 0 0 0 6 2 0
+412 6 1 1 0 0 0 2 0 0
+420 2 0 0 0 0 0 2 0 0
+421 4 1 1 0 0 0 2 0 0
+1094 8 1 1 2 1 0 2 0 0
+1107 8 1 1 2 0 0 2 0 0
+1112 8 1 1 2 0 0 2 0 0
+fl=/build/gcc-multilib/src/gcc-build/x86_64-unknown-linux-gnu/libstdc++-v3/include/ext/concurrence.h
+fn=_GLOBAL__sub_I_bitmap_allocator.cc
+132 29 0 0 1 0 0 20 2 0
+fn=_GLOBAL__sub_I_eh_alloc.cc
+132 5 1 1 0 0 0 5 1 0
+fl=/build/gcc-multilib/src/gcc-build/x86_64-unknown-linux-gnu/libstdc++-v3/include/parallel/settings.h
+fn=_GLOBAL__sub_I_parallel_settings.cc
+338 54 8 8 2 1 1 52 6 6
+fl=/build/gcc-multilib/src/gcc-build/x86_64-unknown-linux-gnu/libstdc++-v3/include/system_error
+fn=std::_V2::error_category::~error_category()
+66 3 1 1 3 0 0 0 0 0
+fl=/home/marcus/Documents/Simple Pong/main.c
+fn=ballPhysics
+106 4308 2154 0 0 0 0 2154 0 0
+108 8616 0 0 4308 0 0 2154 0 0
+109 8616 0 0 4308 0 0 2154 0 0
+111 6462 0 0 2154 0 0 0 0 0
+112 10770 4308 2 4308 0 0 0 0 0
+113 6464 2154 1 2154 0 0 2 0 0
+114 10772 0 0 4308 0 0 2 0 0
+116 12932 2154 1 6465 2154 0 0 0 0
+117 10 1 0 6 0 0 0 0 0
+119 1 0 0 0 0 0 1 0 0
+121 25850 4307 2 12924 0 0 0 0 0
+122 10 0 0 6 0 0 0 0 0
+124 1 1 0 0 0 0 1 0 0
+126 6462 2153 0 4308 0 0 0 0 0
+fn=clearScreen
+129 5474 583 1 0 0 0 2737 0 0
+130 19159 0 0 2737 0 0 2737 0 0
+131 8211 0 0 2737 0 0 2737 0 0
+132 8211 2737 0 5474 2737 0 0 0 0
+fn=defineRects
+53 2 1 1 0 0 0 1 0 0
+55 1 0 0 0 0 0 1 1 1
+56 1 0 0 0 0 0 1 0 0
+57 5 0 0 1 0 0 1 0 0
+58 5 1 1 1 0 0 1 0 0
+60 1 0 0 0 0 0 1 1 1
+61 1 0 0 0 0 0 1 0 0
+62 1 0 0 0 0 0 1 0 0
+63 1 0 0 0 0 0 1 0 0
+65 1 0 0 0 0 0 1 1 1
+66 1 1 1 0 0 0 1 0 0
+67 9 0 0 1 0 0 1 0 0
+68 9 0 0 1 0 0 1 0 0
+70 1 1 1 0 0 0 1 0 0
+71 1 0 0 0 0 0 1 0 0
+72 1 0 0 0 0 0 1 0 0
+73 9 0 0 1 0 0 1 0 0
+75 1 1 1 0 0 0 1 0 0
+76 1 0 0 0 0 0 1 0 0
+77 5 0 0 1 0 0 1 0 0
+78 9 1 1 1 0 0 1 0 0
+80 1 0 0 0 0 0 1 0 0
+81 1 0 0 0 0 0 1 0 0
+82 1 0 0 0 0 0 1 0 0
+83 1 0 0 0 0 0 1 0 0
+84 3 0 0 2 0 0 0 0 0
+fn=getKeystates
+87 5474 2737 0 0 0 0 2737 0 0
+88 8211 2737 1 0 0 0 5474 27 0
+89 14741 0 0 5826 2643 0 352 0 0
+90 14084 133 0 5607 0 0 133 0 0
+91 14414 2604 1 5717 2941 0 243 0 0
+92 14396 237 0 5711 237 0 237 0 0
+93 13704 2500 1 5474 0 0 19 19 0
+94 13705 0 0 5474 0 0 20 20 0
+95 8211 2737 1 5474 0 0 0 0 0
+fn=main
+156 5 2 2 0 0 0 3 0 0
+158 2 0 0 0 0 0 1 0 0
+159 1 1 1 0 0 0 1 0 0
+160 8 2 1 0 0 0 2 1 1
+161 6 1 0 1 0 0 2 1 0
+162 4 1 0 0 0 0 2 0 0
+163 4 1 1 0 0 0 4 0 0
+164 6 1 0 2 0 0 2 0 0
+165 6 1 0 2 1 0 2 0 0
+166 3 1 1 1 0 0 1 0 0
+168 2 0 0 0 0 0 1 0 0
+171 8215 1 1 2738 2737 0 0 0 0
+173 12528 2737 0 0 0 0 3132 0 0
+175 1186 0 0 395 0 0 1 0 0
+178 5474 2737 1 0 0 0 2737 0 0
+179 5474 0 0 0 0 0 2737 0 0
+182 21896 0 0 5474 2557 0 2737 0 0
+183 16422 2738 1 5474 0 0 5474 2569 0
+184 16422 2737 0 5474 2700 0 5474 2737 0
+185 8211 0 0 2737 2736 0 2737 0 0
+186 19159 2737 1 2737 9 0 2737 0 0
+187 8211 0 0 2737 0 0 2737 0 0
+188 8211 0 0 2737 0 0 2737 0 0
+189 24633 2737 1 2737 0 0 2737 0 0
+191 12519 0 0 2737 2737 0 0 0 0
+194 1166 0 0 0 0 0 583 0 0
+195 3498 1166 1 1166 583 0 583 0 0
+196 1166 1 0 0 0 0 583 0 0
+197 583 583 0 0 0 0 0 0 0
+199 4308 2154 0 0 0 0 2154 0 0
+200 4308 0 0 0 0 0 2154 0 0
+201 4308 2154 0 0 0 0 2154 0 0
+202 2154 2154 0 0 0 0 0 0 0
+206 5474 583 0 0 0 0 2737 0 0
+210 3 0 0 1 0 0 1 0 0
+211 3 0 0 1 1 0 1 0 0
+212 3 1 1 1 1 0 1 0 0
+213 3 1 1 1 1 1 1 0 0
+214 1 0 0 0 0 0 1 0 0
+215 1 0 0 0 0 0 1 0 0
+216 1 1 0 0 0 0 0 0 0
+217 2 0 0 2 1 1 0 0 0
+fn=paddleMovement
+98 5474 0 0 0 0 0 2737 0 0
+99 8211 0 0 2737 0 0 0 0 0
+100 13685 0 0 5474 0 0 0 0 0
+101 8211 2737 1 2737 2257 0 0 0 0
+102 13685 0 0 5474 0 0 0 0 0
+103 8211 2737 1 5474 0 0 0 0 0
+fn=renderGame
+135 5474 2737 1 0 0 0 2737 0 0
+137 19159 0 0 2737 2155 0 2737 0 0
+138 10948 0 0 2737 0 0 2737 0 0
+139 10948 2737 1 2737 2737 0 2737 0 0
+141 10948 0 0 2737 0 0 2737 0 0
+142 10948 0 0 2737 0 0 2737 0 0
+144 10948 2737 1 2737 0 0 2737 0 0
+145 10948 0 0 2737 0 0 2737 0 0
+147 10948 0 0 2737 0 0 2737 0 0
+148 10948 2737 1 2737 0 0 2737 0 0
+150 16422 0 0 5474 0 0 2737 0 0
+152 8211 13 0 2737 1181 0 2737 0 0
+153 8211 2737 0 5474 2737 0 0 0 0
+fl=???
+fn=(below main)
+0 58 6 6 16 7 0 17 1 0
+fn=???
+0 381201359 13427483 25737 102267487 6260004 102718 51966523 1789161 285909
+fn=FT_Add_Default_Modules
+0 131 1 1 24 4 4 22 0 0
+fn=FT_Add_Module
+0 3646 12 11 1223 58 32 597 5 0
+fn=FT_CMap_New
+0 255 6 6 72 2 2 66 0 0
+fn=FT_DivFix
+0 2448 98 2 136 0 0 0 0 0
+fn=FT_Done_Face
+0 48 3 3 11 5 4 11 0 0
+fn=FT_Done_FreeType
+0 10 1 1 3 2 0 3 0 0
+fn=FT_Done_GlyphSlot
+0 29 2 2 8 2 1 4 0 0
+fn=FT_Done_Library
+0 782 6 6 236 47 35 55 0 0
+fn=FT_Done_Memory
+0 3 1 1 1 1 0 0 0 0
+fn=FT_Get_Advance
+0 2025 9 5 405 48 0 225 0 0
+fn=FT_Get_CMap_Format
+0 96 2 2 33 10 1 12 0 0
+fn=FT_Get_Char_Index
+0 4536 17 2 1944 59 0 648 0 0
+fn=FT_Get_Module
+0 1338 5 2 405 145 0 159 0 0
+fn=FT_Get_Module_Interface
+0 16 1 1 6 0 0 2 0 0
+fn=FT_Get_Next_Char
+0 15532 3 3 4942 4 0 2824 0 0
+fn=FT_GlyphLoader_Add
+0 2053 7 2 692 0 0 65 0 0
+fn=FT_GlyphLoader_CheckPoints
+0 511 19 9 163 1 0 104 1 0
+fn=FT_GlyphLoader_CreateExtra
+0 46 3 3 14 0 0 11 0 0
+fn=FT_GlyphLoader_Done
+0 14 1 1 3 1 1 3 0 0
+fn=FT_GlyphLoader_New
+0 24 2 2 7 0 0 6 0 0
+fn=FT_GlyphLoader_Prepare
+0 1950 3 1 715 0 0 585 0 0
+fn=FT_GlyphLoader_Reset
+0 34 2 2 8 1 1 16 0 0
+fn=FT_GlyphLoader_Rewind
+0 1632 9 4 680 0 0 816 120 1
+fn=FT_Init_FreeType
+0 22 1 1 5 0 0 6 0 0
+fn=FT_List_Add
+0 75 4 2 12 2 0 24 0 0
+fn=FT_List_Finalize
+0 2170 13 8 618 0 0 618 0 0
+fn=FT_List_Find
+0 72 3 3 27 7 6 0 0 0
+fn=FT_List_Remove
+0 67 4 4 15 0 0 10 0 0
+fn=FT_Load_Glyph
+0 13550 118 19 2668 245 1 4205 43 0
+fn=FT_Load_Sfnt_Table
+0 148 3 3 40 12 0 24 0 0
+fn=FT_Lookup_Renderer
+0 107 4 4 30 0 0 0 0 0
+fn=FT_MulDiv
+0 7744 20 2 352 0 0 0 0 0
+fn=FT_MulDiv_No_Round
+0 3520 32 1 176 0 0 0 0 0
+fn=FT_MulFix
+0 81 0 0 9 0 0 0 0 0
+fn=FT_New_GlyphSlot
+0 81 6 6 25 5 1 20 1 0
+fn=FT_New_Library
+0 35 3 3 7 0 0 12 0 0
+fn=FT_New_Memory
+0 14 1 1 1 0 0 5 0 0
+fn=FT_New_Size
+0 77 5 5 21 1 0 19 0 0
+fn=FT_Open_Face
+0 151 18 16 37 6 0 38 2 0
+fn=FT_Outline_Check
+0 3648 4 2 503 1 0 0 0 0
+fn=FT_Outline_Get_CBox
+0 27225 7 4 4363 7 0 504 6 0
+fn=FT_Outline_Get_Orientation
+0 9672 27 7 1391 1 0 184 0 0
+fn=FT_Outline_Translate
+0 2704 3 1 784 1 0 0 0 0
+fn=FT_Remove_Module
+0 2253 8 8 551 27 18 225 0 0
+fn=FT_Render_Glyph
+0 132 2 1 36 1 0 0 0 0
+fn=FT_Render_Glyph_Internal
+0 552 5 3 156 34 0 108 0 0
+fn=FT_Request_Metrics
+0 86 8 8 20 2 0 14 0 0
+fn=FT_Request_Size
+0 32 2 2 12 1 0 3 0 0
+fn=FT_Select_Charmap
+0 16 4 2 0 0 0 0 0 0
+fn=FT_Set_Char_Size
+0 33 3 3 4 0 0 7 0 0
+fn=FT_Set_Charmap
+0 99 3 3 21 2 0 15 0 0
+fn=FT_Stream_Close
+0 6 1 1 2 0 0 0 0 0
+fn=FT_Stream_EnterFrame
+0 4272 41 3 1513 0 0 979 5 0
+fn=FT_Stream_ExitFrame
+0 1044 34 1 435 2 0 435 0 0
+fn=FT_Stream_ExtractFrame
+0 32 2 1 8 0 0 12 0 0
+fn=FT_Stream_Free
+0 15 1 1 5 0 0 4 0 0
+fn=FT_Stream_GetULong
+0 484 1 1 176 0 0 44 0 0
+fn=FT_Stream_New
+0 56 4 4 14 1 0 11 0 0
+fn=FT_Stream_Pos
+0 276 14 1 276 0 0 0 0 0
+fn=FT_Stream_Read
+0 8 1 1 2 0 0 0 0 0
+fn=FT_Stream_ReadAt
+0 56 2 1 14 0 0 12 0 0
+fn=FT_Stream_ReadFields
+0 9758 11 11 2111 20 16 604 9 0
+fn=FT_Stream_ReadULong
+0 117 3 3 36 0 0 21 1 0
+fn=FT_Stream_ReadUShort
+0 8960 50 3 2912 0 0 1568 0 0
+fn=FT_Stream_ReleaseFrame
+0 108 2 2 45 4 4 27 0 0
+fn=FT_Stream_Seek
+0 6270 6 2 1320 13 0 1320 11 0
+fn=KeySymToUcs4
+0 2070 210 14 30 0 0 0 0 0
+fn=SDL_CreateRGBSurface
+0 2738 2738 1 2738 2738 1 0 0 0
+fn=SDL_CreateRenderer
+0 1 1 1 1 1 1 0 0 0
+fn=SDL_CreateTextureFromSurface
+0 2738 2738 1 2738 2738 1 0 0 0
+fn=SDL_CreateWindow
+0 1 1 1 1 1 1 0 0 0
+fn=SDL_DYNAPI_entry
+0 1107 121 121 2 0 0 548 69 0
+fn=SDL_Delay
+0 2737 2737 1 2737 2737 1 0 0 0
+fn=SDL_DestroyRenderer
+0 1 0 0 1 1 0 0 0 0
+fn=SDL_DestroyTexture
+0 1 1 1 1 1 0 0 0 0
+fn=SDL_DestroyWindow
+0 1 1 1 1 1 1 0 0 0
+fn=SDL_FreeSurface
+0 2738 2738 1 2738 2738 0 0 0 0
+fn=SDL_GetKeyboardState
+0 2737 2737 1 2737 2737 1 0 0 0
+fn=SDL_Init
+0 1 1 1 1 1 0 0 0 0
+fn=SDL_PollEvent
+0 3132 2737 1 3132 2923 1 0 0 0
+fn=SDL_QueryTexture
+0 2737 2737 1 2737 2737 0 0 0 0
+fn=SDL_Quit
+0 1 1 1 1 1 1 0 0 0
+fn=SDL_RWFromFile
+0 1 1 1 1 1 1 0 0 0
+fn=SDL_RenderClear
+0 2737 2737 1 2737 0 0 0 0 0
+fn=SDL_RenderCopy
+0 3320 3320 1 3320 583 1 0 0 0
+fn=SDL_RenderDrawRect
+0 10948 2737 1 10948 2155 0 0 0 0
+fn=SDL_RenderFillRect
+0 10948 2737 0 10948 2737 0 0 0 0
+fn=SDL_RenderPresent
+0 2737 2737 0 2737 2737 0 0 0 0
+fn=SDL_SetColorKey
+0 2738 2738 1 2738 2738 1 0 0 0
+fn=SDL_SetRenderDrawColor
+0 27370 5474 1 5474 5474 1 0 0 0
+fn=SDL_free
+0 13 1 1 13 2 1 0 0 0
+fn=SDL_malloc
+0 13 12 1 13 13 1 0 0 0
+fn=SDL_memcpy
+0 12 5 1 12 12 0 0 0 0
+fn=SDL_memset
+0 13 5 1 13 2 1 0 0 0
+fn=SDL_strlen
+0 8214 2740 1 8214 2796 1 0 0 0
+fn=TTF_CloseFont
+0 1337 3 3 265 261 253 18 0 0
+fn=TTF_Init
+0 14 2 2 3 3 1 2 0 0
+fn=TTF_OpenFont
+0 2 1 1 0 0 0 0 0 0
+fn=TTF_OpenFontIndex
+0 17 1 1 2 0 0 3 0 0
+fn=TTF_OpenFontIndexRW
+0 157 12 12 33 8 1 41 2 0
+fn=TTF_Quit
+0 9 1 1 2 1 1 1 0 0
+fn=TTF_RenderText_Solid
+0 221898 13690 4 41085 2746 0 35609 0 0
+fn=TTF_RenderUTF8_Solid
+0 6152366 32869 12 1638291 11169 0 139713 43 0
+fn=TTF_SizeUTF8
+0 868666 30120 11 219205 13725 0 112318 2 0
+fn=XAddToExtensionList
+0 5 1 0 2 1 0 2 1 0
+fn=XAllocClassHint
+0 9 0 0 0 0 0 0 0 0
+fn=XAllocSizeHints
+0 9 3 1 0 0 0 0 0 0
+fn=XAllocWMHints
+0 9 2 1 0 0 0 0 0 0
+fn=XAutoRepeatOn
+0 14 2 2 4 0 0 3 0 0
+fn=XChangeKeyboardControl
+0 64 6 6 14 0 0 10 1 0
+fn=XChangeProperty
+0 3159 31 10 927 11 0 741 7 0
+fn=XCheckIfEvent
+0 6912 512 8 1984 0 0 1024 0 0
+fn=XCloseDisplay
+0 158 10 10 48 18 3 22 0 0
+fn=XCloseIM
+0 20 2 2 8 2 2 6 0 0
+fn=XCreateColormap
+0 156 12 4 42 5 0 45 0 0
+fn=XCreateGC
+0 179 17 9 26 5 0 87 3 0
+fn=XCreateIC
+0 162 14 5 36 8 2 66 0 0
+fn=XCreateWindow
+0 210 15 5 66 2 0 69 3 0
+fn=XDeleteProperty
+0 87 9 3 27 0 0 24 0 0
+fn=XDestroyIC
+0 72 6 3 21 6 2 12 0 0
+fn=XDestroyWindow
+0 81 6 4 24 0 0 18 0 0
+fn=XDisplayKeycodes
+0 6 1 1 3 0 0 2 0 0
+fn=XEHeadOfExtensionList
+0 10008 2752 2 5004 0 0 0 0 0
+fn=XESetCloseDisplay
+0 167 6 1 68 0 0 36 0 0
+fn=XESetCopyEventCookie
+0 54 4 4 18 2 1 12 0 0
+fn=XESetError
+0 128 4 2 52 11 0 24 0 0
+fn=XESetErrorString
+0 54 4 4 22 0 0 12 0 0
+fn=XESetEventToWire
+0 996 7 5 350 9 4 222 0 0
+fn=XESetWireToEvent
+0 1041 10 5 365 11 4 232 0 0
+fn=XESetWireToEventCookie
+0 54 6 4 18 4 1 12 0 0
+fn=XEventsQueued
+0 97634 5396 2 37377 0 0 20765 0 0
+fn=XFilterEvent
+0 51699 700 3 22682 1298 9 6126 0 0
+fn=XFindOnExtensionList
+0 30023 2749 2 15011 5668 2 0 0 0
+fn=XFlush
+0 66736 5485 6 25026 5717 0 16684 0 0
+fn=XForceScreenSaver
+0 27 2 2 8 3 0 6 0 0
+fn=XFree
+0 5615 14 0 1123 0 0 1123 0 0
+fn=XFreeEventData
+0 7098 164 2 1638 0 0 2730 0 0
+fn=XFreeGC
+0 117 8 8 38 16 13 16 0 0
+fn=XFreeModifiermap
+0 44 6 4 12 0 0 12 0 0
+fn=XGetEventData
+0 12558 360 4 4368 0 0 3276 0 0
+fn=XGetICValues
+0 153 18 6 36 4 1 60 0 0
+fn=XGetInputFocus
+0 132 9 3 42 0 0 30 0 0
+fn=XGetModifierMapping
+0 252 16 9 60 0 0 56 0 0
+fn=XGetVisualInfo
+0 548914 329 16 95870 7186 102 14108 432 0
+fn=XGetWindowAttributes
+0 420 18 6 150 2 0 105 3 0
+fn=XGetWindowProperty
+0 1252 62 24 386 2 0 436 2 0
+fn=XIFreeDeviceInfo
+0 104 2 2 42 0 0 28 0 0
+fn=XIQueryDevice
+0 697 9 9 155 14 0 194 10 8
+fn=XIQueryVersion
+0 21 2 2 5 0 0 5 0 0
+fn=XISelectEvents
+0 648 38 24 136 6 0 120 0 0
+fn=XIfEvent
+0 7557 16 10 1721 499 73 669 11 0
+fn=XInitExtension
+0 444 31 7 118 12 1 126 0 0
+fn=XInitThreads
+0 58 5 5 15 8 0 18 2 0
+fn=XInternAtom
+0 3303 27 10 951 5 0 507 1 0
+fn=XKeysymToKeycode
+0 10103 4 4 3148 5 0 25 0 0
+fn=XListPixmapFormats
+0 392 3 3 108 8 0 104 0 0
+fn=XLockDisplay
+0 54 6 3 20 6 0 8 0 0
+fn=XLookupString
+0 16848 552 6 5148 0 0 2574 81 0
+fn=XMapRaised
+0 70 6 3 16 0 0 20 0 0
+fn=XMatchVisualInfo
+0 170 7 6 58 5 0 40 0 0
+fn=XMaxRequestSize
+0 4 2 1 4 1 0 0 0 0
+fn=XNextEvent
+0 59218 1279 2 32672 1510 150 31651 4 0
+fn=XNextRequest
+0 42 4 2 14 1 0 10 0 0
+fn=XOpenDisplay
+0 9220 92 47 2684 137 1 3033 99 0
+fn=XOpenIM
+0 26 3 2 6 1 0 5 0 0
+fn=XPending
+0 1760 174 2 640 2 0 336 0 0
+fn=XQueryExtension
+0 963 28 5 278 13 0 236 8 1
+fn=XQueryKeymap
+0 180 12 7 60 0 0 44 0 0
+fn=XQueryPointer
+0 312 15 10 116 0 0 88 0 0
+fn=XRRFreeCrtcInfo
+0 4 4 1 0 0 0 0 0 0
+fn=XRRFreeOutputInfo
+0 6 1 1 0 0 0 0 0 0
+fn=XRRFreeScreenResources
+0 2 1 1 0 0 0 0 0 0
+fn=XRRGetCrtcInfo
+0 444 8 8 136 0 0 132 0 0
+fn=XRRGetOutputInfo
+0 852 9 9 270 0 0 252 1 0
+fn=XRRGetOutputPrimary
+0 67 6 6 18 0 0 13 0 0
+fn=XRRGetOutputProperty
+0 258 12 11 84 0 0 82 0 0
+fn=XRRGetScreenResources
+0 4 1 1 0 0 0 0 0 0
+fn=XRRListOutputProperties
+0 144 11 4 36 0 0 32 0 0
+fn=XRRQueryVersion
+0 121 7 7 36 0 0 29 0 0
+fn=XResetScreenSaver
+0 6 2 2 1 0 0 1 0 0
+fn=XSelectInput
+0 90 8 3 27 2 0 27 2 0
+fn=XSendEvent
+0 216 14 14 62 5 4 65 3 2
+fn=XSetClassHint
+0 198 15 5 36 0 0 51 0 0
+fn=XSetErrorHandler
+0 512 22 7 221 60 5 83 0 0
+fn=XSetICFocus
+0 7 2 2 3 1 0 0 0 0
+fn=XSetIOErrorHandler
+0 62 2 2 26 0 0 8 0 0
+fn=XSetTextProperty
+0 108 6 2 45 0 0 27 0 0
+fn=XSetWMClientMachine
+0 6 2 1 0 0 0 0 0 0
+fn=XSetWMHints
+0 159 11 4 24 0 0 45 0 0
+fn=XSetWMNormalHints
+0 6 3 1 0 0 0 0 0 0
+fn=XSetWMProperties
+0 297 24 8 57 0 0 81 0 0
+fn=XSetWMProtocols
+0 102 9 3 18 0 0 24 0 0
+fn=XSetWMSizeHints
+0 225 15 5 36 0 0 87 2 0
+fn=XStoreColors
+0 17043 10 5 7722 14 0 5403 144 0
+fn=XStringListToTextProperty
+0 183 15 5 30 0 0 45 1 0
+fn=XStringToKeysym
+0 209276 8 8 53389 2213 131 22581 0 0
+fn=XSync
+0 740 34 9 203 10 1 149 2 0
+fn=XSynchronize
+0 52 4 2 17 0 0 10 0 0
+fn=XUndefineCursor
+0 116 8 4 32 0 0 32 0 0
+fn=XUngrabKeyboard
+0 54 4 4 16 0 0 12 0 0
+fn=XUngrabPointer
+0 54 4 4 16 0 0 12 0 0
+fn=XUnlockDisplay
+0 36 2 1 14 1 0 6 0 0
+fn=XUnmapWindow
+0 54 6 5 16 0 0 12 0 0
+fn=XVisualIDFromVisual
+0 4 2 1 4 0 0 0 0 0
+fn=XWithdrawWindow
+0 82 6 6 18 0 0 32 0 0
+fn=XauDisposeAuth
+0 156 4 3 42 0 0 30 0 0
+fn=XauFileName
+0 39 4 4 12 0 0 12 0 0
+fn=XauGetBestAuthByAddr
+0 444 24 16 114 3 1 84 0 0
+fn=XauReadAuth
+0 390 14 12 75 0 0 105 1 0
+fn=XextAddDisplay
+0 1038 44 9 332 20 1 193 2 0
+fn=XextCreateExtension
+0 40 7 2 4 0 0 16 0 0
+fn=XextDestroyExtension
+0 8 1 1 0 0 0 6 0 0
+fn=XextFindDisplay
+0 84539 5672 4 33824 6157 11 16898 4 0
+fn=XextRemoveDisplay
+0 240 3 2 102 9 4 48 0 0
+fn=XkbAllocClientMap
+0 104 7 7 19 0 0 17 0 0
+fn=XkbFreeClientMap
+0 484 6 6 128 19 18 217 1 0
+fn=XkbFreeCompatMap
+0 13 3 3 5 0 0 3 0 0
+fn=XkbFreeControls
+0 8 1 1 2 0 0 0 0 0
+fn=XkbFreeIndicatorMaps
+0 7 1 1 2 0 0 0 0 0
+fn=XkbFreeKeyboard
+0 75 8 8 10 0 0 15 0 0
+fn=XkbFreeNames
+0 20 2 2 8 0 0 6 0 0
+fn=XkbFreeServerMap
+0 20 2 2 8 0 0 6 0 0
+fn=XkbGetMap
+0 38 3 3 5 1 0 10 0 0
+fn=XkbGetState
+0 85 6 6 32 0 0 26 2 0
+fn=XkbGetUpdatedMap
+0 39 2 2 11 4 0 8 0 0
+fn=XkbGetXlibControls
+0 390 78 1 234 0 0 0 0 0
+fn=XkbKeycodeToKeysym
+0 19236 5 5 6499 45 0 1425 0 0
+fn=XkbLookupKeyBinding
+0 3276 184 2 936 0 0 0 0 0
+fn=XkbLookupKeySym
+0 6552 184 2 1872 184 2 702 0 0
+fn=XkbSelectEventDetails
+0 176 10 10 44 2 1 39 1 0
+fn=XkbSetXlibControls
+0 3588 156 2 1560 0 0 468 0 0
+fn=XkbTranslateKeyCode
+0 19680 460 5 5880 746 21 1404 0 0
+fn=XkbTranslateKeySym
+0 16078 554 8 4447 91 0 2344 105 1
+fn=XkbUseExtension
+0 303 32 14 74 4 1 63 1 0
+fn=XrmStringToQuark
+0 216055 10 4 38318 412 46 0 0 0
+fn=Xutf8LookupString
+0 546 156 2 234 78 1 0 0 0
+fn=Xutf8TextListToTextProperty
+0 81 6 2 21 3 1 18 0 0
+fn=_Exit
+0 8 2 2 1 1 0 0 0 0
+fn=_IO_cleanup
+0 43 4 4 15 0 0 8 0 0
+fn=_IO_default_finish
+0 9345 22 6 3738 0 0 623 0 0
+fn=_IO_default_uflow
+0 1024 11 2 512 0 0 256 2 0
+fn=_IO_default_xsputn
+0 921098 11213 8 189756 0 0 147933 3113 41
+fn=_IO_doallocbuf
+0 11196 25 2 4976 543 0 2488 3 0
+fn=_IO_file_close
+0 3738 22 6 1246 0 0 0 0 0
+fn=_IO_file_close_it@@GLIBC_2.2.5
+0 29904 1121 10 6230 17 4 9968 0 0
+fn=_IO_file_doallocate
+0 22392 60 3 5598 26 0 3732 86 1
+fn=_IO_file_finish@@GLIBC_2.2.5
+0 4984 12 2 1246 0 0 623 0 0
+fn=_IO_file_fopen@@GLIBC_2.2.5
+0 44058 1594 10 7588 543 8 5089 0 0
+fn=_IO_file_init@@GLIBC_2.2.5
+0 8294 373 1 2552 0 0 3190 0 0
+fn=_IO_file_open
+0 21526 362 3 3812 0 0 4419 0 0
+fn=_IO_file_read
+0 7576 44 2 3773 0 0 0 0 0
+fn=_IO_file_seek
+0 1354 12 1 677 0 0 0 0 0
+fn=_IO_file_seekoff@@GLIBC_2.2.5
+0 74948 177 16 23068 50 0 11826 98 0
+fn=_IO_file_stat
+0 2492 608 1 623 0 0 0 0 0
+fn=_IO_file_underflow@@GLIBC_2.2.5
+0 34164 440 5 11472 55 0 9406 5 0
+fn=_IO_file_xsgetn
+0 93898 590 8 23875 14 0 15525 5 0
+fn=_IO_flush_all_lockp
+0 90 9 9 25 11 8 12 0 0
+fn=_IO_getline
+0 15690 14 2 0 0 0 0 0 0
+fn=_IO_getline_info
+0 488160 51 14 110070 0 0 102163 3 0
+fn=_IO_link_in
+0 64378 137 10 22938 1337 1 10208 551 1
+fn=_IO_no_init
+0 163218 8285 7 35500 0 0 64456 845 9
+fn=_IO_old_init
+0 158114 5517 4 14200 0 0 115514 514 6
+fn=_IO_seekoff_unlocked
+0 20656 41 2 5335 136 0 1329 0 0
+fn=_IO_setb
+0 130154 5528 6 33316 1 0 33316 0 0
+fn=_IO_sgetn
+0 4812 8 0 3208 644 0 0 0 0
+fn=_IO_sputbackc
+0 9840 12 4 3936 0 0 1312 0 0
+fn=_IO_str_init_static_internal
+0 226170 8281 6 32310 0 0 77548 5 0
+fn=_IO_str_underflow
+0 52 6 2 20 0 0 0 0 0
+fn=_IO_switch_to_get_mode
+0 17580 20 1 6153 0 0 5274 0 0
+fn=_IO_un_link
+0 3783 15 3 1884 0 0 0 0 0
+fn=_IO_unsave_markers
+0 3120 336 3 1872 3 2 0 0 0
+fn=_IO_vfscanf
+0 76168 382 104 21294 130 16 11225 63 0
+fn=_Utf8GetConvByName
+0 268 2 2 55 22 22 3 0 0
+fn=_XAllocID
+0 100 11 3 40 0 0 30 0 0
+fn=_XAllocIDs
+0 409 14 4 126 18 1 77 0 0
+fn=_XCloseLC
+0 21024 8 6 6398 0 0 2744 0 0
+fn=_XConnectXCB
+0 178 24 8 50 11 0 48 5 0
+fn=_XData32
+0 1665 25 6 309 1 0 249 9 0
+fn=_XDeq
+0 20553 717 4 5125 8 0 6962 0 0
+fn=_XEatData
+0 8 2 2 4 0 0 0 0 0
+fn=_XEnq
+0 43744 1246 14 12041 1138 30 11740 1111 52
+fn=_XEventToWire
+0 69 13 13 24 3 3 17 0 0
+fn=_XEventsQueued
+0 127620 8225 7 43170 1 0 18942 0 0
+fn=_XFetchEventCookie
+0 24570 493 6 8736 0 0 6552 0 0
+fn=_XFlush
+0 46607 2742 2 4237 0 0 12711 0 0
+fn=_XFreeAtomTable
+0 434 2 2 69 9 8 39 0 0
+fn=_XFreeDisplayStructure
+0 5637 34 34 1782 422 78 881 0 0
+fn=_XFreeEventCookies
+0 11598 534 2 5484 149 0 3317 0 0
+fn=_XFreeExtData
+0 3417 4 4 854 1 0 570 0 0
+fn=_XFreeX11XCBStructure
+0 50 2 1 24 4 0 12 0 0
+fn=_XGetAsyncReply
+0 450 8 4 135 0 0 75 0 0
+fn=_XGetHostname
+0 123 9 3 24 0 0 27 3 0
+fn=_XGetRequest
+0 5576 100 8 1940 1 0 1454 51 2
+fn=_XGetWindowAttributes
+0 1245 39 16 360 1 0 405 8 0
+fn=_XIMCompileResourceList
+0 280 2 2 48 1 0 88 0 0
+fn=_XInitIM
+0 26 2 2 14 4 0 6 1 0
+fn=_XInitOM
+0 10 1 1 6 1 0 2 0 0
+fn=_XIsEventCookie
+0 26030 426 5 11798 255 140 0 0 0
+fn=_XNextRequest
+0 14 2 1 6 0 0 4 0 0
+fn=_XOpenLC
+0 59498 53 21 20132 1549 6 10987 411 0
+fn=_XPollfdCacheInit
+0 28 4 2 6 0 0 10 0 0
+fn=_XProcessWindowAttributes
+0 174 18 6 27 4 0 18 3 0
+fn=_XRead
+0 15190 46 9 4410 40 0 1960 0 0
+fn=_XRead32
+0 1280 2 1 224 0 0 214 2 0
+fn=_XReadEvents
+0 1212 17 14 377 7 0 238 2 0
+fn=_XReadPad
+0 608 12 5 152 0 0 114 0 0
+fn=_XRegisterFilterByType
+0 343 16 4 91 11 0 126 5 0
+fn=_XReply
+0 40717 466 53 13309 229 4 7453 33 0
+fn=_XSend
+0 165652 8492 23 69003 5583 1 38364 3020 1
+fn=_XSetLastRequestRead
+0 22930 804 5 6258 0 0 3123 0 0
+fn=_XStoreEventCookie
+0 31618 862 8 9190 32 30 11626 47 0
+fn=_XUnregisterFilter
+0 193 14 5 74 6 1 41 0 0
+fn=_XUpdateAtomCache
+0 1584 11 5 360 1 0 396 0 0
+fn=_XUpdateGCCache
+0 112 20 10 12 0 0 2 0 0
+fn=_XVIDtoVisual
+0 236147 61 12 40903 381 45 0 0 0
+fn=_XWireToEvent
+0 25133 921 34 8812 361 7 8816 689 28
+fn=_XcmsAddCmapRec
+0 90 9 3 21 6 1 36 3 1
+fn=_XimCheckICMode
+0 2178 23 8 282 5 0 9 0 0
+fn=_XimCheckIMMode
+0 77 1 1 14 0 0 0 0 0
+fn=_XimCheckIfLocalProcessing
+0 27 3 3 6 0 0 6 0 0
+fn=_XimCheckLocalInputStyle
+0 237 14 5 51 8 2 39 0 0
+fn=_XimDecodeLocalICAttr
+0 51 3 1 0 0 0 0 0 0
+fn=_XimDestroyIMStructureList
+0 8 2 2 4 1 1 1 0 0
+fn=_XimEncodeLocalICAttr
+0 192 5 2 12 0 0 0 0 0
+fn=_XimGetCharCode
+0 2760 51 0 552 0 0 690 51 0
+fn=_XimGetCurrentICValues
+0 501 22 8 174 9 0 351 0 0
+fn=_XimGetCurrentIMValues
+0 35 3 3 9 1 0 17 1 0
+fn=_XimGetICValueData
+0 216 18 6 42 0 0 54 0 0
+fn=_XimGetLocaleCode
+0 43 3 3 9 0 0 11 0 0
+fn=_XimGetResourceListRec
+0 210 3 1 30 0 0 45 0 0
+fn=_XimGetResourceListRecByQuark
+0 31245 5 3 4693 20 0 0 0 0
+fn=_XimInitialResourceInfo
+0 728 6 6 100 45 12 193 3 2
+fn=_XimLocalCreateIC
+0 534 31 9 81 13 4 282 10 0
+fn=_XimLocalFilter
+0 27534 914 11 6162 1433 13 1560 14 1
+fn=_XimLocalGetICValues
+0 78 6 3 27 1 0 18 0 0
+fn=_XimLocalIMFree
+0 95 9 9 23 4 3 50 1 1
+fn=_XimLocalOpenIM
+0 309 27 27 60 5 1 104 5 0
+fn=_XimLocalUtf8LookupString
+0 3216 498 8 936 1 0 624 0 0
+fn=_XimLookupUTF8Text
+0 4206 420 7 1014 0 0 882 0 0
+fn=_XimOpenIM
+0 93 11 11 15 5 0 26 0 0
+fn=_XimParseStringFile
+0 2 1 1 0 0 0 0 0 0
+fn=_XimSetCurrentICValues
+0 606 29 8 348 7 0 342 12 0
+fn=_XimSetCurrentIMValues
+0 17 1 1 9 0 0 8 0 0
+fn=_XimSetICDefaults
+0 3642 16 7 552 90 26 447 0 0
+fn=_XimSetICMode
+0 1836 9 4 441 42 14 237 0 0
+fn=_XimSetICResourceList
+0 4 0 0 0 0 0 0 0 0
+fn=_XimSetICValueData
+0 660 21 10 177 3 1 123 0 0
+fn=_XimSetIMMode
+0 100 2 2 19 0 0 18 0 0
+fn=_XimSetIMResourceList
+0 4 1 1 0 0 0 0 0 0
+fn=_XimSetLocalIMDefaults
+0 179 3 3 20 4 0 23 0 0
+fn=_XkbFreeReadBuffer
+0 23 1 1 6 0 0 6 0 0
+fn=_XkbGetCharset
+0 15 2 2 4 0 0 3 0 0
+fn=_XkbGetConverters
+0 34 1 1 4 0 0 14 1 1
+fn=_XkbGetReadBufferPtr
+0 5580 2 2 1550 0 0 310 0 0
+fn=_XkbInitReadBuffer
+0 31 3 3 4 0 0 9 0 0
+fn=_XkbReadBufferCopyKeySyms
+0 5060 2 2 1540 0 0 660 0 0
+fn=_XkbReadCopyKeySyms
+0 3555 1 1 579 18 0 359 0 0
+fn=_XkbReadGetMapReply
+0 16674 40 40 5504 23 0 3982 2 0
+fn=_XlcAddCT
+0 5228 13 13 754 1 1 1416 1 0
+fn=_XlcAddCharSet
+0 850 2 2 200 0 0 300 0 0
+fn=_XlcAddLoader
+0 63 2 2 12 0 0 21 0 0
+fn=_XlcAddUtf8Converters
+0 44 4 4 1 0 0 7 0 0
+fn=_XlcCloseConverter
+0 2763 1 1 1842 4 4 0 0 0
+fn=_XlcCompareISOLatin1
+0 896 2 2 118 0 0 0 0 0
+fn=_XlcConvert
+0 2739 4 2 1826 253 1 0 0 0
+fn=_XlcCreateDefaultCharSet
+0 4630 6 6 598 0 0 1394 0 0
+fn=_XlcCreateLC
+0 82 3 3 24 2 0 20 0 0
+fn=_XlcCreateLocaleDataBase
+0 12028 16 16 2364 17 2 1378 23 0
+fn=_XlcCurrentLC
+0 10967 10 6 2742 0 0 3655 0 0
+fn=_XlcDbg_printValue
+0 4 0 0 4 0 0 0 0 0
+fn=_XlcDeInitLoader
+0 8 2 1 3 2 0 2 0 0
+fn=_XlcDefaultLoader
+0 81 7 7 6 2 0 14 0 0
+fn=_XlcDestroyLC
+0 3 1 0 2 0 0 0 0 0
+fn=_XlcDestroyLocaleDataBase
+0 39 2 2 12 1 0 9 0 0
+fn=_XlcFileName
+0 672 8 8 110 4 1 102 5 1
+fn=_XlcGetCharSet
+0 17778 5 2 8626 498 0 108 0 0
+fn=_XlcGetCharSetWithSide
+0 942 6 2 462 285 95 6 0 0
+fn=_XlcGetLocaleDataBase
+0 9318 2 2 3450 15 0 648 4 0
+fn=_XlcGetResource
+0 216 1 1 144 2 0 0 0 0
+fn=_XlcInitCTInfo
+0 1193 5 4 275 6 1 111 1 0
+fn=_XlcInitLoader
+0 11 2 2 3 3 0 2 0 0
+fn=_XlcMapOSLocaleName
+0 14672 12 4 3668 0 0 3668 1 0
+fn=_XlcNCompareISOLatin1
+0 276 3 2 32 1 0 0 0 0
+fn=_XlcOpenConverter
+0 59469 30 16 9677 3 1 13830 1 0
+fn=_XlcParseCharSet
+0 2023 6 6 381 0 0 450 0 0
+fn=_XlcRemoveLoader
+0 72 3 1 27 2 0 3 0 0
+fn=_XlcResolveLocaleName
+0 178 10 8 28 2 0 40 2 1
+fn=_XlcSetConverter
+0 2885 4 4 1020 7 0 440 1 1
+fn=_XlcUtf8Loader
+0 16 3 3 6 2 0 3 0 0
+fn=_Xlcmbstoutf8
+0 29575 5 5 5005 0 0 7280 0 0
+fn=_Xlcmbstowcs
+0 29575 5 5 5005 0 0 7280 50 0
+fn=_Xmbstoutf8
+0 2275 1 1 0 0 0 0 0 0
+fn=_Xmbstowcs
+0 2275 1 1 0 0 0 0 0 0
+fn=_XrmInternalStringToQuark
+0 507117 53 28 155842 1276 32 38694 547 73
+fn=_Xutf8TextListToTextProperty
+0 27 6 2 3 0 0 6 0 0
+fn=__GI__IO_un_link.part.1
+0 64417 2092 33 22317 566 12 9567 400 2
+fn=__GI_memcmp
+0 57787 15 5 8683 624 3 0 0 0
+fn=__GI_memcpy
+0 2209644 8469 23 1077691 108089 69 1043475 109347 60797
+fn=__GI_memmove
+0 26673 21 3 4919 0 0 4583 0 0
+fn=__GI_memset
+0 21691040 15861 10 163859 51 0 11543514 1034396 172108
+fn=__GI_stpcpy
+0 37912 15 8 2915 0 0 5000 1 0
+fn=__GI_strchr
+0 1780398 269 13 231969 362 56 0 0 0
+fn=__GI_strcmp
+0 4364656 92 58 967320 72033 10 0 0 0
+fn=__GI_strncmp
+0 1520 88 31 221 8 2 0 0 0
+fn=__GI_strncpy
+0 23 2 1 4 0 0 5 0 0
+fn=__GI_strstr
+0 22127 72 5 6803 418 1 3738 0 0
+fn=____strtol_l_internal
+0 243485 998 16 37088 353 18 14659 6 0
+fn=____strtoul_l_internal
+0 803755 2008 15 123817 2063 65 47298 1 0
+fn=__acos_finite
+0 5 1 1 3 0 0 0 0 0
+fn=__alloc_dir
+0 884 9 3 130 2 0 286 2 0
+fn=__asin_finite
+0 5 1 1 3 0 0 0 0 0
+fn=__asprintf_chk
+0 5856 139 3 366 0 0 2928 4 0
+fn=__atan2_finite
+0 8 2 2 3 0 0 0 0 0
+fn=__call_tls_dtors
+0 33 4 2 15 5 2 6 0 0
+fn=__ctype_b_loc
+0 43272 5 2 43272 6 0 0 0 0
+fn=__ctype_init
+0 48 6 4 30 16 1 9 1 0
+fn=__current_locale_name
+0 4160 6 4 3328 415 0 0 0 0
+fn=__cxa_atexit
+0 198 8 4 45 0 0 72 5 1
+fn=__cxa_finalize
+0 5811 15 9 1218 101 10 407 1 0
+fn=__dcigettext
+0 84898 469 43 21224 978 3 19140 0 0
+fn=__deallocate_stack
+0 70 9 5 22 1 0 22 3 0
+fn=__default_morecore
+0 581 52 1 83 0 0 83 12 0
+fn=__errno_location
+0 30912 6348 2 30912 3143 0 0 0 0
+fn=__exp_finite
+0 16 4 4 6 2 0 0 0 0
+fn=__fdelt_chk
+0 31330 5474 2 6266 0 0 0 0 0
+fn=__fopen_internal
+0 24942 41 3 2567 0 0 6410 272 2
+fn=__fopen_maybe_mmap
+0 2492 14 1 1246 0 0 0 0 0
+fn=__free_tcb
+0 24 2 1 8 0 0 2 0 0
+fn=__gconv
+0 352 22 6 112 0 0 68 0 0
+fn=__gconv_alias_compare
+0 42603 4 1 28402 5459 0 0 0 0
+fn=__gconv_close
+0 128 7 2 40 0 0 24 0 0
+fn=__gconv_close_transform
+0 184 14 3 40 1 0 28 0 0
+fn=__gconv_find_transform
+0 356 32 9 80 8 0 56 2 2
+fn=__gconv_get_builtin_trans
+0 208 4 4 36 5 5 46 1 0
+fn=__gconv_get_path
+0 210 14 14 37 0 0 27 0 0
+fn=__gconv_load_cache
+0 29 3 3 6 0 0 7 1 1
+fn=__gconv_lookup_cache
+0 80 12 3 32 4 1 24 1 1
+fn=__gconv_open
+0 608 44 11 132 16 1 144 3 2
+fn=__gconv_read_conf
+0 326436 18 18 95337 2036 10 31743 90 0
+fn=__gconv_release_cache
+0 12 4 1 8 1 0 0 0 0
+fn=__gconv_release_step
+0 104 8 2 40 0 0 16 0 0
+fn=__gconv_transform_ascii_internal
+0 36894 1825 9 8645 0 0 6409 1 0
+fn=__gconv_transform_internal_ascii
+0 1188 54 14 236 0 0 228 0 0
+fn=__gconv_transform_utf8_internal
+0 964 45 13 228 1 0 140 0 0
+fn=__gen_tempname
+0 332 28 14 44 4 2 48 0 0
+fn=__getdents
+0 6929 6 2 1218 38 0 1593 1 0
+fn=__gettimeofday_syscall
+0 10 2 2 2 0 0 0 0 0
+fn=__glDispatchCheckMultithreaded
+0 236156 11137 11 92157 11127 3 57601 4 0
+fn=__glDispatchCreateTable
+0 16 2 2 3 0 0 8 0 0
+fn=__glDispatchDestroyTable
+0 18 2 2 5 0 0 6 0 0
+fn=__glDispatchFini
+0 895 3 3 210 5 1 275 34 16
+fn=__glDispatchGetABIVersion
+0 2 1 1 1 0 0 0 0 0
+fn=__glDispatchGetCurrentAPIState
+0 72 7 2 36 6 0 0 0 0
+fn=__glDispatchGetProcAddress
+0 22113 24 4 4864 954 0 3424 4 0
+fn=__glDispatchInit
+0 47 3 3 10 4 0 20 0 0
+fn=__glDispatchLoseCurrent
+0 16 2 1 0 0 0 2 0 0
+fn=__glDispatchMakeCurrent
+0 163 17 7 41 10 0 56 7 0
+fn=__glDispatchNewVendorID
+0 17 2 1 6 2 0 6 0 0
+fn=__glDispatchRegisterStubCallbacks
+0 19 2 2 5 0 0 7 0 0
+fn=__glDispatchUnregisterStubCallbacks
+0 35 4 4 9 3 0 8 1 0
+fn=__glXGLLoadGLXFunction
+0 897 6 2 273 29 11 273 0 0
+fn=__glx_Main
+0 17 2 2 4 2 1 4 0 0
+fn=__init_misc
+0 24 2 2 7 2 0 5 1 0
+fn=__libc_csu_init
+0 34 3 3 8 1 0 8 0 0
+fn=__libc_disable_asynccancel
+0 220443 2860 1 55113 0 0 0 0 0
+fn=__libc_dl_error_tsd
+0 8328 24 2 8328 1361 1 0 0 0
+fn=__libc_enable_asynccancel
+0 202102 5805 3 55122 2982 0 0 0 0
+fn=__libc_memalign
+0 2718 4 4 537 4 0 529 9 2
+fn=__libc_pthread_init
+0 393 1 1 110 8 0 58 7 7
+fn=__libc_scratch_buffer_set_array_size
+0 1062 6 3 295 0 0 177 1 0
+fn=__libc_sigaction
+0 860 27 23 274 2 0 266 1 0
+fn=__libc_thread_freeres
+0 56 4 2 14 2 1 12 0 0
+fn=__linkin_atfork
+0 9 2 2 4 2 0 1 0 0
+fn=__lll_lock_elision
+0 559923 11058 8 125349 3968 2 33411 0 0
+fn=__lll_unlock_elision
+0 267288 5610 3 133644 0 0 0 0 0
+fn=__log_finite
+0 16 2 2 6 1 0 0 0 0
+fn=__longjmp
+0 14922 522 2 9119 0 0 0 0 0
+fn=__memcmp_sse4_1
+0 139761 9451 34 35162 8597 14 0 0 0
+fn=__memcpy_chk
+0 91 7 4 42 9 0 0 0 0
+fn=__memcpy_sse2_unaligned
+0 1378054 2240 25 240676 37654 14399 217585 37429 5990
+fn=__memmove_ssse3_back
+0 5716461 123907 174 1537150 181851 469 1169493 178693 8788
+fn=__mempcpy_ssse3_back
+0 2154 170 4 560 137 2 280 2 0
+fn=__memset_chk
+0 20 4 4 12 7 0 0 0 0
+fn=__mpn_cmp
+0 44 2 2 12 0 0 0 0 0
+fn=__mpn_divrem
+0 284 4 4 76 0 0 60 1 0
+fn=__mpn_extract_double
+0 40 3 3 2 0 0 8 0 0
+fn=__mpn_lshift
+0 30 2 2 4 0 0 2 0 0
+fn=__mpn_mul_1
+0 40 4 2 6 0 0 4 0 0
+fn=__mpn_rshift
+0 68 3 3 12 0 0 8 0 0
+fn=__new_exitfn
+0 396 21 13 102 23 6 37 1 1
+fn=__new_sem_wait_fast
+0 18 4 4 6 1 0 2 0 0
+fn=__new_sem_wait_slow
+0 46 3 3 11 1 1 9 0 0
+fn=__new_sem_wait_slow.constprop.0
+0 42 3 3 10 1 0 8 0 0
+fn=__pow_finite
+0 20 4 2 12 5 0 0 0 0
+fn=__printf_fp
+0 1528 69 67 346 12 8 186 2 0
+fn=__pthread_disable_asynccancel
+0 39 6 4 10 2 0 0 0 0
+fn=__pthread_enable_asynccancel
+0 39 3 2 11 2 0 0 0 0
+fn=__pthread_init_static_tls
+0 132 10 5 44 10 0 20 0 0
+fn=__pthread_initialize_minimal
+0 161 15 15 25 7 0 60 10 3
+fn=__pthread_mutex_lock_full
+0 577 15 8 143 2 0 96 0 0
+fn=__pthread_mutex_unlock_full
+0 470 19 12 112 5 2 22 0 0
+fn=__pthread_mutex_unlock_usercnt
+0 1181054 22185 7 208754 198 0 21852 0 0
+fn=__pthread_once_slow
+0 220 20 4 45 6 0 40 1 0
+fn=__register_atfork
+0 115 12 12 26 6 6 20 0 0
+fn=__rpc_thread_destroy
+0 22 4 2 10 2 2 4 0 0
+fn=__run_exit_handlers
+0 182 7 4 29 5 0 21 0 0
+fn=__scandir_tail
+0 4 2 2 1 0 0 0 0 0
+fn=__shm_directory
+0 192 5 4 64 0 0 48 1 0
+fn=__sigjmp_save
+0 54 0 0 12 0 0 12 0 0
+fn=__sigsetjmp
+0 38032 59 8 10004 157 1 16016 187 1
+fn=__snprintf_chk
+0 1694 17 4 121 0 0 726 14 3
+fn=__sprintf_chk
+0 2100 12 3 140 0 0 980 0 0
+fn=__stpcpy_sse2_unaligned
+0 74657 450 21 14027 426 3 6912 0 0
+fn=__strcasecmp_avx
+0 351 4 1 234 8 0 0 0 0
+fn=__strcasecmp_l_avx
+0 5347 26 13 1431 82 18 0 0 0
+fn=__strcat_sse2_unaligned
+0 545267 129 35 195646 1210 3 2325 269 0
+fn=__strcmp_sse2_unaligned
+0 6106684 5594 12 1410771 45628 3168 0 0 0
+fn=__strcpy_chk
+0 663 20 4 117 0 0 156 0 0
+fn=__strcpy_sse2_unaligned
+0 24863 222 27 5423 304 3 2660 450 2
+fn=__strcspn_sse42
+0 4121873 10 6 546426 13 2 0 0 0
+fn=__strncat_sse2_unaligned
+0 520 24 17 64 5 2 12 1 0
+fn=__strncmp_sse42
+0 217059 619 66 30931 70 6 0 0 0
+fn=__strncpy_chk
+0 3 1 1 0 0 0 0 0 0
+fn=__strncpy_sse2_unaligned
+0 361645 252 48 9433 242 8 166973 40521 27909
+fn=__strspn_sse42
+0 19856 449 4 3168 346 1 0 0 0
+fn=__strstr_sse2_unaligned
+0 787210 1008 19 153825 1205 12 0 0 0
+fn=__strtol_internal
+0 1968 4 0 1312 1 0 0 0 0
+fn=__strtoul_internal
+0 9774 9 0 6516 18 0 0 0 0
+fn=__syscall_clock_gettime
+0 10707 2754 3 3569 0 0 0 0 0
+fn=__time_syscall
+0 1344 28 1 448 0 0 0 0 0
+fn=__tls_get_addr
+0 5736 507 2 3650 1213 0 0 0 0
+fn=__uflow
+0 2046 23 4 890 38 1 90 0 0
+fn=__underflow
+0 17677 54 4 7940 43 0 1379 0 0
+fn=__unregister_atfork
+0 1676 14 9 600 47 4 137 0 0
+fn=__vasprintf_chk
+0 29280 18 6 5856 15 0 6954 3 0
+fn=__vsnprintf_chk
+0 52052 73 12 10010 0 0 13013 78 6
+fn=__vsprintf_chk
+0 6580 3 2 1260 0 0 1820 1 0
+fn=__wait_lookup_done
+0 559 18 12 162 47 6 60 0 0
+fn=_dbus_append_user_from_current_process
+0 7 1 1 1 0 0 2 0 0
+fn=_dbus_auth_bytes_sent
+0 12 0 0 0 0 0 0 0 0
+fn=_dbus_auth_client_new
+0 41 3 3 10 0 0 12 0 0
+fn=_dbus_auth_delete_unused_bytes
+0 6 0 0 2 0 0 0 0 0
+fn=_dbus_auth_do_work
+0 4163 12 11 1269 5 0 727 0 0
+fn=_dbus_auth_get_buffer
+0 8 0 0 4 0 0 2 0 0
+fn=_dbus_auth_get_bytes_to_send
+0 27 2 2 6 0 0 6 0 0
+fn=_dbus_auth_get_unused_bytes
+0 6 1 1 3 0 0 1 0 0
+fn=_dbus_auth_return_buffer
+0 4 0 0 4 0 0 0 0 0
+fn=_dbus_auth_set_credentials
+0 117 2 2 36 0 0 27 0 0
+fn=_dbus_auth_unref
+0 37 4 4 8 0 0 13 0 0
+fn=_dbus_close
+0 15 2 2 3 0 0 3 0 0
+fn=_dbus_close_socket
+0 1 1 1 0 0 0 0 0 0
+fn=_dbus_connection_lock
+0 91 0 0 52 0 0 26 0 0
+fn=_dbus_connection_ref_unlocked
+0 426 4 3 142 0 0 142 0 0
+fn=_dbus_connection_unlock
+0 1060 16 9 400 0 0 320 0 0
+fn=_dbus_connection_unref_unlocked
+0 413 4 3 118 0 0 118 0 0
+fn=_dbus_credentials_clear
+0 221 5 4 65 1 1 130 2 1
+fn=_dbus_credentials_new
+0 56 2 2 4 0 0 32 0 0
+fn=_dbus_credentials_unref
+0 52 2 2 20 0 0 16 0 0
+fn=_dbus_first_type_in_signature
+0 12086 5 3 4284 3 0 0 0 0
+fn=_dbus_get_monotonic_time
+0 64 5 5 16 0 0 12 0 0
+fn=_dbus_getenv
+0 32 1 1 4 0 0 8 0 0
+fn=_dbus_geteuid
+0 5 1 1 1 0 0 1 0 0
+fn=_dbus_hash_table_insert_int
+0 70 6 6 18 1 1 16 0 0
+fn=_dbus_hash_table_lookup_int
+0 22 2 2 6 2 0 2 0 0
+fn=_dbus_hash_table_new
+0 45 4 4 5 0 0 19 0 0
+fn=_dbus_hash_table_remove_int
+0 50 4 4 14 0 0 8 0 0
+fn=_dbus_hash_table_unref
+0 59 3 3 20 1 1 5 0 0
+fn=_dbus_header_get_byte_order
+0 195 0 0 195 2 0 0 0 0
+fn=_dbus_header_get_field_raw
+0 531 13 8 121 0 0 95 0 0
+fn=_dbus_header_set_field_basic
+0 778 20 20 98 0 0 170 0 0
+fn=_dbus_list_alloc_link
+0 14 4 2 0 0 0 0 0 0
+fn=_dbus_list_append
+0 517 6 4 188 0 0 141 1 0
+fn=_dbus_list_append_link
+0 80 0 0 40 0 0 30 0 0
+fn=_dbus_list_clear
+0 676 4 3 200 0 0 155 0 0
+fn=_dbus_list_find_last
+0 60 4 3 16 0 0 12 0 0
+fn=_dbus_list_foreach
+0 164 7 5 60 1 1 16 0 0
+fn=_dbus_list_free_link
+0 8 2 1 0 0 0 0 0 0
+fn=_dbus_list_get_first_link
+0 140 4 3 140 0 0 0 0 0
+fn=_dbus_list_get_last
+0 24 4 3 16 0 0 0 0 0
+fn=_dbus_list_get_last_link
+0 125 4 3 75 0 0 0 0 0
+fn=_dbus_list_get_length
+0 11 2 2 3 0 0 0 0 0
+fn=_dbus_list_pop_first_link
+0 684 4 3 153 0 0 160 0 0
+fn=_dbus_list_pop_last
+0 272 4 4 68 0 0 68 0 0
+fn=_dbus_list_prepend
+0 776 3 2 153 2 1 243 0 0
+fn=_dbus_list_prepend_link
+0 138 6 4 42 0 0 58 0 0
+fn=_dbus_list_remove
+0 59 0 0 14 3 2 4 0 0
+fn=_dbus_list_remove_link
+0 162 4 3 27 0 0 54 0 0
+fn=_dbus_list_unlink
+0 294 8 6 94 0 0 120 0 0
+fn=_dbus_marshal_read_uint32
+0 892 5 3 234 0 0 56 0 0
+fn=_dbus_marshal_set_uint32
+0 308 4 3 66 0 0 88 0 0
+fn=_dbus_mem_pool_alloc
+0 1381 12 9 516 13 9 252 0 0
+fn=_dbus_mem_pool_dealloc
+0 441 3 2 189 0 0 126 0 0
+fn=_dbus_mem_pool_free
+0 36 1 1 8 2 2 6 0 0
+fn=_dbus_mem_pool_new
+0 54 2 2 8 0 0 14 0 0
+fn=_dbus_message_get_unix_fds
+0 20 0 0 12 0 0 8 0 0
+fn=_dbus_message_iter_get_args_valist
+0 160 14 14 48 0 0 44 0 0
+fn=_dbus_message_loader_get_buffer
+0 20 2 2 10 1 1 5 0 0
+fn=_dbus_message_loader_get_is_corrupted
+0 12 2 1 8 0 0 0 0 0
+fn=_dbus_message_loader_get_unix_fds
+0 98 3 3 42 0 0 20 0 0
+fn=_dbus_message_loader_new
+0 33 3 3 5 0 0 13 0 0
+fn=_dbus_message_loader_queue_messages
+0 549 26 26 162 0 0 139 0 0
+fn=_dbus_message_loader_return_buffer
+0 10 1 1 10 0 0 0 0 0
+fn=_dbus_message_loader_return_unix_fds
+0 20 2 2 12 0 0 0 0 0
+fn=_dbus_message_loader_unref
+0 25 2 2 6 1 1 6 0 0
+fn=_dbus_pending_call_new_unlocked
+0 92 6 6 12 0 0 26 0 0
+fn=_dbus_pending_call_ref_unlocked
+0 36 2 2 12 0 0 12 0 0
+fn=_dbus_pending_call_unref_and_unlock
+0 56 2 2 16 0 0 16 0 0
+fn=_dbus_poll
+0 40 1 1 0 0 0 0 0 0
+fn=_dbus_read
+0 84 2 2 16 0 0 20 0 0
+fn=_dbus_read_socket
+0 2 1 1 0 0 0 0 0 0
+fn=_dbus_register_shutdown_func
+0 54 4 2 10 0 0 20 0 0
+fn=_dbus_rmutex_lock
+0 300 6 3 0 0 0 0 0 0
+fn=_dbus_rmutex_unlock
+0 300 4 3 0 0 0 0 0 0
+fn=_dbus_strdup
+0 100 3 2 15 0 0 25 0 0
+fn=_dbus_string_append
+0 315 2 2 63 0 0 63 0 0
+fn=_dbus_string_append_byte
+0 1332 1 1 444 0 0 296 0 0
+fn=_dbus_string_append_uint
+0 52 3 3 10 0 0 7 0 0
+fn=_dbus_string_compact
+0 105 1 0 42 0 0 21 0 0
+fn=_dbus_string_copy
+0 18 1 1 3 0 0 0 0 0
+fn=_dbus_string_copy_data
+0 24 2 2 6 0 0 5 0 0
+fn=_dbus_string_copy_len
+0 69 4 3 0 0 0 0 0 0
+fn=_dbus_string_delete
+0 77 1 1 0 0 0 0 0 0
+fn=_dbus_string_equal_c_str
+0 485 3 2 154 5 4 0 0 0
+fn=_dbus_string_equal_substring
+0 323 2 2 94 1 0 0 0 0
+fn=_dbus_string_find
+0 228 2 1 57 0 0 0 0 0
+fn=_dbus_string_find_blank
+0 161 2 2 22 0 0 2 0 0
+fn=_dbus_string_find_to
+0 2610 5 4 520 2 2 248 0 0
+fn=_dbus_string_free
+0 624 3 3 195 5 3 78 0 0
+fn=_dbus_string_hex_decode
+0 713 8 8 128 2 2 30 0 0
+fn=_dbus_string_hex_encode
+0 80 4 4 16 0 0 14 0 0
+fn=_dbus_string_init
+0 48 0 0 0 0 0 0 0 0
+fn=_dbus_string_init_const
+0 364 8 6 52 0 0 78 0 0
+fn=_dbus_string_init_const_len
+0 999 0 0 222 0 0 444 0 0
+fn=_dbus_string_insert_byte
+0 2261 4 3 595 0 0 595 1 0
+fn=_dbus_string_insert_bytes
+0 658 7 5 139 0 0 102 0 0
+fn=_dbus_string_lengthen
+0 679 1 1 97 0 0 0 0 0
+fn=_dbus_string_move
+0 24 1 1 4 0 0 0 0 0
+fn=_dbus_string_replace_len
+0 38 3 3 9 0 0 8 0 0
+fn=_dbus_string_set_length
+0 31 5 2 0 0 0 0 0 0
+fn=_dbus_string_shorten
+0 324 0 0 81 0 0 0 0 0
+fn=_dbus_string_skip_blank
+0 32 2 2 7 0 0 2 0 0
+fn=_dbus_string_validate_nul
+0 87 4 4 18 0 0 0 0 0
+fn=_dbus_string_validate_utf8
+0 4688 8 4 600 0 0 0 0 0
+fn=_dbus_timeout_new
+0 50 4 4 12 0 0 20 0 0
+fn=_dbus_timeout_unref
+0 32 2 2 10 0 0 4 0 0
+fn=_dbus_type_reader_get_current_type
+0 11715 6 6 5594 18 9 1074 0 0
+fn=_dbus_type_reader_get_element_type
+0 24 0 0 12 0 0 0 0 0
+fn=_dbus_type_reader_get_signature
+0 253 1 1 110 0 0 66 0 0
+fn=_dbus_type_reader_init
+0 405 10 6 30 0 0 210 0 0
+fn=_dbus_type_reader_init_types_only
+0 520 2 2 40 0 0 280 0 0
+fn=_dbus_type_reader_next
+0 6372 6 6 1416 0 0 1416 0 0
+fn=_dbus_type_reader_read_basic
+0 1232 3 3 385 0 0 231 1 0
+fn=_dbus_type_reader_recurse
+0 7083 12 12 1912 3 2 1434 5 0
+fn=_dbus_type_reader_set_basic
+0 63 5 5 14 0 0 14 0 0
+fn=_dbus_type_writer_init
+0 1067 8 6 194 0 0 679 0 0
+fn=_dbus_type_writer_init_values_only
+0 90 4 3 45 0 0 30 0 0
+fn=_dbus_type_writer_recurse
+0 2034 8 6 495 0 0 373 0 0
+fn=_dbus_type_writer_unrecurse
+0 2160 12 9 578 1 0 279 0 0
+fn=_dbus_type_writer_write_basic
+0 2984 13 9 769 0 0 448 0 0
+fn=_dbus_validate_body_with_reason
+0 306 8 8 84 0 0 63 0 0
+fn=_dbus_validate_bus_name
+0 130 7 5 20 0 0 0 0 0
+fn=_dbus_validate_error_name
+0 2 0 0 0 0 0 0 0 0
+fn=_dbus_validate_interface
+0 2375 16 12 233 0 0 0 0 0
+fn=_dbus_validate_member
+0 687 10 7 83 0 0 0 0 0
+fn=_dbus_validate_path
+0 1714 17 12 165 0 0 0 0 0
+fn=_dbus_validate_signature_with_reason
+0 1530 17 16 272 4 4 238 2 0
+fn=_dbus_watch_invalidate
+0 6 1 1 2 0 0 4 0 0
+fn=_dbus_watch_list_add_watch
+0 40 2 2 10 0 0 10 0 0
+fn=_dbus_watch_list_free
+0 17 1 1 2 1 1 4 0 0
+fn=_dbus_watch_list_new
+0 2 1 1 0 0 0 0 0 0
+fn=_dbus_watch_list_remove_watch
+0 28 2 2 6 0 0 6 0 0
+fn=_dbus_watch_list_set_functions
+0 37 4 4 11 0 0 13 0 0
+fn=_dbus_watch_new
+0 72 3 3 16 0 0 28 0 0
+fn=_dbus_watch_ref
+0 6 1 0 4 0 0 0 0 0
+fn=_dbus_watch_unref
+0 52 2 2 12 2 2 8 0 0
+fn=_dbus_write_socket
+0 78 3 3 18 0 0 15 0 0
+fn=_dl_add_to_namespace_list
+0 9697 16 4 2510 505 0 551 3 1
+fn=_dl_add_to_slotinfo
+0 120 8 4 48 21 0 30 7 1
+fn=_dl_addr
+0 962706 39 11 202355 19022 1730 306 21 0
+fn=_dl_allocate_static_tls
+0 18 1 1 6 0 0 4 0 0
+fn=_dl_allocate_tls
+0 14 2 2 0 0 0 2 0 0
+fn=_dl_allocate_tls_init
+0 537 21 14 176 28 4 70 0 0
+fn=_dl_allocate_tls_storage
+0 316 3 3 5 0 0 293 36 36
+fn=_dl_cache_libcmp
+0 66177 26 8 10240 662 205 0 0 0
+fn=_dl_catch_error
+0 77353 52 8 20298 369 2 37433 693 6
+fn=_dl_check_all_versions
+0 299 3 3 45 13 0 24 0 0
+fn=_dl_check_caller
+0 4563 70 7 2052 467 2 135 7 0
+fn=_dl_check_map_versions
+0 40133 190 30 11682 658 186 4989 149 91
+fn=_dl_close
+0 361 9 4 123 34 3 71 1 0
+fn=_dl_close_worker
+0 114810 148 94 32156 5177 405 7922 706 65
+fn=_dl_count_modids
+0 4 1 1 3 0 0 0 0 0
+fn=_dl_debug_initialize
+0 1305 33 6 487 113 1 4 0 0
+fn=_dl_debug_state
+0 64 0 0 64 0 0 0 0 0
+fn=_dl_determine_tlsoffset
+0 104 6 6 19 1 0 11 0 0
+fn=_dl_discover_osversion
+0 80 4 4 14 1 1 7 1 1
+fn=_dl_find_dso_for_object
+0 78270 482 3 32505 6120 0 0 0 0
+fn=_dl_fini
+0 2670 16 12 943 460 227 260 50 0
+fn=_dl_fixup
+0 40579 253 16 14842 3619 824 3480 91 3
+fn=_dl_get_tls_static_info
+0 5 0 0 3 1 0 2 1 1
+fn=_dl_higher_prime_number
+0 152 1 1 14 2 1 0 0 0
+fn=_dl_important_hwcaps
+0 268 18 18 53 0 0 45 2 2
+fn=_dl_init
+0 2809 32 4 909 76 0 203 1 0
+fn=_dl_init_paths
+0 94 9 9 15 0 0 28 2 2
+fn=_dl_initial_error_catch_tsd
+0 104 0 0 52 0 0 0 0 0
+fn=_dl_load_cache_lookup
+0 22217 97 28 4562 723 164 2905 89 0
+fn=_dl_lookup_symbol_x
+0 2992098 597 31 577623 29092 3740 293864 622 23
+fn=_dl_map_object
+0 224403 272 44 54334 19247 93 19893 296 4
+fn=_dl_map_object_deps
+0 128327 313 43 27278 2800 107 8058 317 11
+fn=_dl_map_object_from_fd
+0 74866 341 107 20476 5020 488 6867 228 151
+fn=_dl_mcount_wrapper_check
+0 1852 464 4 1389 68 0 0 0 0
+fn=_dl_name_match_p
+0 789573 61 4 204554 20908 51 117132 118 4
+fn=_dl_new_object
+0 14159 177 30 2737 77 20 2475 177 114
+fn=_dl_next_ld_env_entry
+0 165 2 2 59 13 13 2 0 0
+fn=_dl_next_tls_modid
+0 48 10 4 18 0 0 6 0 0
+fn=_dl_open
+0 1674 92 5 432 53 0 567 17 0
+fn=_dl_protect_relro
+0 1302 13 4 372 9 0 124 0 0
+fn=_dl_receive_error
+0 28 2 2 10 2 0 12 1 0
+fn=_dl_relocate_object
+0 2929758 444 72 709036 84879 66409 257033 40224 35120
+fn=_dl_runtime_resolve_avx
+0 24900 219 18 8964 219 0 8466 256 26
+fn=_dl_scope_free
+0 1189 12 6 323 30 2 218 10 2
+fn=_dl_setup_hash
+0 1583 15 5 484 76 63 411 0 0
+fn=_dl_signal_cerror
+0 15751 6 2 1658 829 0 4145 0 0
+fn=_dl_signal_error
+0 52227 12 4 9948 854 0 16580 70 0
+fn=_dl_sort_fini
+0 287335 32 18 69430 2172 10 3769 31 0
+fn=_dl_start
+0 611 18 18 133 24 22 51 18 17
+fn=_dl_sym
+0 4155 0 0 0 0 0 0 0 0
+fn=_dl_sysdep_read_whole_file
+0 820 22 6 120 19 0 180 28 0
+fn=_dl_sysdep_start
+0 481 23 23 109 17 15 53 6 6
+fn=_dl_sysdep_start_cleanup
+0 1 1 1 1 0 0 0 0 0
+fn=_dl_try_allocate_static_tls
+0 62 4 3 22 2 0 4 0 0
+fn=_dl_unload_cache
+0 240 14 1 76 28 0 40 4 0
+fn=_dl_unmap
+0 300 6 4 140 14 1 80 0 0
+fn=_dl_update_slotinfo
+0 2390 22 13 661 53 15 58 0 0
+fn=_dl_vdso_vsym
+0 156 12 4 78 41 0 0 0 0
+fn=_dl_vsym
+0 2573 3 3 324 2 2 125 0 0
+fn=_fxstat
+0 14350 55 4 1435 0 0 0 0 0
+fn=_glapi_get_current
+0 5760 2749 3 0 0 0 0 0 0
+fn=_init
+0 100 6 6 17 5 0 18 3 2
+fn=_int_free
+0 8615733 87363 44 2204880 56547 1724 983259 4710 1051
+fn=_int_malloc
+0 16309329 197196 72 2332411 154471 731 2462711 102857 9365
+fn=_int_realloc
+0 452052 18144 19 89176 3755 4 64183 594 290
+fn=_itoa_word
+0 136282 8632 7 12361 2905 2 6460 10 0
+fn=_lxstat
+0 30468 2 1 3066 0 0 32 0 0
+fn=_mid_memalign
+0 39 6 3 15 0 0 9 0 0
+fn=_nv000glcore
+0 104 11 2 78 15 0 0 0 0
+fn=_nv001glcore
+0 264 7 2 198 44 3 0 0 0
+fn=_nv002glcore
+0 56 0 0 42 0 0 0 0 0
+fn=_nv007tls
+0 51 6 6 15 6 2 3 0 0
+fn=_nv008tls
+0 10 1 1 2 2 0 1 0 0
+fn=_nv010tls
+0 3 1 0 3 0 0 0 0 0
+fn=_nv011tls
+0 25 2 2 8 3 0 9 2 0
+fn=_nv012tls
+0 40 3 3 15 4 2 9 0 0
+fn=_nv014glcore
+0 764 13 2 573 91 0 0 0 0
+fn=_nv014tls
+0 10 1 1 5 3 0 2 0 0
+fn=_nv016glcore
+0 22727 3 3 5667 728 205 1858 3 3
+fn=_nv017tls
+0 23 2 1 15 3 1 0 0 0
+fn=_nv018tls
+0 6 0 0 4 1 0 2 1 0
+fn=_nv022tls
+0 2 1 1 2 1 1 0 0 0
+fn=_nv023glcore
+0 34 4 2 0 0 0 0 0 0
+fn=_pthread_cleanup_pop
+0 45 0 0 18 1 0 9 2 0
+fn=_pthread_cleanup_pop_restore
+0 10712 188 5 4017 0 0 1339 0 0
+fn=_pthread_cleanup_push
+0 54 14 6 18 5 0 36 0 0
+fn=_pthread_cleanup_push_defer
+0 18746 161 3 4017 674 0 6695 1 0
+fn=_setjmp
+0 12 3 2 0 0 0 0 0 0
+fn=_start
+0 11 1 1 1 0 0 3 0 0
+fn=_wordcopy_bwd_aligned
+0 92 6 4 20 4 0 12 0 0
+fn=_wordcopy_bwd_dest_aligned
+0 3963 10 5 634 0 0 452 0 0
+fn=_wordcopy_fwd_aligned
+0 2927 84 17 934 5 0 782 0 0
+fn=_wordcopy_fwd_dest_aligned
+0 1711 16 12 216 0 0 156 0 0
+fn=_xstat
+0 1707 6 3 177 0 0 15 0 0
+fn=access
+0 1671 8 4 335 1 0 9 1 0
+fn=add_alias2.isra.1.part.2
+0 32292 2 2 5382 7 0 8073 0 0
+fn=add_module.isra.0
+0 224119 12 12 60297 578 0 36714 0 0
+fn=add_to_global
+0 436 12 7 147 17 0 34 1 0
+fn=af_shaper_buf_create
+0 3 2 1 0 0 0 0 0 0
+fn=af_shaper_buf_destroy
+0 6 0 0 0 0 0 0 0 0
+fn=af_shaper_get_cluster
+0 3425 16 6 946 62 0 720 3 0
+fn=af_shaper_get_coverage
+0 5018 9 9 1172 281 5 1657 56 0
+fn=af_shaper_get_elem
+0 2068 52 2 584 0 0 449 0 0
+fn=allocate_dtv
+0 57 6 4 12 1 0 15 1 1
+fn=arena_get2.part.4
+0 97 14 14 28 4 0 15 1 1
+fn=arena_thread_freeres
+0 34 4 3 13 2 1 5 0 0
+fn=asprintf
+0 7038 1230 3 414 0 0 3726 0 0
+fn=atan
+0 8 2 2 3 1 0 0 0 0
+fn=basename
+0 3100 296 1 620 0 0 620 0 0
+fn=bcmp
+0 8014 107 11 1394 238 13 0 0 0
+fn=bind
+0 5 1 1 1 0 0 0 0 0
+fn=bind_textdomain_codeset
+0 13 1 1 3 0 0 2 0 0
+fn=bindtextdomain
+0 26 2 2 6 2 2 4 0 0
+fn=brk
+0 908 58 2 158 0 0 87 1 1
+fn=cache_rpath.part.6
+0 342 10 3 88 1 0 40 0 0
+fn=call_dl_lookup
+0 936 4 1 624 29 0 260 1 0
+fn=call_init.part.0
+0 3720 30 4 1312 407 0 570 0 0
+fn=calloc
+0 3297955 42349 22 734998 43825 0 234103 2975 23
+fn=canonicalize_file_name
+0 632 141 1 0 0 0 0 0 0
+fn=ceil
+0 10 2 2 6 2 1 0 0 0
+fn=ceilf
+0 5 2 2 3 0 0 0 0 0
+fn=check_match
+0 509606 758 18 160412 12217 1484 58593 3407 23
+fn=clock_getres
+0 8 3 2 3 1 1 0 0 0
+fn=clock_gettime
+0 60681 5504 6 17853 2780 1 10707 1 0
+fn=clone
+0 54 5 4 8 1 0 6 2 2
+fn=close
+0 706 11 2 221 1 0 0 0 0
+fn=closedir
+0 312 7 1 78 0 0 52 0 0
+fn=connect
+0 12 6 2 6 0 0 0 0 0
+fn=cos
+0 24 6 4 9 3 0 0 0 0
+fn=cosf
+0 1376 10 5 384 10 5 0 0 0
+fn=create_thread
+0 96 10 10 22 3 0 16 1 0
+fn=dbus_address_entries_free
+0 19 2 1 4 0 0 3 0 0
+fn=dbus_address_entry_get_method
+0 4 1 1 4 0 0 0 0 0
+fn=dbus_address_entry_get_value
+0 159 2 2 51 0 0 35 0 0
+fn=dbus_bus_get_private
+0 3 1 1 0 0 0 0 0 0
+fn=dbus_bus_register
+0 88 9 8 11 0 0 18 0 0
+fn=dbus_connection_allocate_data_slot
+0 6 1 1 0 0 0 0 0 0
+fn=dbus_connection_close
+0 21 3 3 5 0 0 3 0 0
+fn=dbus_connection_flush
+0 26 4 4 6 0 0 6 0 0
+fn=dbus_connection_free_data_slot
+0 12 1 1 2 1 1 0 0 0
+fn=dbus_connection_get_data
+0 46 3 2 10 0 0 10 0 0
+fn=dbus_connection_open_private
+0 20 2 2 2 0 0 3 0 0
+fn=dbus_connection_send
+0 48 6 6 12 4 2 10 0 0
+fn=dbus_connection_send_with_reply
+0 217 16 16 29 1 1 50 0 0
+fn=dbus_connection_send_with_reply_and_block
+0 132 12 10 29 3 2 27 0 0
+fn=dbus_connection_set_data
+0 50 4 4 13 0 0 9 0 0
+fn=dbus_connection_set_dispatch_status_function
+0 33 3 3 11 0 0 11 0 0
+fn=dbus_connection_set_exit_on_disconnect
+0 44 2 2 8 0 0 8 0 0
+fn=dbus_connection_set_unix_user_function
+0 40 3 3 12 0 0 10 0 0
+fn=dbus_connection_set_wakeup_main_function
+0 33 3 3 11 0 0 11 0 0
+fn=dbus_connection_set_windows_user_function
+0 40 3 3 12 0 0 10 0 0
+fn=dbus_connection_unref
+0 213 13 9 52 0 0 27 0 0
+fn=dbus_error_free
+0 9 1 1 2 1 0 1 0 0
+fn=dbus_error_init
+0 12 2 1 4 0 0 4 2 0
+fn=dbus_error_is_set
+0 54 2 1 18 1 0 0 0 0
+fn=dbus_free
+0 564 3 2 67 0 0 0 0 0
+fn=dbus_free_string_array
+0 3 1 1 1 0 0 0 0 0
+fn=dbus_malloc
+0 252 7 3 0 0 0 0 0 0
+fn=dbus_malloc0
+0 128 1 1 0 0 0 0 0 0
+fn=dbus_message_append_args
+0 50 8 8 8 0 0 20 0 0
+fn=dbus_message_append_args_valist
+0 159 12 12 41 0 0 32 0 0
+fn=dbus_message_get_args
+0 86 10 10 14 0 0 25 0 0
+fn=dbus_message_get_args_valist
+0 74 6 6 18 0 0 17 0 0
+fn=dbus_message_get_reply_serial
+0 144 4 4 40 0 0 16 0 0
+fn=dbus_message_get_sender
+0 36 4 4 10 0 0 6 0 0
+fn=dbus_message_get_serial
+0 32 4 3 0 0 0 0 0 0
+fn=dbus_message_get_type
+0 12 2 2 0 0 0 0 0 0
+fn=dbus_message_iter_append_basic
+0 352 21 21 59 0 0 59 0 0
+fn=dbus_message_iter_get_arg_type
+0 30 4 4 4 0 0 4 0 0
+fn=dbus_message_iter_init
+0 138 12 12 28 0 0 30 0 0
+fn=dbus_message_iter_init_append
+0 140 11 9 24 0 0 36 0 0
+fn=dbus_message_lock
+0 52 4 3 28 0 0 8 0 0
+fn=dbus_message_new_error
+0 148 10 10 22 0 0 34 0 0
+fn=dbus_message_new_method_call
+0 276 16 12 32 0 0 52 0 0
+fn=dbus_message_new_signal
+0 61 5 5 7 0 0 12 0 0
+fn=dbus_message_ref
+0 102 8 6 30 0 0 12 0 0
+fn=dbus_message_set_no_reply
+0 33 2 2 3 0 0 0 0 0
+fn=dbus_message_set_reply_serial
+0 46 6 6 8 0 0 6 0 0
+fn=dbus_message_set_serial
+0 36 4 3 4 0 0 0 0 0
+fn=dbus_message_unref
+0 766 26 19 169 5 4 115 0 0
+fn=dbus_parse_address
+0 279 15 15 53 0 0 54 0 0
+fn=dbus_pending_call_allocate_data_slot
+0 10 2 2 0 0 0 0 0 0
+fn=dbus_pending_call_block
+0 6 2 2 0 0 0 0 0 0
+fn=dbus_pending_call_free_data_slot
+0 22 4 4 2 0 0 0 0 0
+fn=dbus_pending_call_get_completed
+0 36 4 4 12 0 0 8 0 0
+fn=dbus_pending_call_ref
+0 16 2 2 4 0 0 4 0 0
+fn=dbus_pending_call_steal_reply
+0 44 4 4 16 0 0 10 0 0
+fn=dbus_pending_call_unref
+0 56 2 2 10 0 0 12 0 0
+fn=dbus_realloc
+0 129 3 3 0 0 0 0 0 0
+fn=dbus_set_error_from_message
+0 102 6 6 24 0 0 20 0 0
+fn=dbus_shutdown
+0 36 2 2 15 0 0 11 0 0
+fn=dbus_threads_init
+0 285 4 4 66 0 0 85 3 1
+fn=dbus_threads_init_default
+0 18 1 1 0 0 0 0 0 0
+fn=dbus_timeout_get_interval
+0 4 2 2 4 0 0 0 0 0
+fn=dbus_timeout_set_data
+0 30 2 0 10 1 0 10 0 0
+fn=dbus_type_is_basic
+0 210 7 6 30 0 0 30 0 0
+fn=dbus_type_is_container
+0 306 1 1 42 0 0 42 0 0
+fn=dbus_type_is_fixed
+0 72 4 4 8 0 0 8 0 0
+fn=dbus_type_is_valid
+0 380 3 3 38 0 0 0 0 0
+fn=dbus_watch_get_enabled
+0 20 2 2 8 0 0 0 0 0
+fn=dbus_watch_set_data
+0 34 1 1 10 0 0 10 0 0
+fn=dcgettext
+0 2080 3 1 0 0 0 0 0 0
+fn=decompose_rpath
+0 412 4 4 60 2 0 26 0 0
+fn=derivation_compare
+0 48 2 1 18 3 0 9 2 1
+fn=detect_conflict
+0 83480 2 2 19550 3714 1 9775 0 0
+fn=dirname
+0 40 4 2 8 0 0 6 0 0
+fn=dl_main
+0 1735 74 72 415 135 20 160 21 16
+fn=dl_open_worker
+0 20776 373 41 6136 1023 8 1462 98 0
+fn=dladdr1
+0 153 2 1 17 15 0 0 0 0
+fn=dlclose
+0 325 12 3 50 13 1 25 0 0
+fn=dlerror
+0 25350 24 11 7208 58 0 4639 0 0
+fn=dlopen
+0 432 48 2 108 14 0 108 1 0
+fn=dlsym
+0 34625 26 2 12465 337 0 11080 6 0
+fn=dlvsym
+0 650 3 2 225 6 0 225 0 0
+fn=do_fcntl
+0 378 10 3 42 0 0 0 0 0
+fn=do_futex_wait
+0 35 5 5 7 1 1 6 1 1
+fn=do_futex_wait.constprop.1
+0 27 2 2 5 0 0 5 0 0
+fn=do_lookup_x
+0 8966590 1259 75 3323886 464385 4282 1041124 1898 28
+fn=do_preload
+0 28 3 3 7 0 0 8 0 0
+fn=do_sym
+0 64940 93 10 12521 185 0 17180 17 0
+fn=elision_init
+0 15 2 2 5 2 0 2 1 1
+fn=exit
+0 4 2 2 0 0 0 1 0 0
+fn=expand_dynamic_string_token
+0 72 2 2 18 0 0 21 1 0
+fn=fclose@@GLIBC_2.2.5
+0 42965 663 21 16810 1092 5 5605 0 0
+fn=fcntl
+0 714 11 3 126 3 0 252 5 0
+fn=feof
+0 1292 4 4 494 2 0 76 0 0
+fn=ferror
+0 20060 12 3 7670 0 0 1180 0 0
+fn=fgets
+0 502062 26 12 156894 0 0 70599 3 0
+fn=fileno
+0 3600 21 4 1800 1 1 0 0 0
+fn=fillin_rpath
+0 232 12 12 49 6 1 64 0 0
+fn=find_derivation
+0 373950 48 29 94518 26801 1 47430 275 102
+fn=floor
+0 10 2 2 6 2 0 0 0 0
+fn=floorf
+0 5 2 2 3 0 0 0 0 0
+fn=fnmatch@@GLIBC_2.2.5
+0 11154 2 2 4290 14 0 3146 2 0
+fn=fopen@@GLIBC_2.2.5
+0 1276 537 1 0 0 0 0 0 0
+fn=fread
+0 88572 1217 5 30476 153 0 11228 0 0
+fn=free
+0 1800318 9886 5 434340 35516 2782 4 0 0
+fn=fscanf
+0 1003 8 3 59 0 0 531 0 0
+fn=fseek
+0 1025 52 4 400 48 0 100 1 0
+fn=fseeko
+0 26732 107 4 10432 155 0 2608 11 0
+fn=ft_glyphslot_free_bitmap
+0 752 10 5 348 57 3 116 5 0
+fn=ft_mem_alloc
+0 2112 28 2 594 0 0 462 2 0
+fn=ft_mem_free
+0 645 4 2 215 12 1 0 0 0
+fn=ft_mem_qalloc
+0 1705 69 1 465 33 0 465 10 0
+fn=ft_mem_qrealloc
+0 1517 12 4 216 1 0 174 11 0
+fn=ft_mem_realloc
+0 1366 23 3 361 0 0 328 12 0
+fn=ft_module_get_service
+0 274 2 2 67 28 8 18 0 0
+fn=ft_service_list_lookup
+0 1342 9 3 228 41 20 168 0 0
+fn=ft_validator_init
+0 15 0 0 3 0 0 12 1 0
+fn=ftello
+0 28036 70 5 10432 0 0 2608 0 0
+fn=ftruncate
+0 15 3 1 3 0 0 0 0 0
+fn=g_get_application_name
+0 10 1 1 2 0 0 3 0 0
+fn=g_get_current_time
+0 21 2 2 7 0 0 5 0 0
+fn=g_get_prgname
+0 9 1 1 3 0 0 3 0 0
+fn=g_hash_table_new
+0 3 1 1 0 0 0 0 0 0
+fn=g_hash_table_new_full
+0 40 3 3 7 1 0 22 1 1
+fn=g_malloc
+0 18 1 1 4 0 0 4 0 0
+fn=g_malloc0
+0 33 2 2 6 0 0 6 0 0
+fn=g_malloc0_n
+0 9 3 3 0 0 0 0 0 0
+fn=g_mutex_lock
+0 15 2 2 9 2 2 0 0 0
+fn=g_mutex_unlock
+0 15 2 2 9 0 0 0 0 0
+fn=g_private_get
+0 19 2 2 6 3 0 3 0 0
+fn=g_private_set
+0 15 1 1 5 1 0 3 0 0
+fn=g_slice_alloc
+0 61 8 8 12 2 1 15 1 0
+fn=g_unichar_get_script
+0 270 90 2 90 23 2 0 0 0
+fn=g_unichar_type
+0 630 10 2 135 7 3 0 0 0
+fn=g_unicode_script_to_iso15924
+0 405 12 1 90 24 2 0 0 0
+fn=get_free_list
+0 7 2 1 4 1 0 0 0 0
+fn=getc
+0 795233 4 4 397606 1689 63 83708 0 0
+fn=getdelim
+0 158997 1122 11 42460 0 0 24085 0 0
+fn=getegid
+0 18 0 0 6 0 0 0 0 0
+fn=getenv
+0 645468 11100 9 221352 51098 17 26371 14 1
+fn=geteuid
+0 21 2 1 7 0 0 0 0 0
+fn=getgid
+0 24 0 0 8 0 0 0 0 0
+fn=gethostname
+0 140 11 6 24 0 0 32 1 0
+fn=getpagesize
+0 2315 328 2 1389 696 1 0 0 0
+fn=getpeername
+0 15 0 0 3 0 0 0 0 0
+fn=getpid
+0 28885 5513 4 11554 2751 1 0 0 0
+fn=getresgid
+0 5 1 1 1 0 0 0 0 0
+fn=getresuid
+0 5 1 1 1 0 0 0 0 0
+fn=getrlimit
+0 5 1 1 1 0 0 0 0 0
+fn=getsockname
+0 30 4 2 6 0 0 0 0 0
+fn=getsockopt
+0 6 1 1 1 0 0 0 0 0
+fn=gettimeofday
+0 540 10 6 45 8 0 45 0 0
+fn=getuid
+0 33 4 1 11 0 0 0 0 0
+fn=glXChooseVisual
+0 33668 128 63 7508 292 0 3714 11 0
+fn=glXCreateContext
+0 128 13 5 26 5 0 36 0 0
+fn=glXDestroyContext
+0 68 8 8 12 2 0 16 0 0
+fn=glXGetConfig
+0 903488 34 17 155818 9851 1 13416 122 0
+fn=glXGetProcAddress
+0 170310 189 34 43569 787 58 26914 69 4
+fn=glXGetProcAddressARB
+0 1110 17 3 222 9 0 222 0 0
+fn=glXMakeCurrent
+0 32 8 4 0 0 0 0 0 0
+fn=glXQueryDrawable
+0 468 10 9 92 10 0 108 4 0
+fn=glXQueryExtension
+0 78 10 8 20 3 1 16 2 0
+fn=glXQueryExtensionsString
+0 94 13 6 24 9 0 16 0 0
+fn=glXSwapBuffers
+0 147798 16422 6 32844 5474 0 38318 0 0
+fn=glXSwapIntervalEXT
+0 192 19 11 50 7 0 28 0 0
+fn=gnu_get_libc_version
+0 6 2 1 3 0 0 0 0 0
+fn=gpg_err_init
+0 1 1 1 0 0 0 0 0 0
+fn=hack_digit
+0 358 6 6 132 0 0 58 1 0
+fn=handle_intel
+0 98 5 5 14 0 0 26 0 0
+fn=hb_blob_destroy
+0 35 2 2 14 2 1 0 0 0
+fn=hb_blob_get_data
+0 24 1 1 12 1 1 0 0 0
+fn=hb_blob_get_empty
+0 8 1 1 4 0 0 0 0 0
+fn=hb_blob_get_length
+0 14 0 0 14 3 1 0 0 0
+fn=hb_blob_make_immutable
+0 9 1 1 6 0 0 0 0 0
+fn=hb_blob_reference
+0 18 1 1 6 1 1 0 0 0
+fn=hb_buffer_add_utf8
+0 2565 20 10 495 1 0 405 0 0
+fn=hb_buffer_clear_contents
+0 45 45 1 0 0 0 0 0 0
+fn=hb_buffer_create
+0 120 4 2 8 0 0 56 0 0
+fn=hb_buffer_destroy
+0 172 9 6 52 8 5 52 0 0
+fn=hb_buffer_get_glyph_infos
+0 270 0 0 135 2 0 45 0 0
+fn=hb_buffer_get_glyph_positions
+0 1170 3 1 450 0 0 180 0 0
+fn=hb_buffer_get_length
+0 90 4 1 90 0 0 0 0 0
+fn=hb_buffer_guess_segment_properties
+0 45 0 0 0 0 0 0 0 0
+fn=hb_face_create_for_tables
+0 45 3 3 5 0 0 20 0 0
+fn=hb_face_destroy
+0 80 5 5 22 4 4 15 0 0
+fn=hb_face_get_upem
+0 4 1 1 2 1 0 0 0 0
+fn=hb_face_make_immutable
+0 12 1 1 6 2 0 3 2 0
+fn=hb_face_reference
+0 7 1 1 4 0 0 0 0 0
+fn=hb_face_set_index
+0 5 1 1 2 0 0 1 0 0
+fn=hb_face_set_upem
+0 5 1 1 2 0 0 1 0 0
+fn=hb_font_create
+0 47 3 3 3 0 0 23 4 0
+fn=hb_font_destroy
+0 63 5 5 19 6 5 14 0 0
+fn=hb_font_funcs_create
+0 55 4 4 16 3 3 26 0 0
+fn=hb_font_funcs_destroy
+0 88 8 8 29 6 6 10 0 0
+fn=hb_font_funcs_get_empty
+0 2 1 1 1 0 0 0 0 0
+fn=hb_font_funcs_make_immutable
+0 4 1 1 2 1 0 1 1 0
+fn=hb_font_funcs_reference
+0 7 1 1 4 0 0 0 0 0
+fn=hb_font_funcs_set_font_h_extents_func
+0 26 2 2 7 1 0 7 0 0
+fn=hb_font_funcs_set_glyph_contour_point_func
+0 26 2 2 7 2 0 7 0 0
+fn=hb_font_funcs_set_glyph_extents_func
+0 26 3 3 7 2 0 7 1 0
+fn=hb_font_funcs_set_glyph_from_name_func
+0 26 2 2 7 1 0 7 0 0
+fn=hb_font_funcs_set_glyph_h_advance_func
+0 26 3 3 7 1 0 7 1 0
+fn=hb_font_funcs_set_glyph_h_kerning_func
+0 26 3 3 7 1 0 7 0 0
+fn=hb_font_funcs_set_glyph_name_func
+0 26 3 3 7 1 0 7 1 0
+fn=hb_font_funcs_set_glyph_v_advance_func
+0 26 2 2 7 1 0 7 0 0
+fn=hb_font_funcs_set_glyph_v_origin_func
+0 26 2 2 7 1 0 7 0 0
+fn=hb_font_funcs_set_nominal_glyph_func
+0 26 3 3 7 1 0 7 0 0
+fn=hb_font_funcs_set_variation_glyph_func
+0 26 2 2 7 1 0 7 0 0
+fn=hb_font_get_empty
+0 92 1 1 46 0 0 0 0 0
+fn=hb_font_get_face
+0 112 0 0 112 56 0 0 0 0
+fn=hb_font_set_funcs
+0 30 3 3 8 2 0 9 0 0
+fn=hb_font_set_scale
+0 276 8 1 92 3 0 92 0 0
+fn=hb_ft_face_create
+0 23 2 2 8 3 0 6 0 0
+fn=hb_ft_font_create
+0 31 3 3 8 3 0 8 0 0
+fn=hb_glib_get_unicode_funcs
+0 8 1 1 4 0 0 0 0 0
+fn=hb_glib_script_to_script
+0 45 0 0 0 0 0 0 0 0
+fn=hb_language_from_string
+0 24 3 3 7 1 0 3 0 0
+fn=hb_language_get_default
+0 369 2 2 137 45 1 47 0 0
+fn=hb_language_to_string
+0 4 0 0 2 0 0 0 0 0
+fn=hb_ot_layout_collect_lookups
+0 2346 6 4 635 0 0 479 0 0
+fn=hb_ot_layout_feature_get_lookups
+0 244 10 5 64 1 0 24 0 0
+fn=hb_ot_layout_has_glyph_classes
+0 720 1 1 270 0 0 90 0 0
+fn=hb_ot_layout_has_positioning
+0 1080 50 2 360 43 0 180 0 0
+fn=hb_ot_layout_language_find_feature
+0 2112 6 3 512 0 0 512 0 0
+fn=hb_ot_layout_language_get_required_feature
+0 188 9 5 40 2 1 36 0 0
+fn=hb_ot_layout_script_find_language
+0 140 7 5 32 0 0 28 0 0
+fn=hb_ot_layout_table_choose_script
+0 360 13 7 64 2 0 48 1 0
+fn=hb_ot_layout_table_find_script
+0 2646 3 3 252 0 0 567 0 0
+fn=hb_ot_layout_table_get_lookup_count
+0 24 4 1 12 2 0 0 0 0
+fn=hb_ot_tag_from_language
+0 328 12 8 24 0 0 42 0 0
+fn=hb_ot_tags_from_script
+0 1290 12 8 58 0 0 136 0 0
+fn=hb_script_get_horizontal_direction
+0 1350 5 5 90 0 0 0 0 0
+fn=hb_segment_properties_equal
+0 650 49 1 390 43 0 0 0 0
+fn=hb_set_create
+0 237888 2 2 672 0 0 232512 0 0
+fn=hb_set_destroy
+0 7616 3 3 2016 220 0 2240 0 0
+fn=hb_set_is_empty
+0 639236 1 1 106548 6708 0 0 0 0
+fn=hb_shape
+0 90 1 1 0 0 0 0 0 0
+fn=hb_shape_full
+0 1440 1 1 315 1 0 405 0 0
+fn=hb_shape_plan_create
+0 244 22 13 39 5 1 67 0 0
+fn=hb_shape_plan_create_cached
+0 3720 15 12 1041 13 0 1269 0 0
+fn=hb_shape_plan_destroy
+0 415 4 4 206 7 4 24 0 0
+fn=hb_shape_plan_execute
+0 2393 11 6 541 7 0 316 0 0
+fn=hb_shape_plan_reference
+0 315 1 1 180 1 0 0 0 0
+fn=hb_unicode_funcs_destroy
+0 32 2 2 12 4 2 0 0 0
+fn=hb_unicode_funcs_get_default
+0 4 1 1 0 0 0 0 0 0
+fn=iconv
+0 196 12 3 68 4 1 28 0 0
+fn=iconv_close
+0 44 4 1 4 0 0 4 0 0
+fn=iconv_open
+0 256 20 5 44 2 0 44 0 0
+fn=index
+0 15552 85 12 2058 306 87 0 0 0
+fn=init_cacheinfo
+0 159 8 8 11 0 0 15 2 2
+fn=init_tls
+0 170 5 5 47 26 3 14 1 1
+fn=insert_module
+0 619083 3 3 173544 38040 1 85105 0 0
+fn=intel_check_word
+0 902 9 9 86 6 6 16 0 0
+fn=internal_fnmatch
+0 20286 49 9 4736 15 1 4862 8 0
+fn=ioctl
+0 2305 30 1 461 0 0 0 0 0
+fn=isalnum
+0 14 2 1 8 4 0 0 0 0
+fn=kill
+0 40 1 1 8 0 0 0 0 0
+fn=lockf
+0 94 7 7 8 0 0 32 0 0
+fn=log
+0 120 5 1 0 0 0 0 0 0
+fn=lseek
+0 5300 38 1 1060 0 0 0 0 0
+fn=madvise
+0 10 2 1 2 0 0 0 0 0
+fn=malloc
+0 3027989 37203 7 883072 9823 108 189233 247 4
+fn=malloc_consolidate
+0 2703247 29362 30 851947 79583 1500 400093 6182 29
+fn=malloc_hook_ini
+0 11 2 2 3 1 1 3 0 0
+fn=malloc_init_state
+0 1296 5 5 4 0 0 513 65 64
+fn=map_doit
+0 14 1 1 5 0 0 3 0 0
+fn=match_symbol
+0 33169 38 10 12735 571 78 3051 8 0
+fn=maybe_split_for_insert.isra.0
+0 126139 5 5 45815 5217 0 2583 0 0
+fn=mbrtowc
+0 35152 9 9 7813 546 0 7696 0 0
+fn=mbtowc
+0 5460 2 2 1365 0 0 910 0 0
+fn=memalign
+0 2 0 0 1 0 0 0 0 0
+fn=memalign_hook_ini
+0 9 1 1 3 1 0 1 0 0
+fn=memchr
+0 371910 67 15 39612 1599 210 0 0 0
+fn=memcpy
+0 78071 134 6 12914 23 3 10786 213 71
+fn=memcpy@@GLIBC_2.14
+0 429 22 4 195 49 0 0 0 0
+fn=memcpy@GLIBC_2.2.5
+0 576 44 3 128 40 0 0 0 0
+fn=memmove
+0 22982 54 11 3979 0 0 3668 2 0
+fn=mempcpy
+0 26 3 2 12 3 0 0 0 0
+fn=memset
+0 24208 116 12 1185 48 0 7286 807 697
+fn=mkdir
+0 18 4 2 4 1 0 2 0 0
+fn=mkstemp
+0 8 2 1 0 0 0 0 0 0
+fn=mmap
+0 8286 92 9 1836 65 0 1512 64 10
+fn=mprotect
+0 745 12 4 149 0 0 0 0 0
+fn=mremap
+0 918 1 1 153 0 0 0 0 0
+fn=mremap_chunk
+0 8874 4 4 2142 1 0 918 0 0
+fn=msort_with_tmp.part.0
+0 10332 19 9 2848 0 0 1669 8 0
+fn=munmap
+0 465 13 3 93 0 0 0 0 0
+fn=munmap_chunk
+0 21 2 2 8 1 0 0 0 0
+fn=nanosleep
+0 5474 2737 1 2737 2736 0 0 0 0
+fn=new_heap
+0 52 6 6 7 1 0 9 1 1
+fn=nl_langinfo
+0 3 1 1 2 2 0 0 0 0
+fn=nl_langinfo_l
+0 16 1 1 4 3 0 0 0 0
+fn=open
+0 2131 169 3 888 30 0 13 0 0
+fn=open_path
+0 1823 15 15 575 46 0 312 35 0
+fn=open_verify.constprop.7
+0 13803 93 29 3084 349 5 1513 55 3
+fn=openaux
+0 7718 6 1 3632 113 0 1362 63 0
+fn=opendir
+0 247 4 2 28 1 1 1 0 0
+fn=opendir_tail
+0 654 6 3 105 2 0 104 1 0
+fn=pa_ascii_valid
+0 33676 8 2 8419 1 1 0 0 0
+fn=pa_atou
+0 702 6 5 169 2 0 130 0 0
+fn=pa_aupdate_new
+0 16 1 1 2 0 0 7 0 0
+fn=pa_aupdate_write_begin
+0 26 2 2 8 1 1 6 0 0
+fn=pa_aupdate_write_end
+0 18 2 2 6 0 0 2 0 0
+fn=pa_aupdate_write_swap
+0 36 2 2 8 0 0 4 0 0
+fn=pa_bytes_snprint
+0 67 5 5 10 1 1 12 0 0
+fn=pa_client_conf_free
+0 25 3 3 10 1 1 10 0 0
+fn=pa_client_conf_from_x11
+0 97 12 9 11 3 0 21 1 0
+fn=pa_client_conf_load
+0 155 18 18 14 4 0 72 0 0
+fn=pa_client_conf_load_cookie
+0 77 5 5 42 5 0 37 1 0
+fn=pa_client_conf_new
+0 14 2 1 2 0 0 6 0 0
+fn=pa_close
+0 224 3 2 48 0 0 48 0 0
+fn=pa_close_pipe
+0 48 1 1 12 1 0 11 0 0
+fn=pa_config_parse
+0 2013 22 22 275 4 0 739 46 0
+fn=pa_config_parse_bool
+0 18 1 1 6 0 0 5 0 0
+fn=pa_context_connect
+0 71 7 7 13 6 0 12 0 0
+fn=pa_context_disconnect
+0 19 2 2 3 1 1 2 0 0
+fn=pa_context_get_sink_info_list
+0 5 1 1 0 0 0 0 0 0
+fn=pa_context_get_source_info_list
+0 5 1 1 0 0 0 0 0 0
+fn=pa_context_get_state
+0 140 5 2 42 8 0 0 0 0
+fn=pa_context_new
+0 2 1 1 0 0 0 0 0 0
+fn=pa_context_new_with_proplist
+0 90 10 10 12 3 0 44 2 0
+fn=pa_context_ref
+0 198 6 1 72 1 0 0 0 0
+fn=pa_context_set_subscribe_callback
+0 15 1 1 3 2 0 2 0 0
+fn=pa_context_subscribe
+0 52 4 4 14 2 0 11 0 0
+fn=pa_context_unref
+0 247 10 4 75 2 0 0 0 0
+fn=pa_detect_fork
+0 57 4 4 16 5 1 11 0 0
+fn=pa_fdsem_after_poll
+0 54 5 2 21 2 0 6 0 0
+fn=pa_fdsem_before_poll
+0 80 6 2 36 0 0 8 0 0
+fn=pa_fdsem_free
+0 26 2 2 4 1 1 6 0 0
+fn=pa_fdsem_open_shm
+0 46 2 2 8 0 0 18 0 0
+fn=pa_fdsem_post
+0 138 11 4 48 2 0 24 0 0
+fn=pa_flist_free
+0 18 2 2 4 0 0 4 0 0
+fn=pa_flist_new
+0 2 1 1 0 0 0 0 0 0
+fn=pa_flist_new_with_name
+0 22416 13 5 54 2 0 3189 0 0
+fn=pa_flist_pop
+0 5496 8 6 1034 29 0 1034 0 0
+fn=pa_flist_push
+0 6800 10 4 816 0 0 1360 2 0
+fn=pa_fopen_cloexec
+0 161 4 2 32 0 0 56 0 0
+fn=pa_format_info_free
+0 72 1 1 16 0 0 16 0 0
+fn=pa_format_info_new
+0 80 1 1 16 0 0 40 0 0
+fn=pa_get_binary_name
+0 70 6 3 14 0 0 16 0 0
+fn=pa_get_binary_name_malloc
+0 23 3 3 3 0 0 5 0 0
+fn=pa_get_home_dir
+0 34 2 2 5 0 0 7 0 0
+fn=pa_get_home_dir_malloc
+0 23 2 2 3 0 0 5 0 0
+fn=pa_get_host_name
+0 18 2 2 3 0 0 4 0 0
+fn=pa_get_host_name_malloc
+0 31 3 3 5 0 0 8 0 0
+fn=pa_get_library_version
+0 2 1 1 1 0 0 0 0 0
+fn=pa_get_user_name
+0 23 3 3 3 0 0 5 0 0
+fn=pa_get_user_name_malloc
+0 23 2 2 3 0 0 5 0 0
+fn=pa_hashmap_first
+0 14 2 2 5 3 2 0 0 0
+fn=pa_hashmap_free
+0 168 2 2 21 0 0 42 0 0
+fn=pa_hashmap_get
+0 8142 10 3 997 3 0 988 0 0
+fn=pa_hashmap_iterate
+0 178 4 4 35 1 0 9 0 0
+fn=pa_hashmap_new
+0 12 2 1 0 0 0 0 0 0
+fn=pa_hashmap_new_full
+0 596 6 2 109 1 0 252 0 0
+fn=pa_hashmap_put
+0 15766 8 5 2712 3 0 4141 33 0
+fn=pa_hashmap_remove
+0 72 3 3 10 1 1 10 1 0
+fn=pa_hashmap_remove_all
+0 2961 8 4 756 24 5 490 0 0
+fn=pa_hashmap_size
+0 12 2 2 6 0 0 0 0 0
+fn=pa_idxset_string_compare_func
+0 69 2 1 0 0 0 0 0 0
+fn=pa_idxset_string_hash_func
+0 92184 3 2 12270 44 8 0 0 0
+fn=pa_idxset_trivial_compare_func
+0 12 0 0 2 0 0 0 0 0
+fn=pa_idxset_trivial_hash_func
+0 16 2 1 8 0 0 0 0 0
+fn=pa_init_i18n
+0 35 4 3 3 0 0 6 0 0
+fn=pa_init_proplist
+0 409 20 20 38 8 0 70 0 0
+fn=pa_iochannel_creds_enable
+0 23 2 2 5 0 0 3 0 0
+fn=pa_iochannel_creds_supported
+0 25 3 3 7 0 0 3 0 0
+fn=pa_iochannel_free
+0 19 2 2 5 0 0 3 0 0
+fn=pa_iochannel_is_hungup
+0 66 2 1 22 0 0 0 0 0
+fn=pa_iochannel_is_readable
+0 166 2 1 38 7 0 0 0 0
+fn=pa_iochannel_is_writable
+0 268 4 1 46 1 0 0 0 0
+fn=pa_iochannel_new
+0 39 2 2 7 0 0 10 0 0
+fn=pa_iochannel_read_with_ancil_data
+0 855 20 12 175 0 0 227 0 0
+fn=pa_iochannel_set_callback
+0 5 1 1 1 0 0 2 0 0
+fn=pa_iochannel_socket_set_rcvbuf
+0 4 1 1 1 0 0 0 0 0
+fn=pa_iochannel_socket_set_sndbuf
+0 4 1 1 1 0 0 0 0 0
+fn=pa_iochannel_write
+0 96 3 2 20 1 0 16 0 0
+fn=pa_iochannel_write_with_creds
+0 67 5 5 12 0 0 28 2 0
+fn=pa_is_path_absolute
+0 5 1 1 2 0 0 0 0 0
+fn=pa_log_level_meta
+0 140 11 3 28 1 0 49 3 0
+fn=pa_log_levelv_meta
+0 322 9 4 119 4 0 98 9 1
+fn=pa_log_set_ident
+0 11 1 1 3 0 0 4 0 0
+fn=pa_loop_read
+0 49 3 3 9 0 0 8 0 0
+fn=pa_machine_id
+0 86 8 4 16 1 0 28 1 0
+fn=pa_mainloop_dispatch
+0 2054 41 16 572 24 0 240 2 0
+fn=pa_mainloop_free
+0 19 2 2 2 0 0 6 0 0
+fn=pa_mainloop_get_api
+0 4 1 1 1 0 0 0 0 0
+fn=pa_mainloop_iterate
+0 634 5 4 84 2 0 126 0 0
+fn=pa_mainloop_new
+0 46 5 5 5 0 0 22 0 0
+fn=pa_mainloop_poll
+0 795 18 10 238 4 1 132 3 1
+fn=pa_mainloop_prepare
+0 1974 44 13 516 1 0 281 1 0
+fn=pa_mainloop_quit
+0 5 1 1 1 1 1 1 0 0
+fn=pa_mainloop_run
+0 32 2 2 3 1 1 5 0 0
+fn=pa_mainloop_wakeup
+0 741 7 6 195 5 0 117 0 0
+fn=pa_make_fd_cloexec
+0 142 7 2 18 0 0 20 0 0
+fn=pa_make_fd_nonblock
+0 8 2 1 0 0 0 0 0 0
+fn=pa_make_socket_low_delay
+0 19 3 3 4 0 0 3 0 0
+fn=pa_memblock_acquire
+0 12 2 2 5 0 0 0 0 0
+fn=pa_memblock_get_length
+0 10 1 1 3 0 0 0 0 0
+fn=pa_memblock_is_ours
+0 11 1 1 3 0 0 0 0 0
+fn=pa_memblock_is_read_only
+0 12 1 1 3 0 0 0 0 0
+fn=pa_memblock_ref
+0 22 1 1 8 0 0 0 0 0
+fn=pa_memblock_release
+0 19 2 2 5 1 1 0 0 0
+fn=pa_memblock_unref
+0 129 9 9 49 1 1 12 0 0
+fn=pa_memchunk_reset
+0 84 6 2 12 0 0 36 0 0
+fn=pa_memexport_free
+0 41 4 4 15 0 0 11 0 0
+fn=pa_memexport_new
+0 48 5 5 11 3 0 19 1 0
+fn=pa_memimport_free
+0 80 8 8 28 7 4 22 0 0
+fn=pa_memimport_get
+0 126 9 9 35 1 0 40 0 0
+fn=pa_memimport_new
+0 47 3 3 8 1 0 19 0 0
+fn=pa_mempool_block_size_max
+0 15 1 1 6 0 0 0 0 0
+fn=pa_mempool_free
+0 30 3 3 9 0 0 7 0 0
+fn=pa_mempool_is_shared
+0 6 1 1 2 0 0 0 0 0
+fn=pa_mempool_new
+0 92 6 6 15 2 0 29 3 0
+fn=pa_memtrap_add
+0 71 5 5 10 0 0 24 0 0
+fn=pa_memtrap_remove
+0 33 2 2 5 0 0 11 0 0
+fn=pa_mutex_free
+0 30 1 1 3 0 0 6 0 0
+fn=pa_mutex_lock
+0 200 4 2 25 0 0 25 0 0
+fn=pa_mutex_new
+0 599 18 5 112 0 0 119 2 1
+fn=pa_mutex_unlock
+0 200 12 4 25 0 0 25 0 0
+fn=pa_once_begin
+0 8435 7 3 2231 49 3 1132 6 0
+fn=pa_once_end
+0 165 4 2 11 0 0 22 0 0
+fn=pa_open_cloexec
+0 23 2 2 5 0 0 6 1 0
+fn=pa_open_config_file
+0 87 10 9 8 0 0 20 0 0
+fn=pa_operation_get_state
+0 60 2 2 18 0 0 0 0 0
+fn=pa_operation_ref
+0 99 0 0 36 0 0 0 0 0
+fn=pa_operation_unref
+0 204 11 2 69 3 0 18 0 0
+fn=pa_packet_data
+0 252 15 1 72 3 0 18 0 0
+fn=pa_packet_new
+0 336 8 4 48 0 0 102 4 0
+fn=pa_packet_new_data
+0 126 4 2 30 0 0 30 0 0
+fn=pa_packet_ref
+0 66 4 1 24 0 0 0 0 0
+fn=pa_packet_unref
+0 384 12 3 118 5 0 46 0 0
+fn=pa_parse_address
+0 67 6 6 10 0 0 19 1 0
+fn=pa_parse_boolean
+0 57 6 6 4 0 0 10 0 0
+fn=pa_parsehex
+0 4631 3 3 773 0 0 772 4 0
+fn=pa_path_get_filename
+0 24 2 1 4 0 0 4 0 0
+fn=pa_pdispatch_creds
+0 15 2 2 4 0 0 0 0 0
+fn=pa_pdispatch_fds
+0 17 2 2 4 0 0 1 0 0
+fn=pa_pdispatch_new
+0 30 2 2 5 0 0 11 0 0
+fn=pa_pdispatch_ref
+0 121 3 1 44 0 0 0 0 0
+fn=pa_pdispatch_register_reply
+0 365 15 7 91 6 0 111 8 0
+fn=pa_pdispatch_run
+0 451 30 7 85 11 0 90 0 0
+fn=pa_pdispatch_unref
+0 172 3 3 60 1 1 12 0 0
+fn=pa_pipe_cloexec
+0 17 2 2 5 0 0 5 0 0
+fn=pa_proplist_contains
+0 300 2 2 36 0 0 48 0 0
+fn=pa_proplist_free
+0 51 1 1 0 0 0 0 0 0
+fn=pa_proplist_get
+0 296 3 3 56 1 0 64 0 0
+fn=pa_proplist_gets
+0 38 3 3 6 0 0 6 0 0
+fn=pa_proplist_iterate
+0 73 1 1 17 1 0 9 0 0
+fn=pa_proplist_key_valid
+0 4610 4 2 1383 0 0 922 0 0
+fn=pa_proplist_new
+0 85 3 1 34 2 0 0 0 0
+fn=pa_proplist_set
+0 12312 370 5 1728 0 0 3456 0 0
+fn=pa_proplist_sets
+0 416 10 5 48 1 0 120 0 0
+fn=pa_pstream_enable_shm
+0 20 2 2 5 0 0 4 0 0
+fn=pa_pstream_new
+0 58 4 4 9 0 0 21 0 0
+fn=pa_pstream_ref
+0 253 7 1 92 0 0 0 0 0
+fn=pa_pstream_send_packet
+0 291 6 6 71 16 0 70 5 0
+fn=pa_pstream_send_tagstruct_with_creds
+0 87 3 2 25 0 0 15 0 0
+fn=pa_pstream_set_die_callback
+0 11 2 2 2 0 0 2 0 0
+fn=pa_pstream_set_receive_memblock_callback
+0 11 2 2 2 0 0 2 0 0
+fn=pa_pstream_set_receive_packet_callback
+0 11 2 2 2 0 0 2 0 0
+fn=pa_pstream_set_srbchannel
+0 36 4 4 8 0 0 4 0 0
+fn=pa_pstream_unlink
+0 52 4 4 15 5 3 16 2 1
+fn=pa_pstream_unref
+0 359 11 5 126 3 3 26 0 0
+fn=pa_queue_free
+0 23 2 2 5 0 0 3 0 0
+fn=pa_queue_new
+0 8 2 2 1 0 0 4 0 0
+fn=pa_queue_pop
+0 552 11 5 180 3 0 114 0 0
+fn=pa_queue_push
+0 183 19 3 42 2 0 49 5 0
+fn=pa_random
+0 16 2 2 3 0 0 3 0 0
+fn=pa_read
+0 571 2 2 132 0 0 132 1 0
+fn=pa_readlink
+0 56 3 2 10 0 0 14 1 0
+fn=pa_rtclock_get
+0 1056 25 3 288 14 0 192 1 0
+fn=pa_rtclock_now
+0 416 3 2 128 0 0 96 1 0
+fn=pa_run_once
+0 8688 2 2 1618 1 0 1634 1 0
+fn=pa_semaphore_free
+0 10 2 2 1 0 0 2 0 0
+fn=pa_semaphore_new
+0 36 4 2 6 0 0 8 0 0
+fn=pa_session_id
+0 8 1 1 1 0 0 1 0 0
+fn=pa_shm_attach
+0 3 1 0 0 0 0 0 0 0
+fn=pa_shm_cleanup
+0 608 6 5 318 3 1 66 1 0
+fn=pa_shm_create_rw
+0 105 9 8 14 1 0 23 0 0
+fn=pa_shm_free
+0 451 18 10 111 1 0 102 0 0
+fn=pa_snprintf
+0 548 12 8 76 0 0 187 1 0
+fn=pa_socket_address_is_local
+0 12 2 2 2 0 0 0 0 0
+fn=pa_socket_client_is_local
+0 10 1 1 3 0 0 0 0 0
+fn=pa_socket_client_new_sockaddr
+0 24 2 2 4 0 0 5 0 0
+fn=pa_socket_client_new_string
+0 52 4 4 14 0 0 12 0 0
+fn=pa_socket_client_new_unix
+0 47 3 3 6 0 0 21 0 0
+fn=pa_socket_client_ref
+0 11 1 1 4 0 0 0 0 0
+fn=pa_socket_client_set_callback
+0 11 1 1 2 0 0 2 0 0
+fn=pa_socket_client_unref
+0 44 3 3 14 2 0 3 0 0
+fn=pa_socket_cloexec
+0 22 2 1 5 0 0 6 0 0
+fn=pa_socket_set_rcvbuf
+0 20 3 3 4 0 0 3 0 0
+fn=pa_socket_set_sndbuf
+0 20 2 2 4 0 0 3 0 0
+fn=pa_split_spaces
+0 39 3 3 10 1 0 7 0 0
+fn=pa_sprintf_malloc
+0 495 13 6 72 0 0 153 3 0
+fn=pa_srbchannel_free
+0 31 3 3 11 4 3 7 0 0
+fn=pa_srbchannel_new_from_template
+0 84 6 6 28 1 1 37 0 0
+fn=pa_srbchannel_read
+0 705 4 4 210 4 0 102 1 0
+fn=pa_srbchannel_set_callback
+0 30 3 3 9 0 0 7 0 0
+fn=pa_srbchannel_write
+0 168 4 2 54 4 0 27 0 0
+fn=pa_startswith
+0 722 3 2 104 0 0 155 0 0
+fn=pa_static_mutex_get
+0 480 22 6 108 1 0 60 1 1
+fn=pa_strip
+0 138 3 3 22 0 0 22 0 0
+fn=pa_strip_nl
+0 346 2 2 70 0 0 4 0 0
+fn=pa_strlcpy
+0 135 5 3 20 0 0 30 0 0
+fn=pa_strlist_free
+0 3 1 1 1 0 0 0 0 0
+fn=pa_strlist_parse
+0 58 4 4 11 0 0 17 0 0
+fn=pa_strlist_pop
+0 20 1 1 4 0 0 5 0 0
+fn=pa_tagstruct_data
+0 60 1 1 18 0 0 6 0 0
+fn=pa_tagstruct_eof
+0 91 3 1 39 3 0 0 0 0
+fn=pa_tagstruct_free
+0 198 5 2 50 3 0 38 0 0
+fn=pa_tagstruct_get_arbitrary
+0 8424 4 4 2592 2 0 1080 0 0
+fn=pa_tagstruct_get_boolean
+0 168 2 2 40 0 0 16 0 0
+fn=pa_tagstruct_get_channel_map
+0 432 4 4 104 1 0 48 0 0
+fn=pa_tagstruct_get_cvolume
+0 392 3 3 64 0 0 32 0 0
+fn=pa_tagstruct_get_format_info
+0 296 3 3 96 0 0 56 0 0
+fn=pa_tagstruct_get_proplist
+0 7864 10 6 1304 0 0 1208 0 0
+fn=pa_tagstruct_get_sample_spec
+0 224 3 3 48 1 0 32 0 0
+fn=pa_tagstruct_get_usec
+0 240 2 2 64 0 0 16 0 0
+fn=pa_tagstruct_get_volume
+0 120 2 2 32 0 0 8 0 0
+fn=pa_tagstruct_gets
+0 34289 4 3 6671 75 0 837 0 0
+fn=pa_tagstruct_getu32
+0 4620 11 2 1232 7 0 308 0 0
+fn=pa_tagstruct_getu8
+0 352 6 2 96 0 0 32 0 0
+fn=pa_tagstruct_new
+0 102 7 2 12 0 0 44 4 0
+fn=pa_tagstruct_new_fixed
+0 150 8 2 24 0 0 54 11 0
+fn=pa_tagstruct_put_arbitrary
+0 306 4 2 72 0 0 63 0 0
+fn=pa_tagstruct_put_proplist
+0 235 6 6 38 1 0 52 0 0
+fn=pa_tagstruct_puts
+0 247 4 4 64 0 0 53 0 0
+fn=pa_tagstruct_putu32
+0 506 9 2 154 0 0 110 0 0
+fn=pa_timespec_store
+0 195 4 1 13 0 0 26 0 0
+fn=pa_timeval_load
+0 228 10 1 114 0 0 0 0 0
+fn=pa_timeval_rtstore
+0 156 14 3 48 0 0 30 0 0
+fn=pa_timeval_store
+0 84 6 2 6 0 0 12 1 0
+fn=pa_utf8_filter
+0 55 4 2 5 0 0 15 0 0
+fn=pa_utf8_to_locale
+0 3 1 1 0 0 0 0 0 0
+fn=pa_utf8_valid
+0 18 1 0 0 0 0 0 0 0
+fn=pa_vsnprintf
+0 513 11 4 57 0 0 76 0 0
+fn=pa_write
+0 1330 7 4 324 0 0 282 1 0
+fn=pa_x11_get_prop
+0 399 6 6 60 1 0 83 0 0
+fn=pa_xfree
+0 12753 3 2 3986 10 0 4770 0 0
+fn=pa_xmalloc
+0 8030 4 2 803 0 0 803 1 0
+fn=pa_xmalloc0
+0 816 8 2 68 0 0 68 3 0
+fn=pa_xmemdup
+0 4233 2 2 747 0 0 996 0 0
+fn=pa_xrealloc
+0 120 4 2 12 0 0 12 2 0
+fn=pa_xstrdup
+0 2232 1 0 248 0 0 496 0 0
+fn=pa_xstrndup
+0 23 2 2 3 0 0 6 0 0
+fn=pipe2
+0 5 1 1 1 0 0 0 0 0
+fn=poll
+0 880 183 2 440 7 0 0 0 0
+fn=posix_memalign
+0 26 2 2 3 0 0 3 0 0
+fn=pow
+0 3366 30 4 935 0 0 561 0 0
+fn=ppoll
+0 543 31 4 124 2 1 124 2 1
+fn=prctl
+0 12 4 4 2 0 0 0 0 0
+fn=pthread_attr_init@@GLIBC_2.2.5
+0 62 8 8 10 3 1 22 0 0
+fn=pthread_attr_setdetachstate
+0 28 4 4 10 0 0 0 0 0
+fn=pthread_cond_broadcast@@GLIBC_2.3.2
+0 12198 139 16 5778 257 6 0 0 0
+fn=pthread_cond_destroy@@GLIBC_2.3.2
+0 15624 176 11 6510 17 2 3038 0 0
+fn=pthread_cond_init@@GLIBC_2.3.2
+0 350 13 6 72 4 0 136 9 0
+fn=pthread_cond_signal@@GLIBC_2.3.2
+0 38160 1808 16 17172 347 6 0 0 0
+fn=pthread_condattr_destroy
+0 18 0 0 8 0 0 0 0 0
+fn=pthread_condattr_init
+0 20 3 2 8 1 0 2 0 0
+fn=pthread_condattr_setclock
+0 20 1 1 4 0 0 2 0 0
+fn=pthread_create@@GLIBC_2.2.5
+0 428 44 44 120 24 5 116 19 14
+fn=pthread_equal
+0 282945 2750 3 77935 2764 1 0 0 0
+fn=pthread_getspecific
+0 754907 16487 6 222023 31812 3 0 0 0
+fn=pthread_join
+0 128 10 5 28 4 3 24 1 0
+fn=pthread_key_create
+0 219 8 2 33 7 1 12 1 0
+fn=pthread_key_delete
+0 42 3 1 9 2 0 0 0 0
+fn=pthread_mutex_destroy
+0 4579 32 12 1707 155 20 298 0 0
+fn=pthread_mutex_init
+0 10691 74 5 1875 832 2 1884 23 18
+fn=pthread_mutex_lock
+0 1574738 32010 14 320485 37672 46 43839 0 0
+fn=pthread_mutex_unlock
+0 371387 11426 5 111699 381 0 0 0 0
+fn=pthread_mutexattr_destroy
+0 36 1 1 18 0 0 0 0 0
+fn=pthread_mutexattr_init
+0 192 7 1 64 0 0 64 0 0
+fn=pthread_mutexattr_setprotocol
+0 36 3 1 8 0 0 4 0 0
+fn=pthread_mutexattr_settype
+0 612 12 2 102 0 0 51 0 0
+fn=pthread_once
+0 10315 13 2 4123 9 3 0 0 0
+fn=pthread_rwlock_destroy
+0 12 2 1 6 0 0 0 0 0
+fn=pthread_rwlock_init
+0 124 4 2 12 3 3 40 0 0
+fn=pthread_rwlock_rdlock
+0 397221 19252 15 97564 9142 3 20907 0 0
+fn=pthread_rwlock_unlock
+0 267814 11007 8 84596 11 0 7057 0 0
+fn=pthread_rwlock_wrlock
+0 3018 47 11 1062 104 8 176 0 0
+fn=pthread_self
+0 393942 17242 2 370758 11587 0 0 0 0
+fn=pthread_setcanceltype
+0 78 10 10 16 1 0 6 0 0
+fn=pthread_setname_np
+0 52 6 6 10 0 0 10 1 1
+fn=pthread_setspecific
+0 337 22 9 70 7 1 67 15 2
+fn=pthread_sigmask
+0 36 4 4 4 0 0 0 0 0
+fn=ptmalloc_init.part.7
+0 205 7 7 66 25 1 15 3 1
+fn=qsort
+0 6 1 0 0 0 0 0 0 0
+fn=qsort_r
+0 1808 19 12 571 0 0 212 1 0
+fn=rawmemchr
+0 1496 13 4 180 21 19 0 0 0
+fn=read
+0 4921 71 1 2357 2 0 0 0 0
+fn=read_int
+0 120 4 2 50 0 0 10 0 0
+fn=readdir
+0 18380 475 4 7727 288 0 2770 1 0
+fn=readlink
+0 30 6 1 6 0 0 0 0 0
+fn=readlinkat
+0 4148 1 1 750 22 0 176 23 0
+fn=realloc
+0 641325 37225 10 130893 7713 2 60206 22 0
+fn=realloc_hook_ini
+0 8 1 1 3 2 0 2 0 0
+fn=realpath@@GLIBC_2.3
+0 303704 1482 13 44078 111 0 18062 43 0
+fn=recv
+0 5677 39 8 1261 1 0 1261 4 0
+fn=recvmsg
+0 10548 2757 2 5274 156 0 0 0 0
+fn=remove
+0 238 1 1 56 0 0 42 0 0
+fn=remove_slotinfo
+0 49 5 5 10 2 2 5 0 0
+fn=res_thread_freeres
+0 16 2 1 10 6 4 2 0 0
+fn=rindex
+0 67207 960 12 6170 612 1 0 0 0
+fn=rint
+0 5 2 2 3 0 0 0 0 0
+fn=rintf
+0 5 1 1 3 0 0 0 0 0
+fn=rmdir
+0 126 2 2 28 0 0 14 0 0
+fn=rtld_lock_default_lock_recursive
+0 282 1 1 282 4 1 0 0 0
+fn=rtld_lock_default_unlock_recursive
+0 282 2 1 282 0 0 0 0 0
+fn=sbrk
+0 2241 171 6 586 171 2 322 21 0
+fn=scandir
+0 15 1 1 3 0 0 4 0 0
+fn=sched_yield
+0 54765 2741 1 10953 0 0 0 0 0
+fn=select
+0 12532 2742 1 6266 0 0 0 0 0
+fn=sem_destroy@@GLIBC_2.2.5
+0 8 1 1 4 0 0 0 0 0
+fn=sem_init@@GLIBC_2.2.5
+0 55 3 3 5 0 0 10 0 0
+fn=sem_post@@GLIBC_2.2.5
+0 72 9 9 18 1 1 3 0 0
+fn=sem_timedwait
+0 10 3 3 3 3 1 2 0 0
+fn=sem_wait@@GLIBC_2.2.5
+0 15 2 2 1 0 0 2 0 0
+fn=send
+0 370 8 5 82 0 0 82 0 0
+fn=sendmsg
+0 12 4 2 6 0 0 0 0 0
+fn=set_binding_values.part.0
+0 249 23 23 60 8 2 47 0 0
+fn=setlocale
+0 22080 24 6 7360 12 1 5520 455 0
+fn=setpriority
+0 5 1 1 1 0 0 0 0 0
+fn=setsockopt
+0 36 2 1 6 0 0 0 0 0
+fn=shm_open
+0 1035 10 5 190 2 1 210 0 0
+fn=shm_unlink
+0 58 3 3 10 0 0 12 0 0
+fn=shutdown
+0 15 3 3 3 0 0 0 0 0
+fn=sigaction
+0 48 3 2 0 0 0 0 0 0
+fn=sigaddset
+0 200 2 2 40 0 0 0 0 0
+fn=sigemptyset
+0 56 2 2 2 0 0 34 2 1
+fn=sin
+0 24 5 2 9 3 0 0 0 0
+fn=snprintf
+0 28704 49 3 1794 0 0 14352 27 4
+fn=socket
+0 35 7 2 7 0 0 0 0 0
+fn=socketpair
+0 6 1 1 1 0 0 0 0 0
+fn=sprintf
+0 46631 8223 2 2743 0 0 24687 0 0
+fn=sscanf
+0 51 6 3 3 0 0 27 1 0
+fn=start_thread
+0 164 18 13 46 6 3 30 6 4
+fn=statfs
+0 23 3 2 5 1 0 2 1 0
+fn=stpcpy
+0 155285 16 5 13738 410 1 18302 0 0
+fn=strcasecmp
+0 40 10 2 24 13 0 0 0 0
+fn=strcat
+0 10 4 2 6 3 0 0 0 0
+fn=strchrnul
+0 343736 6256 7 34397 3069 24 0 0 0
+fn=strcmp
+0 2452254 1275 140 520488 22168 1224 0 0 0
+fn=strcpy
+0 75 7 1 45 16 0 0 0 0
+fn=strcspn
+0 30 10 4 15 5 0 0 0 0
+fn=strdup
+0 171020 256 4 20120 0 0 40240 27 0
+fn=strerror_thread_freeres
+0 6 0 0 4 0 0 0 0 0
+fn=strip
+0 564 8 2 92 27 4 52 0 0
+fn=strlen
+0 2064648 9846 16 516979 10652 507 0 0 0
+fn=strncasecmp
+0 25 6 4 15 5 0 0 0 0
+fn=strncat
+0 10 3 1 6 2 0 0 0 0
+fn=strncmp
+0 105 20 2 60 22 0 0 0 0
+fn=strncpy
+0 75 7 1 45 25 0 0 0 0
+fn=strndup
+0 3492 2 1 388 0 0 970 0 0
+fn=strnlen
+0 31915 14 8 5195 115 0 741 251 0
+fn=strpbrk
+0 6 2 2 3 0 0 0 0 0
+fn=strsep
+0 1453 6 6 238 2 1 3 0 0
+fn=strspn
+0 24 4 2 12 4 0 0 0 0
+fn=strstr
+0 66 8 2 33 19 0 0 0 0
+fn=strtok
+0 132170 4 4 49220 86 1 30307 275 0
+fn=strtol
+0 2272 336 1 1136 484 0 0 0 0
+fn=strtoul
+0 2784 288 1 1392 364 0 0 0 0
+fn=syscall
+0 368566 5650 2 67012 0 0 0 0 0
+fn=sysconf
+0 1872 51 19 268 18 4 200 2 0
+fn=sysmalloc
+0 8807 703 30 1818 308 1 1550 146 92
+fn=systrim.isra.1
+0 370 16 4 131 9 0 66 1 0
+fn=tfind
+0 81535 13 3 15891 2661 1 8442 0 0
+fn=time
+0 900 27 5 75 15 2 75 0 0
+fn=tls_get_addr_tail
+0 59 6 6 21 1 0 14 0 0
+fn=tsearch
+0 296850 7 7 72708 2723 0 39626 0 0
+fn=udev_device_get_devnode
+0 2992 416 0 560 26 0 472 0 0
+fn=udev_device_get_parent
+0 840 32 0 240 0 0 240 0 0
+fn=udev_device_get_parent_with_subsystem_devtype
+0 1980 192 0 472 0 0 442 0 0
+fn=udev_device_get_property_value
+0 4986 152 0 1274 29 0 1048 2 0
+fn=udev_device_get_subsystem
+0 2024 52 0 616 44 0 264 0 0
+fn=udev_device_get_sysattr_value
+0 3800 3 0 1274 89 0 610 15 0
+fn=udev_device_new_from_syspath
+0 2660 264 0 420 0 0 560 0 0
+fn=udev_device_unref
+0 4470 180 0 990 91 0 1360 0 0
+fn=udev_enumerate_add_match_subsystem
+0 28 4 0 4 0 0 0 0 0
+fn=udev_enumerate_get_list_entry
+0 3724 8 0 1008 22 0 572 0 0
+fn=udev_enumerate_new
+0 74 3 0 6 0 0 26 0 0
+fn=udev_enumerate_scan_devices
+0 124 15 0 28 5 0 22 0 0
+fn=udev_enumerate_unref
+0 38 3 0 10 5 0 8 0 0
+fn=udev_list_entry_get_name
+0 568 2 0 284 126 0 0 0 0
+fn=udev_list_entry_get_next
+0 5300 1 0 1538 204 2 0 0 0
+fn=udev_list_entry_get_value
+0 8 1 0 4 0 0 0 0 0
+fn=udev_monitor_enable_receiving
+0 36 4 0 8 0 0 8 0 0
+fn=udev_monitor_filter_add_match_subsystem_devtype
+0 24 1 0 2 0 0 2 0 0
+fn=udev_monitor_filter_update
+0 665 10 0 15 0 0 560 43 0
+fn=udev_monitor_get_fd
+0 12528 2737 0 6264 2737 0 0 0 0
+fn=udev_monitor_new_from_netlink
+0 59 4 0 14 1 1 15 0 0
+fn=udev_monitor_unref
+0 22 3 3 4 1 1 6 0 0
+fn=udev_new
+0 109 5 0 27 2 0 22 2 0
+fn=udev_unref
+0 12 2 2 2 1 1 2 0 0
+fn=uname
+0 40 8 3 8 0 0 0 0 0
+fn=ungetc
+0 16960 4 4 6784 0 0 1696 0 0
+fn=unlink
+0 141 4 2 31 1 0 14 0 0
+fn=update_get_addr
+0 14 1 1 5 1 0 2 0 0
+fn=vasprintf
+0 26496 422 5 5382 415 0 6624 2 0
+fn=version_check_doit
+0 10 1 1 4 1 0 2 0 0
+fn=vfprintf
+0 2462682 113510 134 731072 16299 55 551930 15139 23
+fn=vfscanf
+0 118 6 1 0 0 0 0 0 0
+fn=vsnprintf
+0 78936 26 4 14352 0 0 21528 85 17
+fn=vsprintf
+0 104234 8217 3 19201 0 0 27430 3 0
+fn=vsscanf
+0 132 10 3 20 0 0 36 0 0
+fn=where_is_shmfs
+0 28 3 3 8 0 0 9 1 0
+fn=write
+0 84 2 2 42 0 0 0 0 0
+fn=writev
+0 434 28 3 217 0 0 0 0 0
+fn=xcb_big_requests_enable
+0 34 4 2 8 0 0 12 0 0
+fn=xcb_big_requests_enable_reply
+0 2 2 1 0 0 0 0 0 0
+fn=xcb_connect
+0 9 3 2 0 0 0 0 0 0
+fn=xcb_connect_to_display_with_auth_info
+0 432 33 22 75 6 0 129 1 0
+fn=xcb_connect_to_fd
+0 447 31 24 48 6 0 123 10 0
+fn=xcb_connection_has_error
+0 8666 2743 2 8666 0 0 0 0 0
+fn=xcb_disconnect
+0 120 7 7 12 2 0 27 0 0
+fn=xcb_format_end
+0 35 1 1 5 0 0 0 0 0
+fn=xcb_generate_id
+0 368 20 6 112 6 0 72 0 0
+fn=xcb_get_extension_data
+0 142 4 3 34 0 0 34 0 0
+fn=xcb_get_file_descriptor
+0 10 1 1 6 0 0 0 0 0
+fn=xcb_get_maximum_request_length
+0 64 4 2 16 0 0 18 0 0
+fn=xcb_get_property
+0 120 3 3 25 0 0 60 0 0
+fn=xcb_get_property_reply
+0 5 1 1 0 0 0 0 0 0
+fn=xcb_get_property_value
+0 4 1 1 2 0 0 0 0 0
+fn=xcb_get_property_value_length
+0 10 0 0 6 0 0 0 0 0
+fn=xcb_get_setup
+0 35 1 1 21 1 0 0 0 0
+fn=xcb_intern_atom
+0 140 3 3 20 0 0 65 0 0
+fn=xcb_intern_atom_reply
+0 5 1 1 0 0 0 0 0 0
+fn=xcb_parse_display
+0 8 2 1 0 0 0 0 0 0
+fn=xcb_poll_for_event
+0 11538 2763 2 0 0 0 0 0 0
+fn=xcb_poll_for_reply
+0 161200 7739 9 32240 2575 0 32240 0 0
+fn=xcb_prefetch_maximum_request_length
+0 60 6 3 12 4 0 14 0 0
+fn=xcb_query_extension
+0 56 6 3 8 0 0 26 0 0
+fn=xcb_query_extension_reply
+0 2 2 1 0 0 0 0 0 0
+fn=xcb_send_request
+0 56 3 2 14 0 0 14 0 0
+fn=xcb_send_request64
+0 2728 45 30 712 10 3 375 4 0
+fn=xcb_setup_pixmap_formats_iterator
+0 75 1 1 15 0 0 10 0 0
+fn=xcb_setup_roots_iterator
+0 90 2 2 15 0 0 15 0 0
+fn=xcb_setup_vendor_end
+0 25 1 1 10 0 0 0 0 0
+fn=xcb_take_socket
+0 98 6 4 24 0 0 28 0 0
+fn=xcb_wait_for_event
+0 546 8 6 78 0 0 130 0 0
+fn=xcb_wait_for_reply
+0 16522 42 6 2968 29 0 3378 0 0
+fn=xcb_writev
+0 6000 56 3 1600 108 1 1600 12 1
+fn=xlocaledir
+0 216 3 3 54 0 0 54 5 1
+summary: 526447068 14812585 34382 132517592 8318816 213236 76037943 3395739 609473
