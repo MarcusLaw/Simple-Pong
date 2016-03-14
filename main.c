@@ -26,10 +26,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 // Declare Variables - Shit Needs Cleaned, Mang
 int quit;
-int screen = 0;
+int screen = 2;
 int leftScore;
 int rightScore;
-char ScoreBuffer[10];
+char scoreBuffer[10];
 int xBallDirection = 1;
 int yBallDirection = -1;
 const Uint8 *currentKeyState;
@@ -37,8 +37,11 @@ const Uint8 *currentKeyState;
 // Declare SDL Pointers
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
-SDL_Surface *ScoreSurface;
-SDL_Texture *ScoreTexture;
+TTF_Font *silkscreen = NULL;
+SDL_Surface *scoreSurface = NULL;
+SDL_Texture *scoreTexture = NULL;
+SDL_Surface *titleSurface = NULL;
+SDL_Texture *titleTexture = NULL;
 SDL_Event e;
 
 // Declare Rects
@@ -47,7 +50,8 @@ SDL_Rect divider;
 SDL_Rect ball;
 SDL_Rect leftPaddle;
 SDL_Rect rightPaddle;
-SDL_Rect ScoreRect;
+SDL_Rect scoreRect;
+SDL_Rect titleRect;
 
 void defineRects()
 {
@@ -56,6 +60,8 @@ void defineRects()
     startMessageRect.h = 24;
     startMessageRect.x = SCREEN_WIDTH - startMessageRect.w - 5; // SCREEN_WIDTH - messageWidth = keep on screen; -5 = margin
     startMessageRect.y = SCREEN_HEIGHT - startMessageRect.h; // SCREEN_HEIGHT - messageWidth = keep on screen
+    // Score Board
+    scoreRect.y = 25;
     // Divider
     divider.w = 1;
     divider.h = SCREEN_HEIGHT;
@@ -76,11 +82,6 @@ void defineRects()
     rightPaddle.h = 100;
     rightPaddle.x = SCREEN_WIDTH - rightPaddle.w - 5;
     rightPaddle.y = SCREEN_HEIGHT / 2 - rightPaddle.h / 2;
-    // Left Score
-    ScoreRect.w = 0; // All three of these are now zeroed as they're computed later.
-    ScoreRect.h = 0;
-    ScoreRect.x = 0;
-    ScoreRect.y = 32;
 }
 
 void getKeystates()
@@ -131,6 +132,12 @@ void clearScreen()
     SDL_RenderClear(renderer);
 }
 
+void renderStartMenu()
+{
+    SDL_RenderCopy(renderer, titleTexture, NULL, &titleRect);
+    SDL_RenderPresent(renderer);
+}
+
 void renderGame()
 {
     // Divider
@@ -147,9 +154,22 @@ void renderGame()
     SDL_RenderDrawRect(renderer, &ball);
     SDL_RenderFillRect(renderer, &ball);
     // Scoreboard
-    SDL_RenderCopy(renderer, ScoreTexture, NULL, &ScoreRect);
+    SDL_RenderCopy(renderer, scoreTexture, NULL, &scoreRect);
     // Draw
     SDL_RenderPresent(renderer);
+}
+
+void quitSDL()
+{
+    TTF_CloseFont(silkscreen);
+    SDL_DestroyTexture(scoreTexture);
+    SDL_FreeSurface(scoreSurface);
+    SDL_DestroyTexture(titleTexture);
+    SDL_FreeSurface(titleSurface);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    TTF_Quit();
+    SDL_Quit();
 }
 
 int main(int argc, char* argv[])
@@ -159,11 +179,19 @@ int main(int argc, char* argv[])
     TTF_Init();
     window = SDL_CreateWindow("Simple Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-    TTF_Font *font = TTF_OpenFont("fonts/slkscr.ttf", 16);
+    silkscreen = TTF_OpenFont("fonts/slkscr.ttf", 16);
     SDL_Color white = {255, 255, 255};
-    SDL_Surface *textSurface = TTF_RenderText_Solid(font, "Press Enter to Start", white);
+    SDL_Surface *textSurface = TTF_RenderText_Solid(silkscreen, "Press Enter to Start", white);
     SDL_Texture *startMessageTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
     SDL_FreeSurface(textSurface);
+
+    // Start Menu
+    titleSurface = TTF_RenderText_Solid(silkscreen, "Simple Pong", white);
+    titleTexture = SDL_CreateTextureFromSurface(renderer, titleSurface);
+    titleRect.w = 512;
+    titleRect.h = 128;
+    titleRect.x = SCREEN_WIDTH / 2 - titleRect.w / 2;
+    titleRect.y = 25;
 
     defineRects();
 
@@ -178,15 +206,15 @@ int main(int argc, char* argv[])
 		getKeystates();
         paddleMovement();
 
-		// Scoreboard
-        sprintf(ScoreBuffer, "%d   %d", leftScore, rightScore);
-		ScoreSurface = TTF_RenderText_Solid(font, ScoreBuffer, white); // Get score to surface.
-        ScoreTexture = SDL_CreateTextureFromSurface(renderer, ScoreSurface); // Make it a texture.
-        SDL_FreeSurface(ScoreSurface); // Don't need the surface anymore since it's now a texture.
-        SDL_QueryTexture(ScoreTexture,NULL,NULL,&ScoreRect.w,&ScoreRect.h); // ScoreRect now contains the width and height of our scoreboard.
-        ScoreRect.w *= 4; // Adjust font size manually here from texture size queried.
-        ScoreRect.h *=4; // Adjust font size manually here from texture size queried.
-        ScoreRect.x = SCREEN_WIDTH / 2  - ScoreRect.w / 2; // Put it at center, minus half current width.
+        // Query Scoreboard
+        sprintf(scoreBuffer, "%d   %d", leftScore, rightScore);
+        scoreSurface = TTF_RenderText_Solid(silkscreen, scoreBuffer, white); // Get score to surface.
+        scoreTexture = SDL_CreateTextureFromSurface(renderer, scoreSurface); // Make it a texture.
+        SDL_QueryTexture(scoreTexture, NULL, NULL, &scoreRect.w, &scoreRect.h); // scoreRect now contains the width and height of our scoreboard.
+        scoreRect.w *= 4; // Adjust font size manually here from texture size queried.
+        scoreRect.h *= 4; // Adjust font size manually here from texture size queried.
+        scoreRect.x = SCREEN_WIDTH / 2  - scoreRect.w / 2;
+        SDL_RenderDrawRect(renderer, &scoreRect);
 
 		switch(screen)
 		{
@@ -201,19 +229,16 @@ int main(int argc, char* argv[])
                 renderGame();
                 break;
             case 2: // Start Menu
+                clearScreen();
+                SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessageRect);
+                renderStartMenu();
                 break;
 		}
 
-		// Slow down the loop. Temporary until FPS limiter/ticks are introduced.
-        SDL_Delay(3);
+        SDL_Delay(2); // Slow down the loop. Temporary until FPS limiter/ticks are introduced.
     }
 
     // Quit SDL
-    TTF_CloseFont(font);
-    SDL_DestroyTexture(ScoreTexture);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    TTF_Quit();
-    SDL_Quit();
+    quitSDL();
     return 0;
 }
