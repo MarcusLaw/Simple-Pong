@@ -38,12 +38,13 @@ const Uint8 *currentKeyState;
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
 TTF_Font *silkscreen = NULL;
-SDL_Surface *scoreSurface = NULL;
-SDL_Texture *scoreTexture = NULL;
 SDL_Surface *titleSurface = NULL;
 SDL_Texture *titleTexture = NULL;
+SDL_Surface *scoreSurface = NULL;
+SDL_Texture *scoreTexture = NULL;
 SDL_Surface *startButtonSurface = NULL;
 SDL_Texture *startButtonTexture = NULL;
+SDL_Color white = {255, 255, 255};
 SDL_Event e;
 
 // Declare Rects
@@ -98,14 +99,6 @@ void getKeystates()
     if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 1; // Pause
 }
 
-void paddleMovement()
-{
-    if(leftPaddle.y < 0) leftPaddle.y++;
-    if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--;
-    if(rightPaddle.y < 0) rightPaddle.y++;
-    if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--;
-}
-
 void ballPhysics()
 {
     // Velocity
@@ -144,30 +137,38 @@ void renderStartMenu()
 
 void renderGame()
 {
-    // Divider
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-    SDL_RenderDrawRect(renderer, &divider);
+    // Query Scoreboard
+    sprintf(scoreBuffer, "%d   %d", leftScore, rightScore);
+    SDL_Surface *scoreSurface = TTF_RenderText_Solid(silkscreen, scoreBuffer, white); // Get score to surface.
+    scoreTexture = SDL_CreateTextureFromSurface(renderer, scoreSurface); // Make it a texture.
+    SDL_FreeSurface(scoreSurface);
+    SDL_QueryTexture(scoreTexture, NULL, NULL, &scoreRect.w, &scoreRect.h); // scoreRect now contains the width and height of our scoreboard.
+    scoreRect.w *= 4; // Adjust font size manually here from texture size queried.
+    scoreRect.h *= 4; // Adjust font size manually here from texture size queried.
+    scoreRect.x = SCREEN_WIDTH / 2  - scoreRect.w / 2;
+    // Paddle Leash
+    if(leftPaddle.y < 0) leftPaddle.y++; // If the left paddle goes above the screen, bring it back down.
+    if(leftPaddle.y + leftPaddle.h > SCREEN_HEIGHT) leftPaddle.y--; // If the left paddle goes under the screen, bring it back up.
+    if(rightPaddle.y < 0) rightPaddle.y++; // If the right paddle goes above the screen, bring it back down.
+    if(rightPaddle.y + leftPaddle.h > SCREEN_HEIGHT) rightPaddle.y--; // If the right paddle goes under the screen, bring it back up.
+    // Render Game
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // Background
+    SDL_RenderDrawRect(renderer, &divider); // Divider
     SDL_RenderFillRect(renderer, &divider);
-    // Left Paddle
-    SDL_RenderDrawRect(renderer, &leftPaddle);
+    SDL_RenderDrawRect(renderer, &leftPaddle); // Left Paddle
     SDL_RenderFillRect(renderer, &leftPaddle);
-    // Right Paddle
-    SDL_RenderDrawRect(renderer, &rightPaddle);
+    SDL_RenderDrawRect(renderer, &rightPaddle); // Right Paddle
     SDL_RenderFillRect(renderer, &rightPaddle);
-    // Ball
-    SDL_RenderDrawRect(renderer, &ball);
+    SDL_RenderDrawRect(renderer, &ball); // Ball
     SDL_RenderFillRect(renderer, &ball);
-    // Scoreboard
-    SDL_RenderCopy(renderer, scoreTexture, NULL, &scoreRect);
-    // Draw
-    SDL_RenderPresent(renderer);
+    SDL_RenderCopy(renderer, scoreTexture, NULL, &scoreRect); // Scoreboard
+    SDL_RenderPresent(renderer); // Draw
+    SDL_DestroyTexture(scoreTexture); // Free Scoreboard Texture
 }
 
 void quitSDL()
 {
     TTF_CloseFont(silkscreen);
-    SDL_DestroyTexture(scoreTexture);
-    SDL_FreeSurface(scoreSurface);
     SDL_DestroyTexture(titleTexture);
     SDL_FreeSurface(titleSurface);
     SDL_DestroyTexture(startButtonTexture);
@@ -185,12 +186,10 @@ int main(int argc, char* argv[])
     TTF_Init();
     window = SDL_CreateWindow("Simple Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-    silkscreen = TTF_OpenFont("fonts/slkscr.ttf", 16);
-    SDL_Color white = {255, 255, 255};
+    silkscreen = TTF_OpenFont("fonts/slkscr.ttf", 16); // Open Font
     SDL_Surface *textSurface = TTF_RenderText_Solid(silkscreen, "Press Enter to Start", white);
     SDL_Texture *startMessageTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
     SDL_FreeSurface(textSurface);
-
     // Start Menu
     titleSurface = TTF_RenderText_Solid(silkscreen, "Simple Pong", white);
     titleTexture = SDL_CreateTextureFromSurface(renderer, titleSurface);
@@ -198,7 +197,7 @@ int main(int argc, char* argv[])
     titleRect.h = 128;
     titleRect.x = SCREEN_WIDTH / 2 - titleRect.w / 2;
     titleRect.y = 25;
-        // Start Button
+    // Start Button
     startButtonSurface = TTF_RenderText_Solid(silkscreen, "Start", white);
     startButtonTexture = SDL_CreateTextureFromSurface(renderer, startButtonSurface);
     startButtonRect.w = 128;
@@ -217,22 +216,9 @@ int main(int argc, char* argv[])
 
         getKeystates();
 
-        /*
-        // Query Scoreboard
-        sprintf(scoreBuffer, "%d   %d", leftScore, rightScore);
-        scoreSurface = TTF_RenderText_Solid(silkscreen, scoreBuffer, white); // Get score to surface.
-        scoreTexture = SDL_CreateTextureFromSurface(renderer, scoreSurface); // Make it a texture.
-        SDL_QueryTexture(scoreTexture, NULL, NULL, &scoreRect.w, &scoreRect.h); // scoreRect now contains the width and height of our scoreboard.
-        scoreRect.w *= 4; // Adjust font size manually here from texture size queried.
-        scoreRect.h *= 4; // Adjust font size manually here from texture size queried.
-        scoreRect.x = SCREEN_WIDTH / 2  - scoreRect.w / 2;
-        SDL_RenderDrawRect(renderer, &scoreRect);
-        */
-
         switch(screen)
         {
             case 0: // Game
-                paddleMovement();
                 ballPhysics();
                 clearScreen();
                 renderGame();
