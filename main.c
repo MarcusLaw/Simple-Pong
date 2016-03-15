@@ -34,7 +34,7 @@ int xBallDirection = 1;
 int yBallDirection = -1;
 const Uint8 *currentKeyState;
 
-// Declare SDL Pointers
+// Declare SDL Assets
 SDL_Window *window = NULL;
 SDL_Renderer *renderer = NULL;
 TTF_Font *silkscreen = NULL;
@@ -42,6 +42,8 @@ SDL_Surface *scoreSurface = NULL;
 SDL_Texture *scoreTexture = NULL;
 SDL_Surface *titleSurface = NULL;
 SDL_Texture *titleTexture = NULL;
+SDL_Surface *startButtonSurface = NULL;
+SDL_Texture *startButtonTexture = NULL;
 SDL_Event e;
 
 // Declare Rects
@@ -52,6 +54,7 @@ SDL_Rect leftPaddle;
 SDL_Rect rightPaddle;
 SDL_Rect scoreRect;
 SDL_Rect titleRect;
+SDL_Rect startButtonRect;
 
 void defineRects()
 {
@@ -87,12 +90,12 @@ void defineRects()
 void getKeystates()
 {
     currentKeyState = SDL_GetKeyboardState(NULL);
-    if(currentKeyState[SDL_SCANCODE_W]) leftPaddle.y--;
-    if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++;
-    if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--;
-    if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++;
-    if(currentKeyState[SDL_SCANCODE_RETURN]) screen = 1;
-    if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 0;
+    if(currentKeyState[SDL_SCANCODE_W]) leftPaddle.y--; // Left Paddle Up
+    if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++; // Left Paddle Down
+    if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--; // Right Paddle Up
+    if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++; // Right Paddle Down
+    if(currentKeyState[SDL_SCANCODE_RETURN]) screen = 0; // Unpause
+    if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 1; // Pause
 }
 
 void paddleMovement()
@@ -135,6 +138,7 @@ void clearScreen()
 void renderStartMenu()
 {
     SDL_RenderCopy(renderer, titleTexture, NULL, &titleRect);
+    SDL_RenderCopy(renderer, startButtonTexture, NULL, &startButtonRect);
     SDL_RenderPresent(renderer);
 }
 
@@ -166,6 +170,8 @@ void quitSDL()
     SDL_FreeSurface(scoreSurface);
     SDL_DestroyTexture(titleTexture);
     SDL_FreeSurface(titleSurface);
+    SDL_DestroyTexture(startButtonTexture);
+    SDL_FreeSurface(startButtonSurface);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     TTF_Quit();
@@ -192,20 +198,26 @@ int main(int argc, char* argv[])
     titleRect.h = 128;
     titleRect.x = SCREEN_WIDTH / 2 - titleRect.w / 2;
     titleRect.y = 25;
+        // Start Button
+    startButtonSurface = TTF_RenderText_Solid(silkscreen, "Start", white);
+    startButtonTexture = SDL_CreateTextureFromSurface(renderer, startButtonSurface);
+    startButtonRect.w = 128;
+    startButtonRect.h = 48;
+    startButtonRect.x = SCREEN_WIDTH / 2 - startButtonRect.w / 2;
+    startButtonRect.y = SCREEN_HEIGHT / 2;
 
     defineRects();
 
-    // Main Game Loop
-    while(!quit)
+    while(!quit) // Main Loop
     {
         while(SDL_PollEvent(&e) != 0)
         {
             if(e.type == SDL_QUIT) quit = 1;
         }
 
-		getKeystates();
-        paddleMovement();
+        getKeystates();
 
+        /*
         // Query Scoreboard
         sprintf(scoreBuffer, "%d   %d", leftScore, rightScore);
         scoreSurface = TTF_RenderText_Solid(silkscreen, scoreBuffer, white); // Get score to surface.
@@ -215,30 +227,30 @@ int main(int argc, char* argv[])
         scoreRect.h *= 4; // Adjust font size manually here from texture size queried.
         scoreRect.x = SCREEN_WIDTH / 2  - scoreRect.w / 2;
         SDL_RenderDrawRect(renderer, &scoreRect);
+        */
 
-		switch(screen)
-		{
-            case 0: // Pause
-                clearScreen();
-                SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessageRect);
-                renderGame();
-                break;
-            case 1: // Game
+        switch(screen)
+        {
+            case 0: // Game
+                paddleMovement();
                 ballPhysics();
                 clearScreen();
                 renderGame();
                 break;
-            case 2: // Start Menu
+            case 1: // Pause Menu
                 clearScreen();
                 SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessageRect);
+                renderGame();
+                break;
+            case 2: // Start Menu
+                clearScreen();
                 renderStartMenu();
                 break;
-		}
+        }
 
-        SDL_Delay(2); // Slow down the loop. Temporary until FPS limiter/ticks are introduced.
+        SDL_Delay(2); // Slow down the loop.
     }
 
-    // Quit SDL
-    quitSDL();
+    quitSDL(); // Quit all SDL subsystems and free memory.
     return 0;
 }
