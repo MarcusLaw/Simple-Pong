@@ -16,22 +16,14 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "SDL2/SDL.h"
+#include "main.h"
+#include "SDL.h"
 #include "SDL2/SDL_ttf.h"
-
-#define SCREEN_WIDTH 1024
-#define SCREEN_HEIGHT 576
+#include "paddles.h"
+#include "ball.h"
 
 // Declare Variables - Shit Needs Cleaned, Mang
-int quit;
-int screen = 2;
-int leftScore;
-int rightScore;
 char scoreBuffer[10];
-int xBallDirection = 1;
-int yBallDirection = -1;
 const Uint8 *currentKeyState;
 
 // Declare SDL Assets
@@ -50,9 +42,6 @@ SDL_Event e;
 // Declare Rects
 SDL_Rect startMessageRect;
 SDL_Rect divider;
-SDL_Rect ball;
-SDL_Rect leftPaddle;
-SDL_Rect rightPaddle;
 SDL_Rect scoreRect;
 SDL_Rect titleRect;
 SDL_Rect startButtonRect;
@@ -95,31 +84,8 @@ void getKeystates()
     if(currentKeyState[SDL_SCANCODE_S]) leftPaddle.y++; // Left Paddle Down
     if(currentKeyState[SDL_SCANCODE_UP]) rightPaddle.y--; // Right Paddle Up
     if(currentKeyState[SDL_SCANCODE_DOWN]) rightPaddle.y++; // Right Paddle Down
-    if(currentKeyState[SDL_SCANCODE_RETURN]) screen = 0; // Unpause
-    if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 1; // Pause
-}
-
-void ballPhysics()
-{
-    // Velocity
-    ball.x = ball.x + xBallDirection;
-    ball.y = ball.y + yBallDirection;
-    // Balls to the Walls
-    if(ball.x < 0) rightScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = 1;
-    if(ball.x + ball.w > SCREEN_WIDTH) leftScore++, ball.x = SCREEN_WIDTH / 2 - ball.w / 2, xBallDirection = -1;
-    if(ball.y < 0) yBallDirection = 1;
-    if(ball.y + ball.h > SCREEN_HEIGHT) yBallDirection = -1;
-    // Paddle to the Balls
-    if(ball.x < leftPaddle.x + leftPaddle.w && ball.x + ball.w > leftPaddle.x &&
-       ball.y < leftPaddle.y + leftPaddle.h && ball.h + ball.y > leftPaddle.y)
-    {
-        xBallDirection = 1;
-    }
-    if(ball.x < rightPaddle.x + rightPaddle.w && ball.x + ball.w > rightPaddle.x &&
-       ball.y < rightPaddle.y + rightPaddle.h && ball.h + ball.y > rightPaddle.y)
-    {
-        xBallDirection = -1;
-    }
+    if(currentKeyState[SDL_SCANCODE_RETURN]) screen = 1; // Unpause
+    if(currentKeyState[SDL_SCANCODE_ESCAPE]) screen = 2; // Pause
 }
 
 void clearScreen()
@@ -218,19 +184,19 @@ int main(int argc, char* argv[])
 
         switch(screen)
         {
-            case 0: // Game
+            case 0: // Start Menu
+                clearScreen();
+                renderStartMenu();
+                break;
+            case 1: // Game
                 ballPhysics();
                 clearScreen();
                 renderGame();
                 break;
-            case 1: // Pause Menu
+            case 2: // Pause Menu
                 clearScreen();
                 SDL_RenderCopy(renderer, startMessageTexture, NULL, &startMessageRect);
                 renderGame();
-                break;
-            case 2: // Start Menu
-                clearScreen();
-                renderStartMenu();
                 break;
         }
 
