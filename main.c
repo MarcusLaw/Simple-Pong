@@ -17,27 +17,18 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
 #include "main.h"
-#include "SDL.h"
 #include "SDL2/SDL_ttf.h"
 #include "paddles.h"
 #include "ball.h"
+#include "SDL.h"
 
 // Declare Variables - Shit Needs Cleaned, Mang
 char scoreBuffer[10];
 const Uint8 *currentKeyState;
 
 // Declare SDL Assets
-SDL_Window *window = NULL;
-SDL_Renderer *renderer = NULL;
-TTF_Font *silkscreen = NULL;
-SDL_Surface *titleSurface = NULL;
-SDL_Texture *titleTexture = NULL;
 SDL_Surface *scoreSurface = NULL;
 SDL_Texture *scoreTexture = NULL;
-SDL_Surface *startButtonSurface = NULL;
-SDL_Texture *startButtonTexture = NULL;
-SDL_Color white = {255, 255, 255};
-SDL_Event e;
 
 // Declare Rects
 SDL_Rect startMessageRect;
@@ -132,30 +123,9 @@ void renderGame()
     SDL_DestroyTexture(scoreTexture); // Free Scoreboard Texture
 }
 
-void quitSDL()
-{
-    TTF_CloseFont(silkscreen);
-    SDL_DestroyTexture(titleTexture);
-    SDL_FreeSurface(titleSurface);
-    SDL_DestroyTexture(startButtonTexture);
-    SDL_FreeSurface(startButtonSurface);
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    TTF_Quit();
-    SDL_Quit();
-}
-
 int main(int argc, char* argv[])
 {
-    // Initialize SDL
-    SDL_Init(SDL_INIT_EVERYTHING);
-    TTF_Init();
-    window = SDL_CreateWindow("Simple Pong", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-    silkscreen = TTF_OpenFont("fonts/slkscr.ttf", 16); // Open Font
-    SDL_Surface *textSurface = TTF_RenderText_Solid(silkscreen, "Press Enter to Start", white);
-    SDL_Texture *startMessageTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-    SDL_FreeSurface(textSurface);
+    initializeSDL();
     // Start Menu
     titleSurface = TTF_RenderText_Solid(silkscreen, "Simple Pong", white);
     titleTexture = SDL_CreateTextureFromSurface(renderer, titleSurface);

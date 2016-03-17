@@ -1,6 +1,6 @@
-#include "SDL.h"
 #include "main.h"
 #include "ball.h"
+#include "paddles.h"
 
 int xBallDirection = 1;
 int yBallDirection = -1;

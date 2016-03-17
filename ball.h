@@ -1,13 +1,13 @@
 #ifndef BALL_H_INCLUDED
 #define BALL_H_INCLUDED
 
-#include "SDL.h"
+#include "main.h"
 
 int xBallDirection;
 int yBallDirection;
 
-SDL_Rect ball;
-
 void ballPhysics();
+
+SDL_Rect ball;
 
 #endif // BALL_H_INCLUDED

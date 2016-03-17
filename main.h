@@ -6,12 +6,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "SDL.h"
+#include "SDL2/SDL.h"
+#include "SDL2/SDL_ttf.h"
 
 int leftScore;
 int rightScore;
-
-SDL_Rect leftPaddle;
-SDL_Rect rightPaddle;
 
 #endif // MAIN_H_INCLUDED
